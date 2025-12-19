@@ -30,7 +30,7 @@ export function Hero() {
                         animate={{ y: 0 }}
                         transition={{ duration: 0.8, ease: [0.33, 1, 0.68, 1] }}
                     >
-                        <span className="text-white/10 hover:text-accent transition-colors duration-500 cursor-none">
+                        <span className="text-accent md:text-white/10 hover:text-accent transition-colors duration-500 cursor-none">
                             AI DESIGN
                         </span>
                     </motion.h1>

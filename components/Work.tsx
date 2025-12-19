@@ -78,43 +78,45 @@ export function Work() {
                 </h2>
             </div>
 
-            <div ref={ref} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-6 md:px-12">
-                {projects.map((project, index) => (
-                    <motion.div
-                        key={project.id}
-                        initial={{ opacity: 0, y: 30 }}
-                        animate={isInView ? { opacity: 1, y: 0 } : {}}
-                        transition={{ duration: 0.5, delay: index * 0.1 }}
-                        className="group relative w-full aspect-[4/3] md:aspect-[3/4] overflow-hidden cursor-pointer bg-accent hover:bg-black transition-colors duration-500"
-                        onClick={() => setSelectedProject(project)}
-                    >
-                        {/* Default state - Yellow background with title at bottom */}
-                        <div className="absolute inset-0 p-8 flex flex-col justify-end group-hover:opacity-0 transition-opacity duration-500">
-                            <h3 className="text-3xl md:text-4xl font-display font-bold text-black leading-tight">
-                                {project.title}
-                            </h3>
-                        </div>
-
-                        {/* Hover state - Black background with full info */}
-                        <div className="absolute inset-0 p-8 flex flex-col justify-between opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                            <div className="flex justify-between items-start">
-                                <span className="px-3 py-1 bg-accent text-black text-xs font-bold uppercase tracking-widest">
-                                    {project.year}
-                                </span>
-                                <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center">
-                                    <ArrowUpRight className="w-6 h-6 text-black" />
-                                </div>
-                            </div>
-
-                            <div>
-                                <p className="text-accent font-mono text-sm mb-2">{project.category}</p>
-                                <h3 className="text-3xl md:text-4xl font-display font-bold text-white leading-tight">
+            <div className="container mx-auto px-6 md:px-12">
+                <div ref={ref} className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    {projects.map((project, index) => (
+                        <motion.div
+                            key={project.id}
+                            initial={{ opacity: 0, y: 30 }}
+                            animate={isInView ? { opacity: 1, y: 0 } : {}}
+                            transition={{ duration: 0.5, delay: index * 0.1 }}
+                            className="group relative w-full aspect-square md:aspect-[3/4] rounded-[24px] overflow-hidden cursor-pointer bg-accent hover:bg-black transition-colors duration-500"
+                            onClick={() => setSelectedProject(project)}
+                        >
+                            {/* Default state - Yellow background with title at bottom */}
+                            <div className="absolute inset-0 p-6 flex flex-col justify-end group-hover:opacity-0 transition-opacity duration-500">
+                                <h3 className="text-2xl md:text-3xl font-display font-bold text-black leading-tight">
                                     {project.title}
                                 </h3>
                             </div>
-                        </div>
-                    </motion.div>
-                ))}
+
+                            {/* Hover state - Black background with full info */}
+                            <div className="absolute inset-0 p-6 flex flex-col justify-between opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                                <div className="flex justify-between items-start">
+                                    <span className="px-3 py-1 bg-accent text-black text-xs font-bold uppercase tracking-widest">
+                                        {project.year}
+                                    </span>
+                                    <div className="w-11 h-11 bg-white rounded-full flex items-center justify-center">
+                                        <ArrowUpRight className="w-5 h-5 text-black" />
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <p className="text-accent font-mono text-sm mb-2">{project.category}</p>
+                                    <h3 className="text-2xl md:text-3xl font-display font-bold text-white leading-tight">
+                                        {project.title}
+                                    </h3>
+                                </div>
+                            </div>
+                        </motion.div>
+                    ))}
+                </div>
             </div>
 
             <ProjectDetailsModal

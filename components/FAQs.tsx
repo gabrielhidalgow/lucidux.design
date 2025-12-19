@@ -80,14 +80,17 @@ export function FAQs() {
         <section className="py-32 bg-black">
             <div className="container mx-auto px-6 md:px-12" ref={ref}>
                 <motion.div
-                    className="text-center mb-16"
+                    className="text-center mb-12"
                     initial={{ opacity: 0, y: 30 }}
                     animate={isInView ? { opacity: 1, y: 0 } : {}}
                     transition={{ duration: 0.6 }}
                 >
-                    <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold">
-                        Frequently Asked <span className="text-accent">Questions</span>
+                    <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-6">
+                        Frequently<br />Asked <span className="text-accent">Questions</span>
                     </h2>
+                    <p className="text-gray-400 text-lg max-w-xl mx-auto">
+                        Discover quick and comprehensive answers to common questions about our platform, services, and features.
+                    </p>
                 </motion.div>
 
                 <motion.div
@@ -96,29 +99,29 @@ export function FAQs() {
                     animate={isInView ? { opacity: 1, y: 0 } : {}}
                     transition={{ duration: 0.6, delay: 0.2 }}
                 >
-                    <Accordion type="single" collapsible className="space-y-4">
-                        {faqItems.map((item, index) => (
-                            <motion.div
-                                key={item.id}
-                                initial={{ opacity: 0, y: 10 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true, margin: "-50px" }}
-                                transition={{ duration: 0.4, delay: index * 0.05 }}
-                            >
+                    <div className="rounded-2xl border border-white/20 overflow-hidden">
+                        <Accordion type="single" collapsible>
+                            {faqItems.map((item, index) => (
                                 <AccordionItem
+                                    key={item.id}
                                     value={item.id}
-                                    className="rounded-2xl border border-white/10 bg-white/5 overflow-hidden"
+                                    className={index < faqItems.length - 1 ? "border-b border-dashed border-white/20" : ""}
                                 >
-                                    <AccordionTrigger className="text-white text-base md:text-lg hover:no-underline">
+                                    <AccordionTrigger className="text-white text-base md:text-lg font-semibold hover:no-underline px-6 py-5">
                                         {item.question}
                                     </AccordionTrigger>
-                                    <AccordionContent className="text-gray-400 text-base leading-relaxed">
+                                    <AccordionContent className="text-gray-400 text-base leading-relaxed px-6 pb-5">
                                         {item.answer}
                                     </AccordionContent>
                                 </AccordionItem>
-                            </motion.div>
-                        ))}
-                    </Accordion>
+                            ))}
+                        </Accordion>
+                    </div>
+
+                    <p className="text-gray-500 text-base mt-8">
+                        Can't find what you're looking for? Contact our{" "}
+                        <span className="text-white font-medium">customer support team</span>
+                    </p>
                 </motion.div>
             </div>
         </section>
