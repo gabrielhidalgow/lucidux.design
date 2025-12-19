@@ -3,8 +3,11 @@ import { Hero } from "@/components/Hero";
 import { Ticker } from "@/components/Ticker";
 import { Expertise } from "@/components/Expertise";
 import { Comparison } from "@/components/Comparison";
+import { Audience } from "@/components/Audience";
 import { Work } from "@/components/Work";
 import { Philosophy } from "@/components/Philosophy";
+import { Testimonials } from "@/components/Testimonials";
+import { FAQs } from "@/components/FAQs";
 import { Contact } from "@/components/Contact";
 import { Footer } from "@/components/Footer";
 import { CustomCursor } from "@/components/CustomCursor";
@@ -24,8 +27,11 @@ export default function Home() {
       <Expertise />
       <Comparison />
       <Ticker text="CREATING • BEYOND • HUMAN • LIMITS •" />
+      <Audience />
       <Work />
       <Philosophy />
+      <Testimonials />
+      <FAQs />
       <Contact />
       <Footer />
     </div>
