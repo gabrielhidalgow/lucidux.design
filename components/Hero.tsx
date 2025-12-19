@@ -6,43 +6,108 @@ import { motion } from "motion/react";
 export function Hero() {
     return (
         <section className="relative h-screen w-full flex flex-col justify-center px-6 md:px-12 overflow-hidden">
-            {/* Background Blobs - Animated */}
-            <div className="absolute inset-0 z-0">
+            {/* Animated Gradient Background */}
+            <motion.div
+                className="absolute inset-0 z-0 overflow-hidden bg-background"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 1.5, ease: "easeOut" }}
+            >
+                {/* Primary accent blob - top right */}
                 <motion.div
-                    className="absolute top-[-20%] right-[-10%] w-[60vw] h-[60vw] bg-accent/10 rounded-full blur-[120px]"
-                    initial={{ scale: 0.8, opacity: 0 }}
-                    animate={{ scale: 1, opacity: 1 }}
-                    transition={{ duration: 1.5, ease: "easeOut" }}
+                    className="absolute w-[100vw] h-[100vw] md:w-[70vw] md:h-[70vw] rounded-full blur-[100px] md:blur-[120px]"
+                    style={{
+                        background: "radial-gradient(circle, rgba(204, 255, 0, 0.6) 0%, rgba(204, 255, 0, 0) 60%)",
+                        opacity: 0.4,
+                    }}
+                    animate={{
+                        x: ["10%", "40%", "5%", "35%", "10%"],
+                        y: ["-40%", "-15%", "-50%", "-20%", "-40%"],
+                        scale: [1, 1.2, 0.9, 1.15, 1],
+                    }}
+                    transition={{
+                        duration: 12,
+                        repeat: Infinity,
+                        ease: "easeInOut",
+                    }}
                 />
+
+                {/* Secondary purple blob - bottom left */}
                 <motion.div
-                    className="absolute bottom-[-20%] left-[-10%] w-[40vw] h-[40vw] bg-secondary/10 rounded-full blur-[100px]"
-                    initial={{ scale: 0.8, opacity: 0 }}
-                    animate={{ scale: 1, opacity: 1 }}
-                    transition={{ duration: 1.5, delay: 0.2, ease: "easeOut" }}
+                    className="absolute w-[90vw] h-[90vw] md:w-[60vw] md:h-[60vw] rounded-full blur-[80px] md:blur-[100px]"
+                    style={{
+                        background: "radial-gradient(circle, rgba(112, 0, 255, 0.7) 0%, rgba(112, 0, 255, 0) 60%)",
+                        opacity: 0.35,
+                    }}
+                    animate={{
+                        x: ["-30%", "0%", "-40%", "-5%", "-30%"],
+                        y: ["50%", "80%", "40%", "70%", "50%"],
+                        scale: [1, 0.85, 1.15, 0.9, 1],
+                    }}
+                    transition={{
+                        duration: 15,
+                        repeat: Infinity,
+                        ease: "easeInOut",
+                    }}
                 />
-            </div>
+
+                {/* Tertiary mixed blob - center */}
+                <motion.div
+                    className="absolute w-[60vw] h-[60vw] md:w-[45vw] md:h-[45vw] rounded-full blur-[60px] md:blur-[80px]"
+                    style={{
+                        background: "radial-gradient(circle, rgba(204, 255, 0, 0.5) 0%, rgba(112, 0, 255, 0.4) 50%, transparent 70%)",
+                        opacity: 0.3,
+                    }}
+                    animate={{
+                        x: ["40%", "70%", "30%", "60%", "40%"],
+                        y: ["10%", "40%", "0%", "30%", "10%"],
+                        scale: [1, 1.3, 0.8, 1.2, 1],
+                    }}
+                    transition={{
+                        duration: 10,
+                        repeat: Infinity,
+                        ease: "easeInOut",
+                    }}
+                />
+
+                {/* Blue/teal accent - top area */}
+                <motion.div
+                    className="absolute w-[120vw] h-[50vh] rounded-full blur-[100px]"
+                    style={{
+                        background: "linear-gradient(180deg, rgba(0, 180, 220, 0.5) 0%, transparent 100%)",
+                        opacity: 0.25,
+                    }}
+                    animate={{
+                        x: ["-20%", "10%", "-30%", "5%", "-20%"],
+                        y: ["-30%", "-10%", "-40%", "-15%", "-30%"],
+                    }}
+                    transition={{
+                        duration: 18,
+                        repeat: Infinity,
+                        ease: "easeInOut",
+                    }}
+                />
+            </motion.div>
 
             <div className="z-10 max-w-7xl mx-auto w-full">
                 <div className="overflow-hidden">
                     <motion.h1
-                        className="text-[11vw] md:text-[10vw] leading-[0.85] font-display font-bold tracking-tighter mix-blend-difference"
+                        className="text-[7vw] md:text-[5vw] leading-[0.85] font-display font-bold tracking-tighter mix-blend-difference text-white"
                         initial={{ y: "100%" }}
                         animate={{ y: 0 }}
                         transition={{ duration: 0.8, ease: [0.33, 1, 0.68, 1] }}
                     >
-                        <span className="text-accent md:text-white/10 hover:text-accent transition-colors duration-500 cursor-none">
-                            AI DESIGN
-                        </span>
+                        YOUR AI WORKS.
                     </motion.h1>
                 </div>
                 <div className="overflow-hidden">
                     <motion.h1
-                        className="text-[11vw] md:text-[10vw] leading-[0.85] font-display font-bold tracking-tighter mix-blend-difference text-white"
+                        className="text-[7vw] md:text-[5vw] leading-[0.85] font-display font-bold tracking-tighter text-accent"
                         initial={{ y: "100%" }}
                         animate={{ y: 0 }}
                         transition={{ duration: 0.8, delay: 0.1, ease: [0.33, 1, 0.68, 1] }}
                     >
-                        CONSULTING
+                        YOUR INTERFACE DOESN&apos;T.
                     </motion.h1>
                 </div>
 
@@ -53,8 +118,7 @@ export function Hero() {
                     transition={{ duration: 0.6, delay: 0.5 }}
                 >
                     <p className="text-xl md:text-2xl font-body font-light text-gray-400 leading-relaxed">
-                        Transform your design workflow with AI.<br />
-                        I help small and mid-size businesses in Australia and New Zealand implement the right AI tools, build efficient design systems, and automate repetitive processes.
+                        Lucid brings clear UX/UI thinking to AI products—combining expert design judgment with systematic methodology and data-driven validation.
                     </p>
 
                     <motion.div

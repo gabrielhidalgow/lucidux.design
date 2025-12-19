@@ -15,7 +15,7 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "NEURA.AGENCY | FUTURE REALITY",
+  title: "LUCID.DESIGN | FUTURE REALITY",
   description: "An AI-native design studio crafting the visual language of the post-human era.",
 };
 

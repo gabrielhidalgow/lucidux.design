@@ -5,6 +5,98 @@ import { ArrowUpRight, Database, Server, Globe, Layers, Zap } from "lucide-react
 import { ProjectDetailsModal, type ProjectDetails } from "./ProjectDetailsModal";
 import { motion, useInView } from "motion/react";
 
+// Color schemes and unique animations for each card's background
+const cardConfigs = [
+    {
+        // RewardPay - Lime & Emerald - diagonal sweep
+        primary: "radial-gradient(circle, rgba(204, 255, 0, 0.35) 0%, rgba(204, 255, 0, 0) 60%)",
+        secondary: "radial-gradient(circle, rgba(0, 255, 136, 0.25) 0%, rgba(0, 255, 136, 0) 60%)",
+        primaryAnimation: {
+            x: ["-30%", "20%", "-20%", "30%", "-30%"],
+            y: ["-40%", "0%", "-30%", "10%", "-40%"],
+            scale: [1, 1.1, 0.95, 1.15, 1],
+        },
+        secondaryAnimation: {
+            x: ["40%", "-10%", "30%", "0%", "40%"],
+            y: ["50%", "20%", "60%", "30%", "50%"],
+            scale: [1, 1.2, 0.9, 1.1, 1],
+        },
+        primaryDuration: 14,
+        secondaryDuration: 18,
+    },
+    {
+        // Monaco - Purple & Magenta - circular orbit
+        primary: "radial-gradient(circle, rgba(112, 0, 255, 0.35) 0%, rgba(112, 0, 255, 0) 60%)",
+        secondary: "radial-gradient(circle, rgba(255, 0, 170, 0.25) 0%, rgba(255, 0, 170, 0) 60%)",
+        primaryAnimation: {
+            x: ["0%", "30%", "0%", "-30%", "0%"],
+            y: ["-30%", "0%", "30%", "0%", "-30%"],
+            scale: [1, 1.15, 1, 0.9, 1],
+        },
+        secondaryAnimation: {
+            x: ["20%", "-20%", "-30%", "20%", "20%"],
+            y: ["60%", "40%", "70%", "50%", "60%"],
+            scale: [1, 0.85, 1.1, 1, 1],
+        },
+        primaryDuration: 16,
+        secondaryDuration: 20,
+    },
+    {
+        // CommBank - Orange & Yellow - pulsing expansion
+        primary: "radial-gradient(circle, rgba(255, 102, 0, 0.35) 0%, rgba(255, 102, 0, 0) 60%)",
+        secondary: "radial-gradient(circle, rgba(204, 255, 0, 0.25) 0%, rgba(204, 255, 0, 0) 60%)",
+        primaryAnimation: {
+            x: ["10%", "-10%", "20%", "-5%", "10%"],
+            y: ["-20%", "-40%", "-10%", "-35%", "-20%"],
+            scale: [1, 1.3, 0.85, 1.2, 1],
+        },
+        secondaryAnimation: {
+            x: ["-20%", "10%", "-30%", "20%", "-20%"],
+            y: ["70%", "40%", "60%", "35%", "70%"],
+            scale: [1, 0.8, 1.25, 0.9, 1],
+        },
+        primaryDuration: 12,
+        secondaryDuration: 15,
+    },
+];
+
+function AnimatedCardBackground({ colorIndex }: { colorIndex: number }) {
+    const config = cardConfigs[colorIndex] || cardConfigs[0];
+
+    return (
+        <div className="absolute inset-0 overflow-hidden rounded-[24px]">
+            {/* Primary blob */}
+            <motion.div
+                className="absolute w-[150%] h-[150%] rounded-full blur-[50px]"
+                style={{
+                    background: config.primary,
+                    opacity: 0.4,
+                }}
+                animate={config.primaryAnimation}
+                transition={{
+                    duration: config.primaryDuration,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                }}
+            />
+            {/* Secondary blob */}
+            <motion.div
+                className="absolute w-[120%] h-[120%] rounded-full blur-[40px]"
+                style={{
+                    background: config.secondary,
+                    opacity: 0.3,
+                }}
+                animate={config.secondaryAnimation}
+                transition={{
+                    duration: config.secondaryDuration,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                }}
+            />
+        </div>
+    );
+}
+
 export function Work() {
     const [selectedProject, setSelectedProject] = useState<ProjectDetails | null>(null);
     const ref = useRef(null);
@@ -86,12 +178,17 @@ export function Work() {
                             initial={{ opacity: 0, y: 30 }}
                             animate={isInView ? { opacity: 1, y: 0 } : {}}
                             transition={{ duration: 0.5, delay: index * 0.1 }}
-                            className="group relative w-full aspect-square md:aspect-[3/4] rounded-[24px] overflow-hidden cursor-pointer bg-accent hover:bg-black transition-colors duration-500"
+                            className="group relative w-full aspect-square md:aspect-[3/4] rounded-[24px] overflow-hidden cursor-pointer bg-black"
                             onClick={() => setSelectedProject(project)}
                         >
-                            {/* Default state - Yellow background with title at bottom */}
-                            <div className="absolute inset-0 p-6 flex flex-col justify-end group-hover:opacity-0 transition-opacity duration-500">
-                                <h3 className="text-2xl md:text-3xl font-display font-bold text-black leading-tight">
+                            {/* Animated gradient background - fades out on hover */}
+                            <div className="absolute inset-0 group-hover:opacity-0 transition-opacity duration-500">
+                                <AnimatedCardBackground colorIndex={index} />
+                            </div>
+
+                            {/* Default state - title at bottom */}
+                            <div className="absolute inset-0 p-6 flex flex-col justify-end group-hover:opacity-0 transition-opacity duration-500 z-10">
+                                <h3 className="text-2xl md:text-3xl font-display font-bold text-white leading-tight">
                                     {project.title}
                                 </h3>
                             </div>

@@ -105,10 +105,10 @@ export function Testimonials() {
                     transition={{ duration: 0.5, delay: 0.3 }}
                 >
                     <a
-                        href="#"
-                        className="inline-block bg-accent text-black font-bold py-4 px-10 rounded-full hover:bg-accent/90 transition-colors duration-300"
+                        href="#contact"
+                        className="inline-block bg-accent text-black font-bold py-4 px-10 rounded-full hover:bg-accent/90 transition-colors duration-300 uppercase tracking-wider"
                     >
-                        Book a consultation call
+                        BOOK A CONSULTATION CALL
                     </a>
                 </motion.div>
             </div>
