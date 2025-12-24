@@ -53,7 +53,7 @@ export function Comparison() {
                     transition={{ duration: 0.6 }}
                 >
                     <h2 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold leading-tight">
-                        How It <span className="text-accent">Compares</span>
+                        How it <span className="text-accent">compares</span>
                     </h2>
                 </motion.div>
 

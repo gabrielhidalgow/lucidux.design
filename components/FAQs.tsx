@@ -86,7 +86,7 @@ export function FAQs() {
                     transition={{ duration: 0.6 }}
                 >
                     <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-6">
-                        Frequently<br />Asked <span className="text-accent">Questions</span>
+                        Frequently<br />asked <span className="text-accent">questions</span>
                     </h2>
                     <p className="text-gray-400 text-lg max-w-xl mx-auto">
                         Discover quick and comprehensive answers to common questions about our platform, services, and features.

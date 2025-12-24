@@ -111,8 +111,8 @@ export function Philosophy() {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
                     <div>
                         <h2 className="text-5xl md:text-7xl font-display font-bold leading-tight mb-12">
-                            WE DON'T JUST DESIGN. <br />
-                            <span className="text-accent">WE HALLUCINATE.</span>
+                            We don't just design. <br />
+                            <span className="text-accent">We hallucinate.</span>
                         </h2>
 
                         <div className="space-y-8 text-lg md:text-xl text-gray-400 font-light leading-relaxed">

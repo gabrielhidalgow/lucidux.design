@@ -48,7 +48,7 @@ export function Expertise() {
                     transition={{ duration: 0.6 }}
                 >
                     <h2 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold leading-tight">
-                        HOW WE <span className="text-accent">WORK</span>
+                        How we <span className="text-accent">work</span>
                     </h2>
                 </motion.div>
             </div>

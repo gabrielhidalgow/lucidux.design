@@ -235,14 +235,14 @@ export function ProjectDetailsModal({ project, projects, isOpen, onClose, onNavi
                                 <h3 className="text-4xl md:text-5xl font-display font-bold text-white max-w-2xl">
                                     Get Your Solution Built in Office Hours
                                 </h3>
-                                <div className="flex flex-col sm:flex-row gap-4">
-                                    <button className="bg-white text-black px-8 py-4 rounded-full font-bold uppercase tracking-wider hover:bg-gray-200 transition-colors">
-                                        Join Today
-                                    </button>
-                                    <button className="bg-transparent border border-white/20 text-white px-8 py-4 rounded-full font-bold uppercase tracking-wider hover:bg-white/10 transition-colors">
-                                        See Our Plans
-                                    </button>
-                                </div>
+                                <a
+                                    href="https://calendly.com/gabrielhidalgo/30min"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="bg-white text-black px-8 py-4 rounded-full font-bold uppercase tracking-wider hover:bg-gray-200 transition-colors"
+                                >
+                                    Book a Consultation Call
+                                </a>
                             </div>
                             {/* Ambient background glow */}
                             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-accent/5 blur-3xl rounded-full"></div>

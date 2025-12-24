@@ -17,7 +17,7 @@ export function Contact() {
                         animate={isInView ? { y: 0 } : {}}
                         transition={{ duration: 0.7, ease: [0.33, 1, 0.68, 1] }}
                     >
-                        START THE
+                        Start the
                     </motion.h2>
                 </div>
                 <div className="overflow-hidden">
@@ -27,7 +27,7 @@ export function Contact() {
                         animate={isInView ? { y: 0 } : {}}
                         transition={{ duration: 0.7, delay: 0.1, ease: [0.33, 1, 0.68, 1] }}
                     >
-                        REVOLUTION
+                        revolution
                     </motion.h2>
                 </div>
                 <motion.p

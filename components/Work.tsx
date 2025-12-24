@@ -9,8 +9,8 @@ import { motion, useInView } from "motion/react";
 const cardConfigs = [
     {
         // RewardPay - Lime & Emerald - diagonal sweep
-        primary: "radial-gradient(circle, rgba(204, 255, 0, 0.35) 0%, rgba(204, 255, 0, 0) 60%)",
-        secondary: "radial-gradient(circle, rgba(0, 255, 136, 0.25) 0%, rgba(0, 255, 136, 0) 60%)",
+        primary: "radial-gradient(circle, rgba(204, 255, 0, 0.6) 0%, rgba(204, 255, 0, 0) 70%)",
+        secondary: "radial-gradient(circle, rgba(0, 255, 136, 0.5) 0%, rgba(0, 255, 136, 0) 70%)",
         primaryAnimation: {
             x: ["-30%", "20%", "-20%", "30%", "-30%"],
             y: ["-40%", "0%", "-30%", "10%", "-40%"],
@@ -26,8 +26,8 @@ const cardConfigs = [
     },
     {
         // Monaco - Purple & Magenta - circular orbit
-        primary: "radial-gradient(circle, rgba(112, 0, 255, 0.35) 0%, rgba(112, 0, 255, 0) 60%)",
-        secondary: "radial-gradient(circle, rgba(255, 0, 170, 0.25) 0%, rgba(255, 0, 170, 0) 60%)",
+        primary: "radial-gradient(circle, rgba(112, 0, 255, 0.6) 0%, rgba(112, 0, 255, 0) 70%)",
+        secondary: "radial-gradient(circle, rgba(255, 0, 170, 0.5) 0%, rgba(255, 0, 170, 0) 70%)",
         primaryAnimation: {
             x: ["0%", "30%", "0%", "-30%", "0%"],
             y: ["-30%", "0%", "30%", "0%", "-30%"],
@@ -43,8 +43,8 @@ const cardConfigs = [
     },
     {
         // CommBank - Orange & Yellow - pulsing expansion
-        primary: "radial-gradient(circle, rgba(255, 102, 0, 0.35) 0%, rgba(255, 102, 0, 0) 60%)",
-        secondary: "radial-gradient(circle, rgba(204, 255, 0, 0.25) 0%, rgba(204, 255, 0, 0) 60%)",
+        primary: "radial-gradient(circle, rgba(255, 102, 0, 0.6) 0%, rgba(255, 102, 0, 0) 70%)",
+        secondary: "radial-gradient(circle, rgba(204, 255, 0, 0.5) 0%, rgba(204, 255, 0, 0) 70%)",
         primaryAnimation: {
             x: ["10%", "-10%", "20%", "-5%", "10%"],
             y: ["-20%", "-40%", "-10%", "-35%", "-20%"],
@@ -67,10 +67,10 @@ function AnimatedCardBackground({ colorIndex }: { colorIndex: number }) {
         <div className="absolute inset-0 overflow-hidden rounded-[24px]">
             {/* Primary blob */}
             <motion.div
-                className="absolute w-[150%] h-[150%] rounded-full blur-[50px]"
+                className="absolute w-[180%] h-[180%] rounded-full blur-[60px]"
                 style={{
                     background: config.primary,
-                    opacity: 0.4,
+                    opacity: 0.8,
                 }}
                 animate={config.primaryAnimation}
                 transition={{
@@ -81,10 +81,10 @@ function AnimatedCardBackground({ colorIndex }: { colorIndex: number }) {
             />
             {/* Secondary blob */}
             <motion.div
-                className="absolute w-[120%] h-[120%] rounded-full blur-[40px]"
+                className="absolute w-[150%] h-[150%] rounded-full blur-[50px]"
                 style={{
                     background: config.secondary,
-                    opacity: 0.3,
+                    opacity: 0.7,
                 }}
                 animate={config.secondaryAnimation}
                 transition={{
@@ -166,7 +166,7 @@ export function Work() {
         <section id="work" className="py-32 bg-surface relative overflow-hidden z-10">
             <div className="container mx-auto px-6 md:px-12 mb-16">
                 <h2 className="text-5xl md:text-7xl font-display font-bold">
-                    SELECTED <span className="text-white/10">WORK</span>
+                    Selected <span className="text-white/10">work</span>
                 </h2>
             </div>
 
@@ -178,35 +178,35 @@ export function Work() {
                             initial={{ opacity: 0, y: 30 }}
                             animate={isInView ? { opacity: 1, y: 0 } : {}}
                             transition={{ duration: 0.5, delay: index * 0.1 }}
-                            className="group relative w-full aspect-square md:aspect-[3/4] rounded-[24px] overflow-hidden cursor-pointer bg-black"
+                            className="group relative w-full aspect-[4/3] md:aspect-[3/4] rounded-[24px] overflow-hidden cursor-pointer bg-black"
                             onClick={() => setSelectedProject(project)}
                         >
-                            {/* Animated gradient background - fades out on hover */}
-                            <div className="absolute inset-0 group-hover:opacity-0 transition-opacity duration-500">
+                            {/* Animated gradient background - always visible on mobile, fades on desktop hover */}
+                            <div className="absolute inset-0 md:group-hover:opacity-0 transition-opacity duration-500">
                                 <AnimatedCardBackground colorIndex={index} />
                             </div>
 
-                            {/* Default state - title at bottom */}
-                            <div className="absolute inset-0 p-6 flex flex-col justify-end group-hover:opacity-0 transition-opacity duration-500 z-10">
+                            {/* Desktop default state - title at bottom (hidden on mobile) */}
+                            <div className="hidden md:flex absolute inset-0 p-6 flex-col justify-end md:group-hover:opacity-0 transition-opacity duration-500 z-10">
                                 <h3 className="text-2xl md:text-3xl font-display font-bold text-white leading-tight">
                                     {project.title}
                                 </h3>
                             </div>
 
-                            {/* Hover state - Black background with full info */}
-                            <div className="absolute inset-0 p-6 flex flex-col justify-between opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                            {/* Mobile: always visible / Desktop: hover state */}
+                            <div className="absolute inset-0 p-5 md:p-6 flex flex-col justify-between md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-500">
                                 <div className="flex justify-between items-start">
                                     <span className="px-3 py-1 bg-accent text-black text-xs font-bold uppercase tracking-widest">
                                         {project.year}
                                     </span>
-                                    <div className="w-11 h-11 bg-white rounded-full flex items-center justify-center">
-                                        <ArrowUpRight className="w-5 h-5 text-black" />
+                                    <div className="w-10 h-10 md:w-11 md:h-11 bg-white rounded-full flex items-center justify-center">
+                                        <ArrowUpRight className="w-4 h-4 md:w-5 md:h-5 text-black" />
                                     </div>
                                 </div>
 
                                 <div>
-                                    <p className="text-accent font-mono text-sm mb-2">{project.category}</p>
-                                    <h3 className="text-2xl md:text-3xl font-display font-bold text-white leading-tight">
+                                    <p className="text-accent font-mono text-xs md:text-sm mb-1 md:mb-2">{project.category}</p>
+                                    <h3 className="text-xl md:text-3xl font-display font-bold text-white leading-tight">
                                         {project.title}
                                     </h3>
                                 </div>

@@ -24,7 +24,7 @@ export function Audience() {
                     animate={isInView ? { opacity: 1, y: 0 } : {}}
                     transition={{ duration: 0.6 }}
                 >
-                    Who This Is <span className="text-accent">For</span>
+                    Who this is <span className="text-accent">for</span>
                 </motion.h2>
             </div>
 

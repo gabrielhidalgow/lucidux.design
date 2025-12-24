@@ -28,7 +28,7 @@ export function Footer() {
                         animate={isInView ? { opacity: 1, y: 0 } : {}}
                         transition={{ duration: 0.5, delay: 0.1 }}
                     >
-                        <h4 className="font-bold mb-6 uppercase tracking-widest text-sm">Sitemap</h4>
+                        <h4 className="font-bold mb-6 tracking-widest text-sm">Sitemap</h4>
                         <ul className="space-y-3 text-gray-400 text-sm">
                             {["Home", "Work", "Services", "About"].map((item) => (
                                 <li key={item}>
@@ -43,13 +43,14 @@ export function Footer() {
                         animate={isInView ? { opacity: 1, y: 0 } : {}}
                         transition={{ duration: 0.5, delay: 0.2 }}
                     >
-                        <h4 className="font-bold mb-6 uppercase tracking-widest text-sm">Social</h4>
+                        <h4 className="font-bold mb-6 tracking-widest text-sm">Social</h4>
                         <ul className="space-y-3 text-gray-400 text-sm">
-                            {["Instagram", "Twitter / X", "LinkedIn", "GitHub"].map((item) => (
-                                <li key={item}>
-                                    <a href="#" className="hover:text-accent transition-colors">{item}</a>
-                                </li>
-                            ))}
+                            <li>
+                                <a href="https://x.com/ghidalgodesign" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">X</a>
+                            </li>
+                            <li>
+                                <a href="https://www.linkedin.com/in/gabrielhidalgow/" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">LinkedIn</a>
+                            </li>
                         </ul>
                     </motion.div>
                 </div>
@@ -60,8 +61,8 @@ export function Footer() {
                     animate={isInView ? { opacity: 1 } : {}}
                     transition={{ duration: 0.5, delay: 0.3 }}
                 >
-                    <p>&copy; 2026 LUCID. ALL RIGHTS RESERVED.</p>
-                    <p>DESIGNED BY AI. CURATED BY HUMANS.</p>
+                    <p>&copy; 2026 Lucid. All rights reserved.</p>
+                    <p>Designed by AI. Curated by humans.</p>
                 </motion.div>
             </div>
         </footer>
