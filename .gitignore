@@ -39,3 +39,16 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Local logs
+*.log
+
+# Claude Code local state
+.claude/
+
+# Tool-specific local folders
+.moat/
+.playwright-mcp/
+
+# Temporary test files
+test.js
