@@ -38,14 +38,17 @@ export function Contact() {
                 >
                     Ready to leave the traditional world behind? Let's build something that defies explanation.
                 </motion.p>
-                <motion.button
-                    className="bg-black text-white px-10 py-5 rounded-full font-bold text-lg uppercase tracking-widest hover:scale-105 transition-transform duration-300"
+                <motion.a
+                    href="https://calendly.com/gabrielhidalgo/30min"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block bg-black text-white px-10 py-5 rounded-full font-bold text-lg uppercase tracking-widest hover:scale-105 transition-transform duration-300"
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={isInView ? { opacity: 1, scale: 1 } : {}}
                     transition={{ duration: 0.5, delay: 0.5 }}
                 >
                     Initialize Project
-                </motion.button>
+                </motion.a>
             </div>
 
             {/* Decorative Rotating Circles */}

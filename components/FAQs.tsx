@@ -119,8 +119,8 @@ export function FAQs() {
                     </div>
 
                     <p className="text-gray-500 text-base mt-8">
-                        Can't find what you're looking for? Contact our{" "}
-                        <span className="text-white font-medium">customer support team</span>
+                        Can't find what you're looking for? Contact us on{" "}
+                        <a href="mailto:gabrielhidalgow@gmail.com" className="text-white font-medium hover:text-accent transition-colors">gabrielhidalgow@gmail.com</a>
                     </p>
                 </motion.div>
             </div>

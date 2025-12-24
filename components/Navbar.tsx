@@ -39,7 +39,9 @@ export function Navbar() {
             </motion.div>
 
             <motion.a
-                href="#contact"
+                href="https://calendly.com/gabrielhidalgo/30min"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="bg-accent text-black font-bold font-body text-xs px-3 py-2 md:text-sm md:px-6 md:py-3 rounded-full hover:bg-accent/90 transition-colors uppercase tracking-wider"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}

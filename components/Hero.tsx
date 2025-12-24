@@ -5,7 +5,7 @@ import { motion } from "motion/react";
 
 export function Hero() {
     return (
-        <section className="relative h-screen w-full flex flex-col justify-center px-6 md:px-12 overflow-hidden">
+        <section className="relative min-h-screen w-full flex flex-col justify-center px-6 md:px-12 overflow-hidden">
             {/* Animated Gradient Background */}
             <motion.div
                 className="absolute inset-0 z-0 overflow-hidden bg-background"
@@ -92,7 +92,7 @@ export function Hero() {
             <div className="z-10 max-w-7xl mx-auto w-full">
                 <div className="overflow-hidden">
                     <motion.h1
-                        className="text-[7vw] md:text-[5vw] leading-[0.85] font-display font-bold tracking-tighter mix-blend-difference text-white"
+                        className="text-[11vw] md:text-[5vw] leading-[0.85] font-display font-bold tracking-tighter mix-blend-difference text-white"
                         initial={{ y: "100%" }}
                         animate={{ y: 0 }}
                         transition={{ duration: 0.8, ease: [0.33, 1, 0.68, 1] }}
@@ -102,7 +102,7 @@ export function Hero() {
                 </div>
                 <div className="overflow-hidden">
                     <motion.h1
-                        className="text-[7vw] md:text-[5vw] leading-[0.85] font-display font-bold tracking-tighter text-accent"
+                        className="text-[11vw] md:text-[5vw] leading-[0.85] font-display font-bold tracking-tighter text-accent"
                         initial={{ y: "100%" }}
                         animate={{ y: 0 }}
                         transition={{ duration: 0.8, delay: 0.1, ease: [0.33, 1, 0.68, 1] }}

@@ -60,7 +60,7 @@ export function Footer() {
                     animate={isInView ? { opacity: 1 } : {}}
                     transition={{ duration: 0.5, delay: 0.3 }}
                 >
-                    <p>&copy; 2024 LUCID. ALL RIGHTS RESERVED.</p>
+                    <p>&copy; 2026 LUCID. ALL RIGHTS RESERVED.</p>
                     <p>DESIGNED BY AI. CURATED BY HUMANS.</p>
                 </motion.div>
             </div>

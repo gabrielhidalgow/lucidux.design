@@ -105,7 +105,9 @@ export function Testimonials() {
                     transition={{ duration: 0.5, delay: 0.3 }}
                 >
                     <a
-                        href="#contact"
+                        href="https://calendly.com/gabrielhidalgo/30min"
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="inline-block bg-accent text-black font-bold py-4 px-10 rounded-full hover:bg-accent/90 transition-colors duration-300 uppercase tracking-wider"
                     >
                         BOOK A CONSULTATION CALL
