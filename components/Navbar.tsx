@@ -33,7 +33,7 @@ export function Navbar() {
                 transition={{ duration: 0.5, delay: 0.3 }}
             >
                 <Link href="/" className="flex flex-col">
-                    <span>LUCID<span className="text-accent">.</span>DESIGN</span>
+                    <span>LUCIDUX<span className="text-accent">.</span>DESIGN</span>
                     <span className="text-xs font-body tracking-widest font-normal" style={{ color: 'lab(65.9269 -0.832707 -8.17473)' }}>CLEAR UX/UI THINKING FOR AI PRODUCTS</span>
                 </Link>
             </motion.div>
@@ -47,7 +47,7 @@ export function Navbar() {
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.5, delay: 0.4 }}
             >
-                Free UX Audit
+                <span className="hidden md:inline">FREE LUCID UX AUDIT</span><span className="md:hidden">FREE UX AUDIT</span>
             </motion.a>
         </motion.nav>
     );

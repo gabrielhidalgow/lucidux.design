@@ -118,7 +118,7 @@ export function Hero() {
                     transition={{ duration: 0.6, delay: 0.5 }}
                 >
                     <p className="text-xl md:text-2xl font-body font-light text-gray-400 leading-relaxed">
-                        Lucid brings clear UX/UI thinking to AI products—combining expert design judgment with systematic methodology and data-driven validation.
+                        Lucidux brings clear UX/UI thinking to AI products—combining expert design judgment with systematic methodology and data-driven validation.
                     </p>
 
                     <motion.div

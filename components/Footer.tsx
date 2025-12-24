@@ -17,7 +17,7 @@ export function Footer() {
                         animate={isInView ? { opacity: 1, y: 0 } : {}}
                         transition={{ duration: 0.5 }}
                     >
-                        <h3 className="text-2xl font-display font-bold mb-6">LUCID.DESIGN</h3>
+                        <h3 className="text-2xl font-display font-bold mb-6">LUCIDUX.DESIGN</h3>
                         <p className="text-gray-500 max-w-sm">
                             An AI-native design studio crafting the visual language of the post-human era.
                         </p>
@@ -61,7 +61,7 @@ export function Footer() {
                     animate={isInView ? { opacity: 1 } : {}}
                     transition={{ duration: 0.5, delay: 0.3 }}
                 >
-                    <p>&copy; 2026 Lucid. All rights reserved.</p>
+                    <p>&copy; 2026 Lucidux. All rights reserved.</p>
                     <p>Designed by AI. Curated by humans.</p>
                 </motion.div>
             </div>
