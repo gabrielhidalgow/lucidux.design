@@ -103,7 +103,7 @@ export function Philosophy() {
     const isInView = useInView(ref, { once: true, margin: "-100px" });
 
     return (
-        <section id="philosophy" className="py-32 bg-black relative">
+        <section id="philosophy" className="py-16 md:py-32 bg-black relative">
             {/* Background Grid Pattern */}
             <div
                 className="absolute inset-0 bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] pointer-events-none opacity-50"

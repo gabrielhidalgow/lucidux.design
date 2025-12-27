@@ -58,10 +58,10 @@ export function AuditIcon({ isHovered, className = "" }: IconProps) {
           strokeLinecap="round"
           className="stroke-accent md:stroke-transparent md:group-hover:stroke-accent"
           animate={{
-            opacity: [0.3, 1, 0.3],
+            opacity: [0.15, 1, 0.15],
           }}
           transition={{
-            duration: 1.2,
+            duration: 1.5,
             ease: "easeInOut",
             repeat: Infinity,
             delay: i * 0.2,
@@ -83,44 +83,75 @@ export function StrategyIcon({ isHovered, className = "" }: IconProps) {
       xmlns="http://www.w3.org/2000/svg"
       className={className}
     >
+      {/* X mark - top left */}
+      <g
+        className="stroke-accent md:stroke-transparent md:group-hover:stroke-accent transition-colors duration-300"
+        strokeWidth="2"
+        strokeLinecap="round"
+      >
+        <line x1="6" y1="10" x2="12" y2="16" />
+        <line x1="12" y1="10" x2="6" y2="16" />
+      </g>
+
+      {/* X mark - bottom right */}
+      <g
+        className="stroke-accent md:stroke-transparent md:group-hover:stroke-accent transition-colors duration-300"
+        strokeWidth="2"
+        strokeLinecap="round"
+      >
+        <line x1="38" y1="38" x2="44" y2="44" />
+        <line x1="44" y1="38" x2="38" y2="44" />
+      </g>
+
       {/* Path */}
       <path
-        d="M10 38 L10 28 Q10 24 14 24 L34 24 Q38 24 38 20 L38 10"
+        d="M20 38 L20 28 Q20 24 24 24 L34 24 Q38 24 38 20 L38 14"
         strokeWidth="2"
         strokeLinecap="round"
         fill="none"
         className={strokeClasses}
       />
-      {/* Start point */}
+
+      {/* Start point - filled circle */}
       <circle
-        cx="10"
+        cx="20"
         cy="38"
         r="3"
+        className="fill-accent md:fill-gray-500 md:group-hover:fill-accent"
+      />
+
+      {/* End point - arrow pointing up */}
+      <path
+        d="M38 18 L38 8"
         strokeWidth="2"
+        strokeLinecap="round"
         fill="none"
         className={strokeClasses}
       />
-      {/* End point (flag/destination) */}
-      <circle
-        cx="38"
-        cy="10"
-        r="3"
-        className={`${strokeClasses} fill-accent md:fill-gray-500 md:group-hover:fill-accent`}
+      <path
+        d="M32 14 L38 6 L44 14"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        fill="none"
+        className={strokeClasses}
       />
-      {/* Moving dot - one-way animation, fades out at end, restarts fresh */}
+
+      {/* Moving dot - smooth animation from start to end */}
       <motion.circle
         r="3"
         className="fill-accent md:fill-transparent md:group-hover:fill-accent"
         animate={{
-          cx: [10, 10, 12, 24, 36, 38, 38],
-          cy: [38, 28, 24, 24, 24, 20, 10],
-          opacity: [1, 1, 1, 1, 1, 1, 0],
+          cx: [20, 20, 38, 38],
+          cy: [38, 24, 24, 14],
+          opacity: [1, 1, 1, 0],
         }}
         transition={{
-          duration: 0.8,
-          ease: "easeInOut",
+          duration: 1.7,
+          ease: "linear",
           repeat: Infinity,
-          repeatDelay: 0.4,
+          repeatDelay: 0.3,
+          times: [0, 0.35, 0.65, 1],
         }}
       />
     </motion.svg>
@@ -136,28 +167,35 @@ export function ImplementationIcon({ isHovered, className = "" }: IconProps) {
       viewBox="0 0 48 48"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className={className}
+      className={`${className} max-md:animate-[spin_6s_linear_infinite] max-md:origin-center`}
+      initial={{ rotate: 0 }}
       animate={{
-        rotate: isHovered ? 45 : 0,
+        rotate: isHovered ? 360 : 0,
       }}
-      transition={{ duration: 0.4, ease: "easeOut" }}
-      style={{ originX: "50%", originY: "50%" }}
+      transition={{
+        duration: isHovered ? 6 : 0,
+        ease: "linear",
+        repeat: isHovered ? Infinity : 0,
+      }}
+      style={{ transformOrigin: "center center" }}
     >
-      <path
-        d="M24 8L26.5 12.5L32 11L31 16.5L36.5 18L33 22L36.5 26L31 27.5L32 33L26.5 31.5L24 36L21.5 31.5L16 33L17 27.5L11.5 26L15 22L11.5 18L17 16.5L16 11L21.5 12.5L24 8Z"
-        strokeWidth="2"
-        strokeLinejoin="round"
-        fill="none"
-        className={strokeClasses}
-      />
-      <circle
-        cx="24"
-        cy="22"
-        r="5"
-        strokeWidth="2"
-        fill="none"
-        className={strokeClasses}
-      />
+      <g style={{ transform: "scale(1.1)", transformOrigin: "center" }}>
+        <path
+          d="M24 10L26.5 14.5L32 13L31 18.5L36.5 20L33 24L36.5 28L31 29.5L32 35L26.5 33.5L24 38L21.5 33.5L16 35L17 29.5L11.5 28L15 24L11.5 20L17 18.5L16 13L21.5 14.5L24 10Z"
+          strokeWidth="2"
+          strokeLinejoin="round"
+          fill="none"
+          className={strokeClasses}
+        />
+        <circle
+          cx="24"
+          cy="24"
+          r="5"
+          strokeWidth="2"
+          fill="none"
+          className={strokeClasses}
+        />
+      </g>
     </motion.svg>
   );
 }
@@ -172,14 +210,10 @@ export function SupportIcon({ isHovered, className = "" }: IconProps) {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       className={className}
-      animate={{
-        scale: isHovered ? 1.1 : 1,
-      }}
-      transition={{ duration: 0.3, ease: "easeOut" }}
     >
       {/* Headband */}
       <path
-        d="M12 26V22C12 15.4 17.4 10 24 10C30.6 10 36 15.4 36 22V26"
+        d="M12 24V22C12 15.4 17.4 10 24 10C30.6 10 36 15.4 36 22V24"
         strokeWidth="2"
         strokeLinecap="round"
         fill="none"
@@ -209,7 +243,7 @@ export function SupportIcon({ isHovered, className = "" }: IconProps) {
       />
       {/* Microphone */}
       <path
-        d="M36 32V36C36 37.1 35.1 38 34 38H28"
+        d="M40 32V36C40 37.1 39.1 38 38 38H28"
         strokeWidth="2"
         strokeLinecap="round"
         fill="none"
@@ -223,6 +257,26 @@ export function SupportIcon({ isHovered, className = "" }: IconProps) {
         fill="none"
         className={strokeClasses}
       />
+      {/* Audio visualization dots */}
+      {[0, 1, 2].map((i) => (
+        <motion.circle
+          key={i}
+          cx={8 + i * 4}
+          cy="44"
+          r="1.5"
+          className="fill-accent md:fill-transparent md:group-hover:fill-accent"
+          animate={{
+            scale: [1, 1.5, 1],
+            opacity: [0.4, 1, 0.4],
+          }}
+          transition={{
+            duration: 1,
+            ease: "easeInOut",
+            repeat: Infinity,
+            delay: i * 0.15,
+          }}
+        />
+      ))}
     </motion.svg>
   );
 }

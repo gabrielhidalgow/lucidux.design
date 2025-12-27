@@ -16,7 +16,7 @@ export function Audience() {
     const isInView = useInView(ref, { once: true, margin: "-100px" });
 
     return (
-        <section className="py-32 bg-black">
+        <section className="py-16 md:py-32 bg-black">
             <div className="container mx-auto px-6 md:px-12 mb-16" ref={ref}>
                 <motion.h2
                     className="text-5xl md:text-6xl lg:text-7xl font-display font-bold"

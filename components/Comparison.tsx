@@ -44,7 +44,7 @@ export function Comparison() {
     };
 
     return (
-        <section className="py-32 bg-black">
+        <section className="py-16 md:py-32 bg-black">
             <div className="container mx-auto px-6 md:px-12" ref={ref}>
                 <motion.div
                     className="mb-16"

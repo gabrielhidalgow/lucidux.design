@@ -53,7 +53,7 @@ export function Expertise() {
     ];
 
     return (
-        <section id="expertise" className="py-32 bg-black">
+        <section id="expertise" className="py-16 md:py-32 bg-black">
             <div className="container mx-auto px-6 md:px-12 mb-24" ref={ref}>
                 <motion.div
                     className="flex flex-col md:flex-row md:items-end lg:items-end justify-between gap-8 lg:gap-12"
@@ -71,12 +71,11 @@ export function Expertise() {
                 {processSteps.map((item, index) => {
                     const IconComponent = iconMap[item.id];
                     const isHovered = hoveredId === item.id;
-                    const isOddTile = index % 2 === 0; // 01 and 03 (index 0 and 2)
 
                     return (
                         <motion.div
                             key={item.id}
-                            className={`group relative border-t border-white/10 py-12 md:py-14 lg:py-16 md:hover:bg-surface transition-colors duration-500 ${isOddTile ? 'bg-surface md:bg-transparent' : ''}`}
+                            className="group relative border-t border-white/10 py-12 md:py-14 lg:py-16 md:hover:bg-surface transition-colors duration-500"
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true, margin: "-50px" }}

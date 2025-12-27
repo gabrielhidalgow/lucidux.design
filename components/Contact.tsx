@@ -8,7 +8,7 @@ export function Contact() {
     const isInView = useInView(ref, { once: true, margin: "-100px" });
 
     return (
-        <section id="contact" className="py-32 bg-accent text-black relative overflow-hidden">
+        <section id="contact" className="py-16 md:py-32 bg-accent text-black relative overflow-hidden">
             <div ref={ref} className="container mx-auto px-6 md:px-12 text-center relative z-10">
                 <div className="overflow-hidden">
                     <motion.h2
