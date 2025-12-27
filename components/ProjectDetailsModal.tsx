@@ -79,7 +79,7 @@ export function ProjectDetailsModal({ project, projects, isOpen, onClose, onNavi
             ></div>
 
             {/* Modal Container */}
-            <div className="relative w-full max-w-6xl h-[90vh] bg-[#0a0a0a] border border-white/10 rounded-2xl shadow-2xl overflow-hidden flex flex-col animate-in-scale">
+            <div className="relative w-full max-w-6xl h-[90vh] bg-background border border-white/10 rounded-2xl shadow-2xl overflow-hidden flex flex-col animate-in-scale">
 
                 {/* Close Button - Absolute */}
                 <button

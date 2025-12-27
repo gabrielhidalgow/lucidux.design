@@ -17,7 +17,7 @@ export function Hero() {
                 <motion.div
                     className="absolute w-[100vw] h-[100vw] md:w-[70vw] md:h-[70vw] rounded-full blur-[100px] md:blur-[120px]"
                     style={{
-                        background: "radial-gradient(circle, rgba(204, 255, 0, 0.6) 0%, rgba(204, 255, 0, 0) 60%)",
+                        background: "radial-gradient(circle, rgba(var(--accent-rgb), 0.6) 0%, rgba(var(--accent-rgb), 0) 60%)",
                         opacity: 0.4,
                     }}
                     animate={{
@@ -36,7 +36,7 @@ export function Hero() {
                 <motion.div
                     className="absolute w-[90vw] h-[90vw] md:w-[60vw] md:h-[60vw] rounded-full blur-[80px] md:blur-[100px]"
                     style={{
-                        background: "radial-gradient(circle, rgba(112, 0, 255, 0.7) 0%, rgba(112, 0, 255, 0) 60%)",
+                        background: "radial-gradient(circle, rgba(var(--secondary-rgb), 0.7) 0%, rgba(var(--secondary-rgb), 0) 60%)",
                         opacity: 0.35,
                     }}
                     animate={{
@@ -55,7 +55,7 @@ export function Hero() {
                 <motion.div
                     className="absolute w-[60vw] h-[60vw] md:w-[45vw] md:h-[45vw] rounded-full blur-[60px] md:blur-[80px]"
                     style={{
-                        background: "radial-gradient(circle, rgba(204, 255, 0, 0.5) 0%, rgba(112, 0, 255, 0.4) 50%, transparent 70%)",
+                        background: "radial-gradient(circle, rgba(var(--accent-rgb), 0.5) 0%, rgba(var(--secondary-rgb), 0.4) 50%, transparent 70%)",
                         opacity: 0.3,
                     }}
                     animate={{
@@ -74,7 +74,7 @@ export function Hero() {
                 <motion.div
                     className="absolute w-[120vw] h-[50vh] rounded-full blur-[100px]"
                     style={{
-                        background: "linear-gradient(180deg, rgba(0, 180, 220, 0.5) 0%, transparent 100%)",
+                        background: "linear-gradient(180deg, rgba(var(--cyan-rgb), 0.5) 0%, transparent 100%)",
                         opacity: 0.25,
                     }}
                     animate={{

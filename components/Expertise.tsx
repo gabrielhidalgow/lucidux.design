@@ -1,13 +1,27 @@
 "use client";
 
 import { motion, useInView } from "motion/react";
-import { useRef } from "react";
+import { useRef, useState } from "react";
+import {
+  AuditIcon,
+  StrategyIcon,
+  ImplementationIcon,
+  SupportIcon,
+} from "./icons/HowWeWorkIcons";
+
+const iconMap: Record<string, React.ComponentType<{ isHovered: boolean; className?: string }>> = {
+  "01": AuditIcon,
+  "02": StrategyIcon,
+  "03": ImplementationIcon,
+  "04": SupportIcon,
+};
 
 export function Expertise() {
-    const ref = useRef(null);
-    const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const [hoveredId, setHoveredId] = useState<string | null>(null);
 
-    const processSteps = [
+  const processSteps = [
         {
             id: "01",
             title: "Audit",
@@ -54,42 +68,54 @@ export function Expertise() {
             </div>
 
             <div className="flex flex-col">
-                {processSteps.map((item, index) => (
-                    <motion.div
-                        key={item.id}
-                        className="group relative border-t border-white/10 py-12 md:py-14 lg:py-16 hover:bg-surface transition-colors duration-500"
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true, margin: "-50px" }}
-                        transition={{ duration: 0.5, delay: index * 0.1 }}
-                    >
-                        <div className="container mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-12 lg:grid-cols-12 gap-6 md:gap-8 lg:gap-8 items-start">
-                            <div className="md:col-span-2 lg:col-span-2 text-sm font-mono text-gray-500">{item.id}</div>
+                {processSteps.map((item, index) => {
+                    const IconComponent = iconMap[item.id];
+                    const isHovered = hoveredId === item.id;
+                    const isOddTile = index % 2 === 0; // 01 and 03 (index 0 and 2)
 
-                            <div className="md:col-span-5 lg:col-span-5">
-                                <h3 className="text-4xl md:text-4xl lg:text-5xl font-display font-bold mb-2 group-hover:text-accent transition-colors duration-300">
-                                    {item.title}
-                                </h3>
-                                <p className="text-gray-400 text-sm md:text-base">
-                                    {item.subtitle}
-                                </p>
-                            </div>
+                    return (
+                        <motion.div
+                            key={item.id}
+                            className={`group relative border-t border-white/10 py-12 md:py-14 lg:py-16 md:hover:bg-surface transition-colors duration-500 ${isOddTile ? 'bg-surface md:bg-transparent' : ''}`}
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true, margin: "-50px" }}
+                            transition={{ duration: 0.5, delay: index * 0.1 }}
+                            onMouseEnter={() => setHoveredId(item.id)}
+                            onMouseLeave={() => setHoveredId(null)}
+                        >
+                            <div className="container mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-12 lg:grid-cols-12 gap-6 md:gap-4 lg:gap-4 items-start">
+                                <div className="md:col-span-1 lg:col-span-1 text-sm font-mono text-gray-500">{item.id}</div>
 
-                            <div className="md:col-span-5 lg:col-span-4 md:col-start-8 lg:col-start-9">
-                                <p className="text-lg text-gray-400 font-body leading-relaxed group-hover:text-white transition-colors duration-300 mb-6">
-                                    {item.description}
-                                </p>
-                                <p className="text-sm text-gray-500">
-                                    {item.bullets.map((bullet, i) => (
-                                        <span key={bullet}>
-                                            {bullet}{i < item.bullets.length - 1 && " • "}
-                                        </span>
-                                    ))}
-                                </p>
+                                <div className="md:col-span-1 lg:col-span-1 flex items-center justify-start">
+                                    {IconComponent && <IconComponent isHovered={isHovered} />}
+                                </div>
+
+                                <div className="md:col-span-4 lg:col-span-4">
+                                    <h3 className="text-4xl md:text-4xl lg:text-5xl font-display font-bold mb-2 group-hover:text-accent transition-colors duration-300">
+                                        {item.title}
+                                    </h3>
+                                    <p className="text-gray-400 text-sm md:text-base">
+                                        {item.subtitle}
+                                    </p>
+                                </div>
+
+                                <div className="md:col-span-6 lg:col-span-5 md:col-start-7 lg:col-start-8">
+                                    <p className="text-lg text-gray-400 font-body leading-relaxed group-hover:text-white transition-colors duration-300 mb-6">
+                                        {item.description}
+                                    </p>
+                                    <p className="text-sm text-gray-500">
+                                        {item.bullets.map((bullet, i) => (
+                                            <span key={bullet}>
+                                                {bullet}{i < item.bullets.length - 1 && " • "}
+                                            </span>
+                                        ))}
+                                    </p>
+                                </div>
                             </div>
-                        </div>
-                    </motion.div>
-                ))}
+                        </motion.div>
+                    );
+                })}
             </div>
         </section>
     );

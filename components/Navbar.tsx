@@ -34,7 +34,7 @@ export function Navbar() {
             >
                 <Link href="/" className="flex flex-col">
                     <span>LUCIDUX<span className="text-accent">.</span>DESIGN</span>
-                    <span className="text-xs font-body tracking-widest font-normal" style={{ color: 'lab(65.9269 -0.832707 -8.17473)' }}>CLEAR UX/UI THINKING FOR AI PRODUCTS</span>
+                    <span className="text-xs font-body tracking-widest font-normal text-text-muted">CLEAR UX/UI THINKING FOR AI PRODUCTS</span>
                 </Link>
             </motion.div>
 

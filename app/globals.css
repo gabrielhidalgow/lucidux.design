@@ -1,20 +1,54 @@
 @import "tailwindcss";
 
 @theme {
+  /* Core Brand Colors */
   --color-background: #0a0a0a;
   --color-surface: #161616;
+  --color-surface-alt: #1a1a1a;
+  --color-muted: #333333;
   --color-text: #f0f0f0;
+  --color-text-muted: #9ca3af;
+
+  /* Primary Brand */
   --color-accent: #ccff00;
   --color-secondary: #7000ff;
 
+  /* Extended Palette (for gradients) */
+  --color-emerald: #00ff88;
+  --color-magenta: #ff00aa;
+  --color-orange: #ff6600;
+  --color-cyan: #00b4dc;
+
+  /* RGB channels for rgba() usage in gradients */
+  --accent-rgb: 204, 255, 0;
+  --secondary-rgb: 112, 0, 255;
+  --emerald-rgb: 0, 255, 136;
+  --magenta-rgb: 255, 0, 170;
+  --orange-rgb: 255, 102, 0;
+  --cyan-rgb: 0, 180, 220;
+  --background-rgb: 10, 10, 10;
+
+  /* Fonts */
   --font-display: var(--font-display);
   --font-body: var(--font-body);
 }
 
 :root {
-  --background: #0a0a0a;
-  --foreground: #f0f0f0;
+  --background: var(--color-background);
+  --foreground: var(--color-text);
 }
+
+/* Light theme (ready for future use)
+:root[data-theme="light"] {
+  --color-background: #ffffff;
+  --color-surface: #f5f5f5;
+  --color-surface-alt: #eeeeee;
+  --color-muted: #cccccc;
+  --color-text: #0a0a0a;
+  --color-text-muted: #6b7280;
+  --background-rgb: 255, 255, 255;
+}
+*/
 
 body {
   background: var(--background);
@@ -41,7 +75,7 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #333;
+  background: var(--color-muted);
   border-radius: 4px;
 }
 

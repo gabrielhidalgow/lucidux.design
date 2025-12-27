@@ -105,7 +105,10 @@ export function Philosophy() {
     return (
         <section id="philosophy" className="py-32 bg-black relative">
             {/* Background Grid Pattern */}
-            <div className="absolute inset-0 bg-[linear-gradient(to_right,#1a1a1a_1px,transparent_1px),linear-gradient(to_bottom,#1a1a1a_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] pointer-events-none opacity-50"></div>
+            <div
+                className="absolute inset-0 bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] pointer-events-none opacity-50"
+                style={{ backgroundImage: "linear-gradient(to right, var(--color-surface-alt) 1px, transparent 1px), linear-gradient(to bottom, var(--color-surface-alt) 1px, transparent 1px)" }}
+            ></div>
 
             <div className="container mx-auto px-6 md:px-12 relative z-10">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
@@ -177,7 +180,7 @@ export function Philosophy() {
                                         </div>
                                         <div className="h-3 bg-gray-800/80 rounded-full overflow-hidden">
                                             <motion.div
-                                                className="h-full bg-gradient-to-r from-accent to-accent/80 rounded-full group-hover:shadow-[0_0_20px_rgba(204,255,0,0.4)] transition-shadow duration-300"
+                                                className="h-full bg-gradient-to-r from-accent to-accent/80 rounded-full group-hover:shadow-[0_0_20px_rgba(var(--accent-rgb),0.4)] transition-shadow duration-300"
                                                 initial={{ width: 0 }}
                                                 animate={isInView ? { width: `${metric.value}%` } : {}}
                                                 transition={{ duration: 1.2, delay: 0.5 + index * 0.15, ease: "easeOut" }}

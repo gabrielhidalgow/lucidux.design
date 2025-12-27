@@ -9,8 +9,8 @@ import { motion, useInView } from "motion/react";
 const cardConfigs = [
     {
         // RewardPay - Lime & Emerald - diagonal sweep
-        primary: "radial-gradient(circle, rgba(204, 255, 0, 0.6) 0%, rgba(204, 255, 0, 0) 70%)",
-        secondary: "radial-gradient(circle, rgba(0, 255, 136, 0.5) 0%, rgba(0, 255, 136, 0) 70%)",
+        primary: "radial-gradient(circle, rgba(var(--accent-rgb), 0.6) 0%, rgba(var(--accent-rgb), 0) 70%)",
+        secondary: "radial-gradient(circle, rgba(var(--emerald-rgb), 0.5) 0%, rgba(var(--emerald-rgb), 0) 70%)",
         primaryAnimation: {
             x: ["-30%", "20%", "-20%", "30%", "-30%"],
             y: ["-40%", "0%", "-30%", "10%", "-40%"],
@@ -26,8 +26,8 @@ const cardConfigs = [
     },
     {
         // Monaco - Purple & Magenta - circular orbit
-        primary: "radial-gradient(circle, rgba(112, 0, 255, 0.6) 0%, rgba(112, 0, 255, 0) 70%)",
-        secondary: "radial-gradient(circle, rgba(255, 0, 170, 0.5) 0%, rgba(255, 0, 170, 0) 70%)",
+        primary: "radial-gradient(circle, rgba(var(--secondary-rgb), 0.6) 0%, rgba(var(--secondary-rgb), 0) 70%)",
+        secondary: "radial-gradient(circle, rgba(var(--magenta-rgb), 0.5) 0%, rgba(var(--magenta-rgb), 0) 70%)",
         primaryAnimation: {
             x: ["0%", "30%", "0%", "-30%", "0%"],
             y: ["-30%", "0%", "30%", "0%", "-30%"],
@@ -43,8 +43,8 @@ const cardConfigs = [
     },
     {
         // CommBank - Orange & Yellow - pulsing expansion
-        primary: "radial-gradient(circle, rgba(255, 102, 0, 0.6) 0%, rgba(255, 102, 0, 0) 70%)",
-        secondary: "radial-gradient(circle, rgba(204, 255, 0, 0.5) 0%, rgba(204, 255, 0, 0) 70%)",
+        primary: "radial-gradient(circle, rgba(var(--orange-rgb), 0.6) 0%, rgba(var(--orange-rgb), 0) 70%)",
+        secondary: "radial-gradient(circle, rgba(var(--accent-rgb), 0.5) 0%, rgba(var(--accent-rgb), 0) 70%)",
         primaryAnimation: {
             x: ["10%", "-10%", "20%", "-5%", "10%"],
             y: ["-20%", "-40%", "-10%", "-35%", "-20%"],
