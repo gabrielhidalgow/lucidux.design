@@ -83,46 +83,25 @@ export function StrategyIcon({ isHovered, className = "" }: IconProps) {
       xmlns="http://www.w3.org/2000/svg"
       className={className}
     >
-      {/* X mark - top left - animated fade */}
-      <motion.g
-        className="stroke-accent md:stroke-accent"
+      {/* X mark - top left */}
+      <g
+        className="stroke-accent md:stroke-transparent md:group-hover:stroke-accent transition-colors duration-300"
         strokeWidth="2"
         strokeLinecap="round"
-        initial={{ opacity: 1 }}
-        animate={{
-          opacity: [0, 1, 1, 0],
-        }}
-        transition={{
-          duration: 2.4,
-          ease: "easeInOut",
-          repeat: Infinity,
-          times: [0, 0.2, 0.8, 1],
-        }}
       >
-        <line x1="6" y1="10" x2="12" y2="16" className="max-md:stroke-accent md:stroke-accent" />
-        <line x1="12" y1="10" x2="6" y2="16" className="max-md:stroke-accent md:stroke-accent" />
-      </motion.g>
+        <line x1="6" y1="10" x2="12" y2="16" />
+        <line x1="12" y1="10" x2="6" y2="16" />
+      </g>
 
-      {/* X mark - bottom right - animated fade with offset */}
-      <motion.g
-        className="stroke-accent md:stroke-accent"
+      {/* X mark - bottom right */}
+      <g
+        className="stroke-accent md:stroke-transparent md:group-hover:stroke-accent transition-colors duration-300"
         strokeWidth="2"
         strokeLinecap="round"
-        initial={{ opacity: 0 }}
-        animate={{
-          opacity: [0, 1, 1, 0],
-        }}
-        transition={{
-          duration: 2.4,
-          ease: "easeInOut",
-          repeat: Infinity,
-          delay: 1.2,
-          times: [0, 0.2, 0.8, 1],
-        }}
       >
-        <line x1="38" y1="38" x2="44" y2="44" className="max-md:stroke-accent md:stroke-accent" />
-        <line x1="44" y1="38" x2="38" y2="44" className="max-md:stroke-accent md:stroke-accent" />
-      </motion.g>
+        <line x1="38" y1="38" x2="44" y2="44" />
+        <line x1="44" y1="38" x2="38" y2="44" />
+      </g>
 
       {/* Path */}
       <path
