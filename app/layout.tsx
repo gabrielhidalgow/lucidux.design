@@ -39,6 +39,15 @@ export default function RootLayout({
           gtag('config', 'G-GEGQY0ME41');
         `}
       </Script>
+      <Script id="microsoft-clarity" strategy="afterInteractive">
+        {`
+          (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+          })(window, document, "clarity", "script", "ury7erb81j");
+        `}
+      </Script>
       <body
         className={`${syne.variable} ${spaceGrotesk.variable} antialiased bg-background text-text overflow-x-hidden selection:bg-accent selection:text-black`}
         suppressHydrationWarning
