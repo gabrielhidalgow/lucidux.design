@@ -10,8 +10,14 @@ interface IconProps {
 // Shared stroke classes: yellow on mobile, gray on desktop, yellow on desktop hover
 const strokeClasses = "stroke-accent md:stroke-gray-500 md:group-hover:stroke-accent transition-colors duration-300";
 
-// Audit - Magnifying Glass
+// Audit - Magnifying Glass with Analysis Lines
 export function AuditIcon({ isHovered, className = "" }: IconProps) {
+  const lines = [
+    { y: 10, width: 12 },
+    { y: 20, width: 8 },
+    { y: 30, width: 12 },
+  ];
+
   return (
     <motion.svg
       width="48"
@@ -20,28 +26,48 @@ export function AuditIcon({ isHovered, className = "" }: IconProps) {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       className={className}
-      animate={{
-        scale: isHovered ? 1.1 : 1,
-      }}
-      transition={{ duration: 0.3, ease: "easeOut" }}
     >
+      {/* Magnifying glass - right side, larger */}
       <circle
-        cx="20"
+        cx="30"
         cy="20"
-        r="10"
+        r="11"
         strokeWidth="2"
         fill="none"
         className={strokeClasses}
       />
       <line
-        x1="27"
-        y1="27"
-        x2="36"
+        x1="37"
+        y1="28"
+        x2="44"
         y2="36"
         strokeWidth="2"
         strokeLinecap="round"
         className={strokeClasses}
       />
+
+      {/* Analysis lines - left side, animated pulse */}
+      {lines.map((line, i) => (
+        <motion.line
+          key={i}
+          x1="4"
+          y1={line.y}
+          x2={4 + line.width}
+          y2={line.y}
+          strokeWidth="2"
+          strokeLinecap="round"
+          className="stroke-accent md:stroke-transparent md:group-hover:stroke-accent"
+          animate={{
+            opacity: [0.3, 1, 0.3],
+          }}
+          transition={{
+            duration: 1.2,
+            ease: "easeInOut",
+            repeat: Infinity,
+            delay: i * 0.2,
+          }}
+        />
+      ))}
     </motion.svg>
   );
 }
@@ -81,22 +107,22 @@ export function StrategyIcon({ isHovered, className = "" }: IconProps) {
         r="3"
         className={`${strokeClasses} fill-accent md:fill-gray-500 md:group-hover:fill-accent`}
       />
-      {/* Moving dot - only renders on hover, one-way animation */}
-      {isHovered && (
-        <motion.circle
-          r="3"
-          className="fill-accent md:fill-gray-500 md:group-hover:fill-accent"
-          initial={{ cx: 10, cy: 38 }}
-          animate={{
-            cx: [10, 10, 12, 24, 36, 38, 38],
-            cy: [38, 28, 24, 24, 24, 20, 10],
-          }}
-          transition={{
-            duration: 0.8,
-            ease: "easeInOut",
-          }}
-        />
-      )}
+      {/* Moving dot - one-way animation, fades out at end, restarts fresh */}
+      <motion.circle
+        r="3"
+        className="fill-accent md:fill-transparent md:group-hover:fill-accent"
+        animate={{
+          cx: [10, 10, 12, 24, 36, 38, 38],
+          cy: [38, 28, 24, 24, 24, 20, 10],
+          opacity: [1, 1, 1, 1, 1, 1, 0],
+        }}
+        transition={{
+          duration: 0.8,
+          ease: "easeInOut",
+          repeat: Infinity,
+          repeatDelay: 0.4,
+        }}
+      />
     </motion.svg>
   );
 }
