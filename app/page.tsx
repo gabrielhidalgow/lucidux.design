@@ -20,16 +20,24 @@ export default function Home() {
       <CustomCursor />
 
       <Navbar />
-      <Hero />
+      <div id="home">
+        <Hero />
+      </div>
       <div id="ticker">
         <Ticker text="INTELLIGENCE • DESIGN • SYNTHESIS • FUTURE •" />
       </div>
-      <Expertise />
+      <div id="services">
+        <Expertise />
+      </div>
       <Comparison />
       <Ticker text="CREATING • BEYOND • HUMAN • LIMITS •" />
       <Audience />
-      <Work />
-      <Philosophy />
+      <div id="work">
+        <Work />
+      </div>
+      <div id="about">
+        <Philosophy />
+      </div>
       <Testimonials />
       <FAQs />
       <Contact />

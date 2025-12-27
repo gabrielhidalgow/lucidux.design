@@ -30,9 +30,14 @@ export function Footer() {
                     >
                         <h4 className="font-bold mb-6 tracking-widest text-sm">Sitemap</h4>
                         <ul className="space-y-3 text-gray-400 text-sm">
-                            {["Home", "Work", "Services", "About"].map((item) => (
-                                <li key={item}>
-                                    <a href="#" className="hover:text-accent transition-colors">{item}</a>
+                            {[
+                                { label: "Home", href: "#home" },
+                                { label: "Work", href: "#work" },
+                                { label: "Services", href: "#services" },
+                                { label: "About", href: "#about" },
+                            ].map((item) => (
+                                <li key={item.label}>
+                                    <a href={item.href} className="hover:text-accent transition-colors">{item.label}</a>
                                 </li>
                             ))}
                         </ul>
