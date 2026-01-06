@@ -4,11 +4,10 @@ import { motion, useInView } from "motion/react";
 import { useRef } from "react";
 
 const audiences = [
-    "SaaS companies scaling their product design",
-    "E-commerce brands needing consistent visual assets",
-    "Marketing agencies automating client deliverables",
-    "Startups building design systems from scratch",
-    "Teams of 5-50 looking to do more with less",
+    "Technical founders who shipped with Lovable, v0, or Cursor",
+    "AI startups with a working product but lagging conversions",
+    "Small teams (1-3 people) who need design expertise without a full-time hire",
+    "Companies adding AI features (chat, ML, LLM) to existing products",
 ];
 
 export function Audience() {

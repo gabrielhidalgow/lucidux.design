@@ -8,28 +8,28 @@ export function Comparison() {
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true, margin: "-100px" });
 
-    const columns = ["AI Design Consulting", "DIY AI Tools", "Traditional Agency"];
+    const columns = ["Expert UX Review", "DIY Fixes", "Traditional Agency"];
 
     const rows = [
         {
-            feature: "Setup time",
-            values: ["2-4 weeks", "Months of trial/error", "N/A"],
+            feature: "Time to insights",
+            values: ["48 hours", "Weeks of guessing", "2-4 weeks"],
         },
         {
-            feature: "Custom to your workflow",
-            values: ["check", "x", "Partial"],
+            feature: "Issues identified",
+            values: ["10-15 specific", "Maybe 2-3 obvious", "Varies"],
         },
         {
-            feature: "Ongoing support",
-            values: ["check", "x", "$$$$ retainer"],
+            feature: "Data-backed",
+            values: ["check", "x", "Sometimes"],
         },
         {
-            feature: "Team training",
-            values: ["check", "Self-taught", "Limited"],
+            feature: "Understands AI tools",
+            values: ["check", "check", "Rarely"],
         },
         {
             feature: "Cost",
-            values: ["Fixed project fee", "Subscriptions add up", "High hourly rates"],
+            values: ["Fixed project fee", "Your time", "High retainers"],
         },
     ];
 

@@ -97,7 +97,7 @@ export function Hero() {
                         animate={{ y: 0 }}
                         transition={{ duration: 0.8, ease: [0.33, 1, 0.68, 1] }}
                     >
-                        YOUR AI WORKS.
+                        SHIPPED FAST.
                     </motion.h1>
                 </div>
                 <div className="overflow-hidden">
@@ -107,7 +107,7 @@ export function Hero() {
                         animate={{ y: 0 }}
                         transition={{ duration: 0.8, delay: 0.1, ease: [0.33, 1, 0.68, 1] }}
                     >
-                        YOUR INTERFACE DOESN&apos;T.
+                        TIME TO CONVERT.
                     </motion.h1>
                 </div>
 
@@ -118,7 +118,7 @@ export function Hero() {
                     transition={{ duration: 0.6, delay: 0.5 }}
                 >
                     <p className="text-xl md:text-2xl font-body font-light text-gray-400 leading-relaxed">
-                        Lucidux brings clear UX/UI thinking to AI products—combining expert design judgment with systematic methodology and data-driven validation.
+                        Expert UX/UI judgment for AI-built products. I spot what Lovable, v0, and Cursor miss—then validate fixes with real data.
                     </p>
 
                     <motion.div
@@ -133,7 +133,7 @@ export function Hero() {
                         <div className="w-12 h-12 rounded-full border border-gray-600 flex items-center justify-center group-hover:bg-accent group-hover:border-accent group-hover:text-black transition-all duration-300">
                             <ArrowDown className="w-5 h-5" />
                         </div>
-                        <span className="uppercase tracking-widest text-sm font-bold">Explore Our Vision</span>
+                        <span className="uppercase tracking-widest text-sm font-bold">Explore How It Works</span>
                     </motion.div>
                 </motion.div>
             </div>

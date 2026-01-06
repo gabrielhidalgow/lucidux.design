@@ -7,10 +7,12 @@
 #### Phase 1: Expert Eye
 Immediate visual/interaction review identifies 5-7 critical issues:
 - Visual hierarchy problems
+- Typography and spacing issues
+- Color used decoratively vs. functionally
+- Component polish gaps (states, transitions, micro-interactions)
 - Cognitive load issues
 - Interaction gaps
 - Pattern mismatches
-- Composition problems
 
 #### Phase 2: Systematic Evaluation
 Comprehensive assessment against 50+ principles:
@@ -33,28 +35,43 @@ Confirm with real users and analytics:
 
 ## What AI Tools Consistently Miss
 
-### Visual Hierarchy Issues
-- Equal visual weight across all elements
-- Typography differences too subtle
-- No clear focal points
-- Inconsistent spacing
+### UX Problems
 
-### Cognitive Load Problems
+**Flows & Mental Models:**
+- User flows that don't match mental models
+- Navigation patterns chosen by popularity, not appropriateness
+- Generic components that don't fit the use case
+
+**Cognitive Load:**
 - Information density too high
 - No progressive disclosure
 - Multiple competing CTAs
 - Everything exposed at once
 
-### Interaction Gaps
+**Interaction Gaps:**
 - Missing feedback states (loading, error, success)
 - Unclear affordances (what's clickable?)
 - Touch targets too small or close
 - Missing empty states
 
-### Pattern Mismatches
-- Generic components that don't fit use case
-- Navigation doesn't match mental models
-- AI chose by popularity, not appropriateness
+---
+
+### UI Problems
+
+**Visual Hierarchy:**
+- Equal visual weight across all elements (flat hierarchy)
+- No clear focal points to guide the eye
+- Typography differences too subtle to create hierarchy
+
+**Typography & Spacing:**
+- Inconsistent spacing breaking visual rhythm
+- Type scale not functional (decorative rather than guiding)
+- Line heights and letter spacing not optimized for readability
+
+**Color & Polish:**
+- Color used decoratively, not functionally
+- Component polish missing (states, transitions, micro-interactions)
+- Inconsistent visual language across screens
 
 ---
 

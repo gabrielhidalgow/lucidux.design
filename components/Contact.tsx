@@ -17,7 +17,7 @@ export function Contact() {
                         animate={isInView ? { y: 0 } : {}}
                         transition={{ duration: 0.7, ease: [0.33, 1, 0.68, 1] }}
                     >
-                        Start the
+                        Let's make your
                     </motion.h2>
                 </div>
                 <div className="overflow-hidden">
@@ -27,7 +27,7 @@ export function Contact() {
                         animate={isInView ? { y: 0 } : {}}
                         transition={{ duration: 0.7, delay: 0.1, ease: [0.33, 1, 0.68, 1] }}
                     >
-                        revolution
+                        interface convert
                     </motion.h2>
                 </div>
                 <motion.p
@@ -36,7 +36,7 @@ export function Contact() {
                     animate={isInView ? { opacity: 0.8, y: 0 } : {}}
                     transition={{ duration: 0.5, delay: 0.3 }}
                 >
-                    Ready to leave the traditional world behind? Let's build something that defies explanation.
+                    Book a free 30-minute UX audit. I'll review your product live, identify 2-3 quick wins, and give you honest feedback—no pitch, no commitment.
                 </motion.p>
                 <motion.a
                     href="https://calendly.com/gabrielhidalgo/30min"
@@ -47,7 +47,7 @@ export function Contact() {
                     animate={isInView ? { opacity: 1, scale: 1 } : {}}
                     transition={{ duration: 0.5, delay: 0.5 }}
                 >
-                    Initialize Project
+                    Book Free UX Audit
                 </motion.a>
             </div>
 

@@ -8,6 +8,8 @@
 - "Your AI works. Your interface doesn't."
 - "Polished UI isn't effective UI."
 - "I spot 5 problems in 30 seconds. Full audit finds 10-15."
+- "Your spacing is off. Your hierarchy is flat. Let's fix both."
+- "Shipped fast. Time to convert."
 
 **Don't:**
 - "We leverage synergistic UX/UI paradigms..."

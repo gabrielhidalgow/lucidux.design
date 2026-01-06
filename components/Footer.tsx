@@ -19,7 +19,7 @@ export function Footer() {
                     >
                         <h3 className="text-2xl font-display font-bold mb-6">LUCIDUX.DESIGN</h3>
                         <p className="text-gray-500 max-w-sm">
-                            An AI-native design studio crafting the visual language of the post-human era.
+                            Clear UX/UI thinking for AI products.
                         </p>
                     </motion.div>
 

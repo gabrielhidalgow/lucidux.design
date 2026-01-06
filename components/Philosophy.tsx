@@ -114,27 +114,29 @@ export function Philosophy() {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
                     <div>
                         <h2 className="text-5xl md:text-7xl font-display font-bold leading-tight mb-12">
-                            We don't just design. <br />
-                            <span className="text-accent">We hallucinate.</span>
+                            Why AI-built interfaces need <span className="text-accent">expert eyes</span>
                         </h2>
 
                         <div className="space-y-8 text-lg md:text-xl text-gray-400 font-light leading-relaxed">
                             <p>
-                                Traditional design is bounded by human capability. We break those bonds by partnering with intelligence that doesn't sleep, doesn't tire, and explores millions of permutations in seconds.
+                                AI tools ship polished UIs fast. But polished ≠ effective.
                             </p>
                             <p>
-                                Our philosophy is rooted in "Controlled Chaos" — harnessing the wild, unpredictable nature of generative models and tempering them with rigorous design principles and usability standards.
+                                I've reviewed 100+ AI-generated interfaces. The same problems appear in 80%: equal visual weight everywhere, cognitive overload, unclear affordances, generic patterns that don't fit the use case.
+                            </p>
+                            <p>
+                                Expert judgment spots these instantly. Data validates they matter.
                             </p>
                         </div>
 
                         <div className="grid grid-cols-2 gap-8 mt-16">
                             <div>
-                                <h4 className="text-3xl font-display font-bold text-white mb-2">150+</h4>
-                                <p className="text-sm font-mono text-gray-500">MODELS TRAINED</p>
+                                <h4 className="text-3xl font-display font-bold text-white mb-2">100+</h4>
+                                <p className="text-sm font-mono text-gray-500">INTERFACES REVIEWED</p>
                             </div>
                             <div>
-                                <h4 className="text-3xl font-display font-bold text-white mb-2">∞</h4>
-                                <p className="text-sm font-mono text-gray-500">POSSIBILITIES</p>
+                                <h4 className="text-3xl font-display font-bold text-white mb-2">80%</h4>
+                                <p className="text-sm font-mono text-gray-500">SHARE SAME ISSUES</p>
                             </div>
                         </div>
                     </div>

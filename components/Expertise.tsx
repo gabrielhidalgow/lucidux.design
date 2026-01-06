@@ -1,54 +1,44 @@
 "use client";
 
 import { motion, useInView } from "motion/react";
-import { useRef, useState } from "react";
-import {
-  AuditIcon,
-  StrategyIcon,
-  ImplementationIcon,
-  SupportIcon,
-} from "./icons/HowWeWorkIcons";
+import { useRef } from "react";
+import Image from "next/image";
 
-const iconMap: Record<string, React.ComponentType<{ isHovered: boolean; className?: string }>> = {
-  "01": AuditIcon,
-  "02": StrategyIcon,
-  "03": ImplementationIcon,
-  "04": SupportIcon,
+const iconMap: Record<string, string> = {
+  "01": "/icons/icon-eye.png",
+  "02": "/icons/icon-chess.png",
+  "03": "/icons/icon-data.png",
+  "04": "/icons/icon-support.png",
 };
 
 export function Expertise() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
-  const [hoveredId, setHoveredId] = useState<string | null>(null);
 
   const processSteps = [
         {
             id: "01",
-            title: "Audit",
-            subtitle: "Assess your current tools and workflows",
-            description: "I review your existing design processes, identify bottlenecks, and evaluate where AI can make the biggest impact.",
-            bullets: ["Workflow analysis report", "Tool stack evaluation", "AI opportunity assessment", "Priority recommendations"],
+            title: "Expert eye",
+            subtitle: "Spot what AI tools miss",
+            description: "I review your interface and spot 5-7 critical issues in minutes. Visual hierarchy, cognitive load, interaction gaps—problems AI tools consistently miss.",
         },
         {
             id: "02",
             title: "Strategy",
-            subtitle: "Create your AI implementation roadmap",
-            description: "Based on the audit, I recommend specific AI tools and create a step-by-step plan tailored to your team's needs and budget.",
-            bullets: ["Custom AI roadmap", "Tool selection guide", "ROI projections", "Timeline & milestones"],
+            subtitle: "Prioritize what to fix first",
+            description: "Based on the audit, I create a prioritized design roadmap. What's costing you conversions now vs. what can wait. Clear recommendations with expected impact.",
         },
         {
             id: "03",
-            title: "Implementation",
-            subtitle: "Set up systems and automate processes",
-            description: "I help you integrate AI tools into your workflow, build design systems, and set up automations that save hours of manual work.",
-            bullets: ["AI tool setup", "Design system optimization", "Workflow automation", "Team integration"],
+            title: "Data Validation",
+            subtitle: "Prove what matters most",
+            description: "Analytics review and usability testing confirm which fixes matter most. No guesswork—just evidence.",
         },
         {
             id: "04",
             title: "Support",
-            subtitle: "Train your team and provide ongoing guidance",
-            description: "I ensure your team knows how to use the new tools effectively, with documentation and follow-up support as you scale.",
-            bullets: ["Training materials", "30-day post-launch support", "Quarterly reviews", "Slack/email access"],
+            subtitle: "Ongoing design partnership",
+            description: "Weekly strategic consultation, async Figma feedback, design review before development. Expert eyes on every change without a full-time hire.",
         },
     ];
 
@@ -62,36 +52,50 @@ export function Expertise() {
                     transition={{ duration: 0.6 }}
                 >
                     <h2 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold leading-tight">
-                        How we <span className="text-accent">work</span>
+                        How it <span className="text-accent">works</span>
                     </h2>
                 </motion.div>
             </div>
 
             <div className="flex flex-col">
                 {processSteps.map((item, index) => {
-                    const IconComponent = iconMap[item.id];
-                    const isHovered = hoveredId === item.id;
+                    const iconSrc = iconMap[item.id];
 
                     return (
                         <motion.div
                             key={item.id}
-                            className="group relative border-t border-white/10 py-12 md:py-14 lg:py-16 md:hover:bg-surface transition-colors duration-500"
+                            className="relative border-t border-white/10 py-12 md:py-14 lg:py-16"
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true, margin: "-50px" }}
                             transition={{ duration: 0.5, delay: index * 0.1 }}
-                            onMouseEnter={() => setHoveredId(item.id)}
-                            onMouseLeave={() => setHoveredId(null)}
                         >
-                            <div className="container mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-12 lg:grid-cols-12 gap-6 md:gap-4 lg:gap-4 items-start">
-                                <div className="md:col-span-1 lg:col-span-1 text-sm font-mono text-gray-500">{item.id}</div>
-
-                                <div className="md:col-span-1 lg:col-span-1 flex items-center justify-start">
-                                    {IconComponent && <IconComponent isHovered={isHovered} />}
+                            <div className="container mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8 items-center">
+                                <div className="md:col-span-2 flex items-center justify-start">
+                                    {iconSrc && (
+                                        <motion.div
+                                            initial={{ opacity: 0, scale: 0.85, y: 15 }}
+                                            whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                                            viewport={{ once: true }}
+                                            transition={{
+                                                duration: 0.6,
+                                                ease: [0.25, 0.1, 0.25, 1],
+                                                delay: index * 0.1 + 0.2
+                                            }}
+                                        >
+                                            <Image
+                                                src={iconSrc}
+                                                alt={item.title}
+                                                width={80}
+                                                height={80}
+                                                className="object-contain"
+                                            />
+                                        </motion.div>
+                                    )}
                                 </div>
 
-                                <div className="md:col-span-4 lg:col-span-4">
-                                    <h3 className="text-4xl md:text-4xl lg:text-5xl font-display font-bold mb-2 group-hover:text-accent transition-colors duration-300">
+                                <div className="md:col-span-4">
+                                    <h3 className="text-4xl md:text-4xl lg:text-5xl font-display font-bold mb-2">
                                         {item.title}
                                     </h3>
                                     <p className="text-gray-400 text-sm md:text-base">
@@ -99,16 +103,9 @@ export function Expertise() {
                                     </p>
                                 </div>
 
-                                <div className="md:col-span-6 lg:col-span-5 md:col-start-7 lg:col-start-8">
-                                    <p className="text-lg text-gray-400 font-body leading-relaxed group-hover:text-white transition-colors duration-300 mb-6">
+                                <div className="md:col-span-6">
+                                    <p className="text-lg text-gray-400 font-body leading-relaxed">
                                         {item.description}
-                                    </p>
-                                    <p className="text-sm text-gray-500">
-                                        {item.bullets.map((bullet, i) => (
-                                            <span key={bullet}>
-                                                {bullet}{i < item.bullets.length - 1 && " • "}
-                                            </span>
-                                        ))}
                                     </p>
                                 </div>
                             </div>

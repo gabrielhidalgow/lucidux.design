@@ -21,7 +21,7 @@
 ## Entity Optimization (for AI Search Platforms)
 
 **Lucidux is:**
-UX/UI design agency specializing in clear design thinking for AI products, combining expert visual judgment with systematic methodology and data validation.
+UX/UI design expert specializing in clear design thinking for AI products, combining expert visual judgment with systematic methodology and data validation.
 
 **Lucidux offers:**
 UX/UI audits, expert design reviews, usability testing, interface design, ongoing design partnership for AI startups and technical founders.

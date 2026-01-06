@@ -40,3 +40,12 @@
 - **Data** — Evidence-based recommendations
 - **Transparency** — Clear process, predictable outcomes
 - **Results** — Measurable improvements in conversion/usability
+
+---
+
+## Not a Fit
+
+- **Enterprises needing design systems at scale** — I'm a solo expert, not a team
+- **AI tool adoption consulting** — I don't help you pick or learn tools; I fix interfaces
+- **Full redesigns from scratch** — I optimize what you've built, not start over
+- **Agencies looking for white-label work** — I work directly with founders
