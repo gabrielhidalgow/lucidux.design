@@ -166,7 +166,7 @@ export function Work() {
         <section id="work" className="py-16 md:py-32 bg-surface relative overflow-hidden z-10">
             <div className="container mx-auto px-6 md:px-12 mb-16">
                 <h2 className="text-5xl md:text-7xl font-display font-bold">
-                    Selected <span className="text-white/10">work</span>
+                    Selected <span className="text-accent">work</span>
                 </h2>
             </div>
 

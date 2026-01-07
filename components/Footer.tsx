@@ -19,7 +19,7 @@ export function Footer() {
                     >
                         <h3 className="text-2xl font-display font-bold mb-6">LUCIDUX.DESIGN</h3>
                         <p className="text-gray-500 max-w-sm">
-                            Clear UX/UI thinking for AI products.
+                            UX/UI DESIGN FOR AI-BUILT STARTUPS
                         </p>
                     </motion.div>
 
@@ -67,7 +67,6 @@ export function Footer() {
                     transition={{ duration: 0.5, delay: 0.3 }}
                 >
                     <p>&copy; 2026 Lucidux. All rights reserved.</p>
-                    <p>Designed by AI. Curated by humans.</p>
                 </motion.div>
             </div>
         </footer>

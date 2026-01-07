@@ -1,5 +1,5 @@
 
-export function Ticker({ text = "INTELLIGENCE • DESIGN • SYNTHESIS • FUTURE •" }: { text?: string }) {
+export function Ticker({ text = "CONVERT • CLARITY • SPEED • SCALE •" }: { text?: string }) {
     return (
         <div className="w-full py-6 md:py-12 overflow-hidden border-y border-white/10 bg-black flex">
             <div className="flex whitespace-nowrap font-display text-4xl md:text-8xl font-bold text-white/10 uppercase animate-ticker">

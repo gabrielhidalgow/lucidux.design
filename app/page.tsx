@@ -26,13 +26,13 @@ export default function Home() {
       </div>
       <FeaturedTestimonial />
       <div id="ticker">
-        <Ticker text="INTELLIGENCE • DESIGN • SYNTHESIS • FUTURE •" />
+        <Ticker text="CONVERT • CLARITY • SPEED • SCALE •" />
       </div>
       <div id="services">
         <Expertise />
       </div>
       <Comparison />
-      <Ticker text="CREATING • BEYOND • HUMAN • LIMITS •" />
+      <Ticker text="SHIP • FIX • PROVE • GROW •" />
       <Audience />
       <div id="work">
         <Work />

@@ -16,8 +16,53 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "LUCID.DESIGN | FUTURE REALITY",
-  description: "An AI-native design studio crafting the visual language of the post-human era.",
+  metadataBase: new URL('https://lucidux.design'),
+  title: "Lucidux — UX/UI Design for AI-Built Startups | Free UX Audit",
+  description: "Expert UX/UI consultant for technical founders. I fix usability issues, optimize conversion, and build design systems for products built with Cursor, v0, and Lovable.",
+  keywords: ["UX designer", "UI designer", "startup design", "AI products", "UX audit", "design systems", "Cursor", "v0", "Lovable", "conversion optimization"],
+  authors: [{ name: "Gabriel Hidalgo" }],
+  creator: "Gabriel Hidalgo",
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://lucidux.design",
+    siteName: "Lucidux Design",
+    title: "Lucidux — UX/UI Design for AI-Built Startups",
+    description: "Expert UX/UI consultant for technical founders. I fix usability issues, optimize conversion, and build design systems for products built with Cursor, v0, and Lovable.",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Lucidux — UX/UI Design for AI-Built Startups",
+    description: "Expert UX/UI consultant for technical founders. I fix usability issues, optimize conversion, and build design systems.",
+    creator: "@gabrielhidalgo",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  name: "Lucidux Design",
+  description: "Expert UX/UI consultant for technical founders building AI products. Specializing in user journey optimization, usability improvements, and scalable design systems.",
+  url: "https://lucidux.design",
+  founder: {
+    "@type": "Person",
+    name: "Gabriel Hidalgo",
+    jobTitle: "UX/UI Design Consultant",
+  },
+  serviceType: ["UX Design", "UI Design", "UX Audit", "Design Systems", "Conversion Optimization"],
+  areaServed: "Worldwide",
+  priceRange: "$$",
 };
 
 export default function RootLayout({
@@ -27,6 +72,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <Script
         src="https://www.googletagmanager.com/gtag/js?id=G-GEGQY0ME41"
         strategy="afterInteractive"

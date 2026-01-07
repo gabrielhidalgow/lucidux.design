@@ -134,7 +134,7 @@ export function Hero() {
                     transition={{ duration: 0.6, delay: 0.5 }}
                 >
                     <p className="text-xl md:text-2xl font-body font-light text-gray-400 leading-relaxed">
-                        Expert UX/UI judgment for AI-built products. I spot what AI coding tools miss—then validate fixes with real data.
+                        UX/UI Design Consultant for AI-Built Products. I streamline user journeys, fix usability gaps, and build design systems that scale.
                     </p>
 
                     <motion.div

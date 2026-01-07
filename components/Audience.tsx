@@ -4,10 +4,11 @@ import { motion, useInView } from "motion/react";
 import { useRef } from "react";
 
 const audiences = [
-    "Technical founders who shipped with AI coding tools",
-    "AI startups with a working product but lagging conversions",
-    "Small teams (1-3 people) who need design expertise without a full-time hire",
-    "Companies adding AI features (chat, ML, LLM) to existing products",
+    "You built with Lovable, v0, or Cursor and shipped in weeks—but conversion is stuck at 2-3%",
+    "Your product works perfectly but users say \"I don't get it\" or miss obvious CTAs in session recordings",
+    "You're a technical founder who can code anything but visual hierarchy and interaction patterns aren't your expertise",
+    "You've got traction (100+ users, some revenue) but growth stalled because the interface confuses people",
+    "You're choosing between hiring a full-time designer ($120K+) or wasting months on trial-and-error UI tweaks",
 ];
 
 export function Audience() {

@@ -13,7 +13,7 @@ export function Comparison() {
     const rows = [
         {
             feature: "Time to insights",
-            values: ["48 hours", "Weeks of guessing", "2-4 weeks"],
+            values: ["Instant (Free UX Audit)", "Weeks of guessing", "2-4 weeks"],
         },
         {
             feature: "Issues identified",
@@ -29,7 +29,7 @@ export function Comparison() {
         },
         {
             feature: "Cost",
-            values: ["Fixed project fee", "Your time", "High retainers"],
+            values: ["Fixed project OR Hourly rate fees", "Your time", "High retainers"],
         },
     ];
 

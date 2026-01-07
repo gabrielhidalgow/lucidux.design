@@ -34,7 +34,7 @@ export function Navbar() {
             >
                 <Link href="/" className="flex flex-col">
                     <span>LUCIDUX<span className="text-accent">.</span>DESIGN</span>
-                    <span className="text-xs font-body tracking-widest font-normal text-text-muted">CLEAR UX/UI THINKING FOR AI PRODUCTS</span>
+                    <span className="text-xs font-body tracking-widest font-normal text-text-muted">UX/UI DESIGN FOR AI-BUILT STARTUPS</span>
                 </Link>
             </motion.div>
 
@@ -46,19 +46,19 @@ export function Navbar() {
             >
                 <a
                     href="#services"
-                    className="hidden md:block text-sm font-body text-gray-400 hover:text-white transition-colors"
+                    className="hidden md:block text-sm font-body text-gray-400 hover:text-white transition-colors uppercase tracking-wider"
                 >
                     How it works
                 </a>
                 <a
                     href="#work"
-                    className="hidden md:block text-sm font-body text-gray-400 hover:text-white transition-colors"
+                    className="hidden md:block text-sm font-body text-gray-400 hover:text-white transition-colors uppercase tracking-wider"
                 >
                     Work
                 </a>
                 <a
                     href="#testimonials"
-                    className="hidden md:block text-sm font-body text-gray-400 hover:text-white transition-colors"
+                    className="hidden md:block text-sm font-body text-gray-400 hover:text-white transition-colors uppercase tracking-wider"
                 >
                     Testimonials
                 </a>
