@@ -18,8 +18,8 @@ const spaceGrotesk = Space_Grotesk({
 export const metadata: Metadata = {
   metadataBase: new URL('https://lucidux.design'),
   title: "Lucidux — UX/UI Design for AI-Built Startups | Free UX Audit",
-  description: "Expert UX/UI consultant for technical founders. I fix usability issues, optimize conversion, and build design systems for products built with Cursor, v0, and Lovable.",
-  keywords: ["UX designer", "UI designer", "startup design", "AI products", "UX audit", "design systems", "Cursor", "v0", "Lovable", "conversion optimization"],
+  description: "Expert UX/UI consultant for technical founders. I fix usability issues, optimize conversion, and build design systems for products built with Cursor, v0, Lovable, Bolt, Replit, and Claude Code.",
+  keywords: ["UX designer", "UI designer", "startup design", "AI products", "UX audit", "design systems", "Cursor", "v0", "Lovable", "Bolt", "Replit", "Claude Code", "conversion optimization", "Sydney UX designer", "Sydney UI designer", "UX consultant Sydney", "Australian design consultant", "Sydney startup design"],
   authors: [{ name: "Gabriel Hidalgo" }],
   creator: "Gabriel Hidalgo",
   openGraph: {
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     url: "https://lucidux.design",
     siteName: "Lucidux Design",
     title: "Lucidux — UX/UI Design for AI-Built Startups",
-    description: "Expert UX/UI consultant for technical founders. I fix usability issues, optimize conversion, and build design systems for products built with Cursor, v0, and Lovable.",
+    description: "Expert UX/UI consultant for technical founders. I fix usability issues, optimize conversion, and build design systems for products built with Cursor, v0, Lovable, Bolt, Replit, and Claude Code.",
   },
   twitter: {
     card: "summary_large_image",
@@ -53,7 +53,7 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
   name: "Lucidux Design",
-  description: "Expert UX/UI consultant for technical founders building AI products. Specializing in user journey optimization, usability improvements, and scalable design systems.",
+  description: "Sydney-based UX/UI consultant for technical founders building AI products. Specializing in user journey optimization, usability improvements, and scalable design systems.",
   url: "https://lucidux.design",
   founder: {
     "@type": "Person",
@@ -61,7 +61,17 @@ const jsonLd = {
     jobTitle: "UX/UI Design Consultant",
   },
   serviceType: ["UX Design", "UI Design", "UX Audit", "Design Systems", "Conversion Optimization"],
-  areaServed: "Worldwide",
+  areaServed: [
+    { "@type": "City", name: "Sydney" },
+    { "@type": "State", name: "New South Wales" },
+    { "@type": "Country", name: "Australia" }
+  ],
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Sydney",
+    addressRegion: "NSW",
+    addressCountry: "AU"
+  },
   priceRange: "$$",
 };
 

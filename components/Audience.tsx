@@ -4,7 +4,7 @@ import { motion, useInView } from "motion/react";
 import { useRef } from "react";
 
 const audiences = [
-    "You built with Lovable, v0, or Cursor and shipped in weeks—but conversion is stuck at 2-3%",
+    "You built with Lovable, Bolt, Cursor, or Replit and shipped in weeks—but conversion is stuck at 2-3%",
     "Your product works perfectly but users say \"I don't get it\" or miss obvious CTAs in session recordings",
     "You're a technical founder who can code anything but visual hierarchy and interaction patterns aren't your expertise",
     "You've got traction (100+ users, some revenue) but growth stalled because the interface confuses people",

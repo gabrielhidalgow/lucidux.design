@@ -21,6 +21,9 @@ export function Footer() {
                         <p className="text-gray-500 max-w-sm">
                             UX/UI DESIGN FOR AI-BUILT STARTUPS
                         </p>
+                        <p className="text-gray-600 text-sm mt-2">
+                            Based in Sydney. Working with businesses across Australia.
+                        </p>
                     </motion.div>
 
                     <motion.div
