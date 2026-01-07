@@ -38,17 +38,39 @@ export function Navbar() {
                 </Link>
             </motion.div>
 
-            <motion.a
-                href="https://calendly.com/gabrielhidalgo/30min"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-accent text-black font-bold font-body text-xs px-3 py-2 md:text-sm md:px-6 md:py-3 rounded-full hover:bg-accent/90 transition-colors uppercase tracking-wider"
+            <motion.div
+                className="flex items-center gap-8"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.5, delay: 0.4 }}
             >
-                <span className="hidden md:inline">FREE LUCID UX AUDIT</span><span className="md:hidden">FREE UX AUDIT</span>
-            </motion.a>
+                <a
+                    href="#services"
+                    className="hidden md:block text-sm font-body text-gray-400 hover:text-white transition-colors"
+                >
+                    How it works
+                </a>
+                <a
+                    href="#work"
+                    className="hidden md:block text-sm font-body text-gray-400 hover:text-white transition-colors"
+                >
+                    Work
+                </a>
+                <a
+                    href="#testimonials"
+                    className="hidden md:block text-sm font-body text-gray-400 hover:text-white transition-colors"
+                >
+                    Testimonials
+                </a>
+                <a
+                    href="https://calendly.com/gabrielhidalgo/30min"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-accent text-black font-bold font-body text-xs px-3 py-2 md:text-sm md:px-6 md:py-3 rounded-full hover:bg-accent/90 transition-colors uppercase tracking-wider"
+                >
+                    <span className="hidden md:inline">FREE LUCID UX AUDIT</span><span className="md:hidden">FREE UX AUDIT</span>
+                </a>
+            </motion.div>
         </motion.nav>
     );
 }

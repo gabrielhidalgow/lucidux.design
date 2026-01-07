@@ -1,5 +1,6 @@
 import { Navbar } from "@/components/Navbar";
 import { Hero } from "@/components/Hero";
+import { FeaturedTestimonial } from "@/components/FeaturedTestimonial";
 import { Ticker } from "@/components/Ticker";
 import { Expertise } from "@/components/Expertise";
 import { Comparison } from "@/components/Comparison";
@@ -23,6 +24,7 @@ export default function Home() {
       <div id="home">
         <Hero />
       </div>
+      <FeaturedTestimonial />
       <div id="ticker">
         <Ticker text="INTELLIGENCE • DESIGN • SYNTHESIS • FUTURE •" />
       </div>
@@ -38,7 +40,9 @@ export default function Home() {
       <div id="about">
         <Philosophy />
       </div>
-      <Testimonials />
+      <div id="testimonials">
+        <Testimonials />
+      </div>
       <FAQs />
       <Contact />
       <Footer />

@@ -4,7 +4,7 @@ import { motion, useInView } from "motion/react";
 import { useRef } from "react";
 
 const audiences = [
-    "Technical founders who shipped with Lovable, v0, or Cursor",
+    "Technical founders who shipped with AI coding tools",
     "AI startups with a working product but lagging conversions",
     "Small teams (1-3 people) who need design expertise without a full-time hire",
     "Companies adding AI features (chat, ML, LLM) to existing products",

@@ -38,7 +38,7 @@ export function Expertise() {
             id: "04",
             title: "Support",
             subtitle: "Ongoing design partnership",
-            description: "Weekly strategic consultation, async Figma feedback, design review before development. Expert eyes on every change without a full-time hire.",
+            description: "Weekly strategic consultation, async feedback, design review before development. Expert eyes on every change without a full-time hire.",
         },
     ];
 

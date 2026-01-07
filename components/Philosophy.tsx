@@ -1,6 +1,5 @@
 "use client";
 
-import { Hexagon } from "lucide-react";
 import { motion, useInView } from "motion/react";
 import { useRef, useState, useEffect } from "react";
 
@@ -87,9 +86,9 @@ function TypingText({ text, delay, inView }: { text: string; delay: number; inVi
 }
 
 const metrics = [
-    { label: "CREATIVITY", value: 98 },
+    { label: "CREATIVITY", value: 100 },
     { label: "SPEED", value: 100 },
-    { label: "PRECISION", value: 85 },
+    { label: "PRECISION", value: 100 },
 ];
 
 const terminalLines = [
@@ -131,7 +130,7 @@ export function Philosophy() {
 
                         <div className="grid grid-cols-2 gap-8 mt-16">
                             <div>
-                                <h4 className="text-3xl font-display font-bold text-white mb-2">100+</h4>
+                                <h4 className="text-3xl font-display font-bold text-white mb-2">15+</h4>
                                 <p className="text-sm font-mono text-gray-500">INTERFACES REVIEWED</p>
                             </div>
                             <div>
@@ -150,18 +149,6 @@ export function Philosophy() {
                             animate={isInView ? { opacity: 1, y: 0 } : {}}
                             transition={{ duration: 0.6 }}
                         >
-                            {/* Header */}
-                            <div className="flex justify-between items-start mb-8">
-                                <motion.div
-                                    initial={{ rotate: -180, opacity: 0 }}
-                                    animate={isInView ? { rotate: 0, opacity: 1 } : {}}
-                                    transition={{ duration: 0.8, delay: 0.2 }}
-                                >
-                                    <Hexagon className="text-accent w-10 h-10" />
-                                </motion.div>
-                                <div className="font-mono text-xs text-gray-500">SYS.01</div>
-                            </div>
-
                             {/* Metrics Section - Larger bars */}
                             <div className="flex-1 flex flex-col justify-center space-y-8">
                                 {metrics.map((metric, index) => (

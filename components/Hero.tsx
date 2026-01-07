@@ -90,6 +90,22 @@ export function Hero() {
             </motion.div>
 
             <div className="z-10 max-w-7xl mx-auto w-full">
+                {/* Availability Status */}
+                <motion.div
+                    className="inline-flex items-center gap-2 px-4 py-2 mb-6 rounded-full border border-muted/50 bg-surface/50 backdrop-blur-sm"
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 0.2 }}
+                >
+                    <span className="relative flex h-2.5 w-2.5">
+                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald opacity-75"></span>
+                        <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald"></span>
+                    </span>
+                    <span className="text-xs uppercase tracking-widest text-text-muted font-medium">
+                        Available for projects
+                    </span>
+                </motion.div>
+
                 <div className="overflow-hidden">
                     <motion.h1
                         className="text-[11vw] md:text-[5vw] leading-[0.85] font-display font-bold tracking-tighter mix-blend-difference text-white"
@@ -118,7 +134,7 @@ export function Hero() {
                     transition={{ duration: 0.6, delay: 0.5 }}
                 >
                     <p className="text-xl md:text-2xl font-body font-light text-gray-400 leading-relaxed">
-                        Expert UX/UI judgment for AI-built products. I spot what Lovable, v0, and Cursor miss—then validate fixes with real data.
+                        Expert UX/UI judgment for AI-built products. I spot what AI coding tools miss—then validate fixes with real data.
                     </p>
 
                     <motion.div
