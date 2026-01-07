@@ -108,6 +108,24 @@ export function Expertise() {
                     );
                 })}
             </div>
+
+            {/* CTA Button */}
+            <motion.div
+                className="container mx-auto px-6 md:px-12 mt-16 md:mt-24 flex justify-center"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+            >
+                <a
+                    href="https://calendly.com/gabrielhidalgo/30min"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block bg-accent text-black px-10 py-5 rounded-full font-bold text-lg uppercase tracking-widest hover:scale-105 transition-transform duration-300"
+                >
+                    Free Lucid UX Audit
+                </a>
+            </motion.div>
         </section>
     );
 }
