@@ -47,7 +47,7 @@ export function Expertise() {
     ];
 
     return (
-        <section id="expertise" className="py-16 md:py-32 bg-black">
+        <section id="expertise" className="py-16 md:py-32 bg-[var(--color-background)]">
             <div className="container mx-auto px-6 md:px-12 mb-24" ref={ref}>
                 <motion.div
                     className="flex flex-col md:flex-row md:items-end lg:items-end justify-between gap-8 lg:gap-12"

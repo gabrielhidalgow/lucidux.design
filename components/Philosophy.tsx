@@ -102,7 +102,7 @@ export function Philosophy() {
     const isInView = useInView(ref, { once: true, margin: "-100px" });
 
     return (
-        <section id="philosophy" className="py-16 md:py-32 bg-black relative">
+        <section id="philosophy" className="py-16 md:py-32 bg-[var(--color-background)] relative">
             {/* Background Grid Pattern */}
             <div
                 className="absolute inset-0 bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] pointer-events-none opacity-50"
@@ -130,11 +130,11 @@ export function Philosophy() {
 
                         <div className="grid grid-cols-2 gap-8 mt-16">
                             <div>
-                                <h4 className="text-3xl font-display font-bold text-white mb-2">15+</h4>
+                                <h4 className="text-3xl font-display font-bold text-[var(--color-foreground)] mb-2">15+</h4>
                                 <p className="text-sm font-mono text-gray-500">INTERFACES REVIEWED</p>
                             </div>
                             <div>
-                                <h4 className="text-3xl font-display font-bold text-white mb-2">80%</h4>
+                                <h4 className="text-3xl font-display font-bold text-[var(--color-foreground)] mb-2">80%</h4>
                                 <p className="text-sm font-mono text-gray-500">SHARE SAME ISSUES</p>
                             </div>
                         </div>
@@ -144,7 +144,7 @@ export function Philosophy() {
                         <div className="absolute inset-0 bg-gradient-to-r from-accent/20 to-secondary/20 blur-[100px] rounded-full opacity-50"></div>
 
                         <motion.div
-                            className="relative h-full min-h-[500px] border border-white/10 bg-black/50 backdrop-blur-sm p-8 flex flex-col"
+                            className="relative h-full min-h-[500px] border border-[var(--color-foreground)]/10 bg-[var(--color-background)]/50 backdrop-blur-sm p-8 flex flex-col"
                             initial={{ opacity: 0, y: 20 }}
                             animate={isInView ? { opacity: 1, y: 0 } : {}}
                             transition={{ duration: 0.6 }}
@@ -163,7 +163,7 @@ export function Philosophy() {
                                             <span className="font-mono text-sm text-accent tracking-wider">
                                                 {metric.label}
                                             </span>
-                                            <span className="font-mono text-2xl font-bold text-white">
+                                            <span className="font-mono text-2xl font-bold text-[var(--color-foreground)]">
                                                 <AnimatedCounter value={metric.value} inView={isInView} />
                                             </span>
                                         </div>
@@ -181,7 +181,7 @@ export function Philosophy() {
 
                             {/* Terminal Section */}
                             <motion.div
-                                className="mt-8 p-4 border border-white/10 bg-black/80 rounded"
+                                className="mt-8 p-4 border border-[var(--color-foreground)]/10 bg-[var(--color-background)]/80 rounded"
                                 initial={{ opacity: 0 }}
                                 animate={isInView ? { opacity: 1 } : {}}
                                 transition={{ duration: 0.5, delay: 1 }}
@@ -189,7 +189,7 @@ export function Philosophy() {
                                 {terminalLines.map((line, index) => (
                                     <p
                                         key={index}
-                                        className={`font-mono text-sm ${index === terminalLines.length - 1 ? 'text-white' : 'text-gray-400'} ${index < terminalLines.length - 1 ? 'mb-2' : ''}`}
+                                        className={`font-mono text-sm ${index === terminalLines.length - 1 ? 'text-[var(--color-foreground)]' : 'text-gray-400'} ${index < terminalLines.length - 1 ? 'mb-2' : ''}`}
                                     >
                                         <TypingText text={line.text} delay={line.delay + 1000} inView={isInView} />
                                     </p>

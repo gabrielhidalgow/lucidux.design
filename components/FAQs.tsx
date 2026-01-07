@@ -77,7 +77,7 @@ export function FAQs() {
     const isInView = useInView(ref, { once: true, margin: "-100px" });
 
     return (
-        <section className="py-16 md:py-32 bg-black">
+        <section className="py-16 md:py-32 bg-[var(--color-background)]">
             <div className="container mx-auto px-6 md:px-12" ref={ref}>
                 <motion.div
                     className="text-center mb-12"
@@ -99,15 +99,15 @@ export function FAQs() {
                     animate={isInView ? { opacity: 1, y: 0 } : {}}
                     transition={{ duration: 0.6, delay: 0.2 }}
                 >
-                    <div className="rounded-2xl border border-white/20 overflow-hidden">
+                    <div className="rounded-2xl border border-[var(--color-foreground)]/20 overflow-hidden">
                         <Accordion type="single" collapsible>
                             {faqItems.map((item, index) => (
                                 <AccordionItem
                                     key={item.id}
                                     value={item.id}
-                                    className={index < faqItems.length - 1 ? "border-b border-dashed border-white/20" : ""}
+                                    className={index < faqItems.length - 1 ? "border-b border-dashed border-[var(--color-foreground)]/20" : ""}
                                 >
-                                    <AccordionTrigger className="text-white text-base md:text-lg font-semibold hover:no-underline px-6 py-5">
+                                    <AccordionTrigger className="text-[var(--color-foreground)] text-base md:text-lg font-semibold hover:no-underline px-6 py-5">
                                         {item.question}
                                     </AccordionTrigger>
                                     <AccordionContent className="text-gray-400 text-base leading-relaxed px-6 pb-5">
@@ -120,7 +120,7 @@ export function FAQs() {
 
                     <p className="text-gray-500 text-base mt-8">
                         Can't find what you're looking for? Contact us on{" "}
-                        <a href="mailto:gabrielhidalgow@gmail.com" className="text-white font-medium hover:text-accent transition-colors">gabrielhidalgow@gmail.com</a>
+                        <a href="mailto:gabrielhidalgow@gmail.com" className="text-[var(--color-foreground)] font-medium hover:text-accent transition-colors">gabrielhidalgow@gmail.com</a>
                     </p>
                 </motion.div>
             </div>

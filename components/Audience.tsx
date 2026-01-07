@@ -16,7 +16,7 @@ export function Audience() {
     const isInView = useInView(ref, { once: true, margin: "-100px" });
 
     return (
-        <section className="py-16 md:py-32 bg-black">
+        <section className="py-16 md:py-32 bg-[var(--color-background)]">
             <div className="container mx-auto px-6 md:px-12 mb-16" ref={ref}>
                 <motion.h2
                     className="text-5xl md:text-6xl lg:text-7xl font-display font-bold"
@@ -32,7 +32,7 @@ export function Audience() {
                 {audiences.map((item, index) => (
                     <motion.div
                         key={index}
-                        className="group border-t border-white/10 py-8 md:py-10 hover:bg-surface transition-colors duration-500"
+                        className="group border-t border-[var(--color-foreground)]/10 py-8 md:py-10 hover:bg-surface transition-colors duration-500"
                         initial={{ opacity: 0, x: -30 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true, margin: "-50px" }}
@@ -42,7 +42,7 @@ export function Audience() {
                             <span className="text-accent font-mono text-sm">
                                 {String(index + 1).padStart(2, "0")}
                             </span>
-                            <p className="text-xl md:text-2xl lg:text-3xl font-body text-gray-400 group-hover:text-white transition-colors duration-300">
+                            <p className="text-xl md:text-2xl lg:text-3xl font-body text-gray-400 group-hover:text-[var(--color-foreground)] transition-colors duration-300">
                                 {item}
                             </p>
                         </div>

@@ -9,8 +9,9 @@ export function FeaturedTestimonial() {
     const isInView = useInView(ref, { once: true, margin: "-100px" });
 
     return (
-        <section className="py-24 md:py-32 bg-black" ref={ref}>
-            <div className="container mx-auto px-6 md:px-12">
+        <section className="py-24 md:py-32 bg-[var(--color-background)] relative overflow-hidden" ref={ref}>
+            <div className="absolute inset-0 bg-grid [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black_70%)] pointer-events-none" />
+            <div className="container mx-auto px-6 md:px-12 relative z-10">
                 {/* Heading */}
                 <motion.div
                     className="text-center mb-16"
@@ -39,7 +40,7 @@ export function FeaturedTestimonial() {
 
                     {/* Author */}
                     <div className="flex items-center justify-center gap-4">
-                        <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-white/20">
+                        <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-[var(--color-foreground)]/20">
                             <Image
                                 src="/testimonials/michael-doring.avif"
                                 alt="Michael John Doring"
@@ -49,7 +50,7 @@ export function FeaturedTestimonial() {
                             />
                         </div>
                         <div className="text-left">
-                            <p className="text-white font-medium">Michael John Doring</p>
+                            <p className="text-[var(--color-foreground)] font-medium">Michael John Doring</p>
                             <p className="text-gray-500 text-sm">Monaco Solicitors</p>
                         </div>
                     </div>

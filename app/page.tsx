@@ -16,8 +16,6 @@ import { CustomCursor } from "@/components/CustomCursor";
 export default function Home() {
   return (
     <div className="bg-background min-h-screen text-text selection:bg-accent selection:text-black overflow-x-hidden">
-      <div className="grain-overlay"></div>
-
       <CustomCursor />
 
       <Navbar />

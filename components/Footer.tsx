@@ -8,7 +8,7 @@ export function Footer() {
     const isInView = useInView(ref, { once: true, margin: "-50px" });
 
     return (
-        <footer className="bg-black py-16 border-t border-white/10 text-white">
+        <footer className="bg-[var(--color-background)] py-16 border-t border-[var(--color-foreground)]/10 text-[var(--color-foreground)]">
             <div ref={ref} className="container mx-auto px-6 md:px-12">
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
                     <motion.div

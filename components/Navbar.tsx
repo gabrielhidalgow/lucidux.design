@@ -18,7 +18,7 @@ export function Navbar() {
 
     return (
         <motion.nav
-            className={`fixed top-0 left-0 right-0 z-50 px-6 py-6 md:px-12 flex justify-between items-center text-white transition-all duration-300 ${isScrolled
+            className={`fixed top-0 left-0 right-0 z-50 px-6 py-6 md:px-12 flex justify-between items-center text-[var(--color-foreground)] transition-all duration-300 ${isScrolled
                     ? "bg-background/80 backdrop-blur-md"
                     : "mix-blend-difference"
                 }`}
@@ -46,19 +46,19 @@ export function Navbar() {
             >
                 <a
                     href="#services"
-                    className="hidden md:block text-sm font-body text-gray-400 hover:text-white transition-colors uppercase tracking-wider"
+                    className="hidden md:block text-sm font-body text-gray-400 hover:text-[var(--color-foreground)] transition-colors uppercase tracking-wider"
                 >
                     How it works
                 </a>
                 <a
                     href="#work"
-                    className="hidden md:block text-sm font-body text-gray-400 hover:text-white transition-colors uppercase tracking-wider"
+                    className="hidden md:block text-sm font-body text-gray-400 hover:text-[var(--color-foreground)] transition-colors uppercase tracking-wider"
                 >
                     Work
                 </a>
                 <a
                     href="#testimonials"
-                    className="hidden md:block text-sm font-body text-gray-400 hover:text-white transition-colors uppercase tracking-wider"
+                    className="hidden md:block text-sm font-body text-gray-400 hover:text-[var(--color-foreground)] transition-colors uppercase tracking-wider"
                 >
                     Testimonials
                 </a>

@@ -16,10 +16,10 @@ export function ExpertEyeAnimation() {
         {/* Main Card (Center) */}
         <div className="relative z-10">
           {/* Main Glow */}
-          <div className="absolute -inset-2 bg-[#ccff00]/15 rounded-xl blur-md animate-[pulse_2s_ease-in-out_infinite]"></div>
+          <div className="absolute -inset-2 bg-[var(--color-accent)]/15 rounded-xl blur-md animate-[pulse_2s_ease-in-out_infinite]"></div>
 
-          <div className="w-20 h-24 bg-zinc-900 rounded-lg border border-[#ccff00]/50 shadow-[0_0_30px_-5px_rgba(204,255,0,0.25)] flex flex-col items-center justify-center gap-1.5 relative">
-            <div className="w-10 h-10 rounded-full bg-[#ccff00] flex items-center justify-center text-black">
+          <div className="w-20 h-24 bg-zinc-900 rounded-lg border border-[var(--color-accent)]/50 shadow-[0_0_30px_-5px_rgba(var(--accent-rgb),0.25)] flex flex-col items-center justify-center gap-1.5 relative">
+            <div className="w-10 h-10 rounded-full bg-[var(--color-accent)] flex items-center justify-center text-[var(--color-background)]">
               {/* Eye Icon with Blink Animation */}
               <Eye size={20} className="animate-[blink_2.5s_infinite]" />
             </div>

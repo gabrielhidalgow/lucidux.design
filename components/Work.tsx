@@ -178,7 +178,7 @@ export function Work() {
                             initial={{ opacity: 0, y: 30 }}
                             animate={isInView ? { opacity: 1, y: 0 } : {}}
                             transition={{ duration: 0.5, delay: index * 0.1 }}
-                            className="group relative w-full aspect-[4/3] md:aspect-[3/4] rounded-[24px] overflow-hidden cursor-pointer bg-black"
+                            className="group relative w-full aspect-[4/3] md:aspect-[3/4] rounded-[24px] overflow-hidden cursor-pointer bg-[var(--color-background)]"
                             onClick={() => setSelectedProject(project)}
                         >
                             {/* Animated gradient background - always visible on mobile, fades on desktop hover */}
@@ -188,7 +188,7 @@ export function Work() {
 
                             {/* Desktop default state - title at bottom (hidden on mobile) */}
                             <div className="hidden md:flex absolute inset-0 p-6 flex-col justify-end md:group-hover:opacity-0 transition-opacity duration-500 z-10">
-                                <h3 className="text-2xl md:text-3xl font-display font-bold text-white leading-tight">
+                                <h3 className="text-2xl md:text-3xl font-display font-bold text-[var(--color-foreground)] leading-tight">
                                     {project.title}
                                 </h3>
                             </div>
@@ -206,7 +206,7 @@ export function Work() {
 
                                 <div>
                                     <p className="text-accent font-mono text-xs md:text-sm mb-1 md:mb-2">{project.category}</p>
-                                    <h3 className="text-xl md:text-3xl font-display font-bold text-white leading-tight">
+                                    <h3 className="text-xl md:text-3xl font-display font-bold text-[var(--color-foreground)] leading-tight">
                                         {project.title}
                                     </h3>
                                 </div>

@@ -42,7 +42,7 @@ export function Contact() {
                     href="https://calendly.com/gabrielhidalgo/30min"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-block bg-black text-white px-10 py-5 rounded-full font-bold text-lg uppercase tracking-widest hover:scale-105 transition-transform duration-300"
+                    className="inline-block bg-[var(--color-background)] text-[var(--color-foreground)] px-10 py-5 rounded-full font-bold text-lg uppercase tracking-widest hover:scale-105 transition-transform duration-300"
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={isInView ? { opacity: 1, scale: 1 } : {}}
                     transition={{ duration: 0.5, delay: 0.5 }}

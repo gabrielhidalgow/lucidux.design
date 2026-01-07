@@ -74,19 +74,19 @@ export function ProjectDetailsModal({ project, projects, isOpen, onClose, onNavi
         <div className="fixed inset-0 z-[9999] flex items-center justify-center p-4 md:p-6">
             {/* Backdrop */}
             <div
-                className="absolute inset-0 bg-black/80 backdrop-blur-sm animate-fade-in"
+                className="absolute inset-0 bg-[var(--color-background)]/80 backdrop-blur-sm animate-fade-in"
                 onClick={onClose}
             ></div>
 
             {/* Modal Container */}
-            <div className="relative w-full max-w-6xl h-[90vh] bg-background border border-white/10 rounded-2xl shadow-2xl overflow-hidden flex flex-col animate-in-scale">
+            <div className="relative w-full max-w-6xl h-[90vh] bg-background border border-[var(--color-foreground)]/10 rounded-2xl shadow-2xl overflow-hidden flex flex-col animate-in-scale">
 
                 {/* Close Button - Absolute */}
                 <button
                     onClick={onClose}
                     className="absolute top-6 right-6 z-50 w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors backdrop-blur-md group"
                 >
-                    <X className="w-5 h-5 text-white group-hover:rotate-90 transition-transform duration-300" />
+                    <X className="w-5 h-5 text-[var(--color-foreground)] group-hover:rotate-90 transition-transform duration-300" />
                 </button>
 
                 {/* Scrollable Content */}
@@ -102,9 +102,9 @@ export function ProjectDetailsModal({ project, projects, isOpen, onClose, onNavi
                         >
 
                             {/* Header Section */}
-                        <div className="flex flex-col lg:flex-row justify-between items-start gap-12 border-b border-white/10 pb-12">
+                        <div className="flex flex-col lg:flex-row justify-between items-start gap-12 border-b border-[var(--color-foreground)]/10 pb-12">
                             <div className="flex-1">
-                                <h2 className="text-5xl md:text-7xl font-display font-bold mb-6 text-white leading-tight">
+                                <h2 className="text-5xl md:text-7xl font-display font-bold mb-6 text-[var(--color-foreground)] leading-tight">
                                     {project.title.split(' ').map((word, i) => (
                                         <span key={i} className="block">{word}</span>
                                     ))}
@@ -117,15 +117,15 @@ export function ProjectDetailsModal({ project, projects, isOpen, onClose, onNavi
                             <div className="grid grid-cols-2 gap-x-12 gap-y-8 text-sm uppercase tracking-wider">
                                 <div>
                                     <h4 className="text-gray-500 font-bold mb-2">Client</h4>
-                                    <p className="text-white font-medium">{project.client}</p>
+                                    <p className="text-[var(--color-foreground)] font-medium">{project.client}</p>
                                 </div>
                                 <div>
                                     <h4 className="text-gray-500 font-bold mb-2">Completion Time</h4>
-                                    <p className="text-white font-medium">{project.completionTime}</p>
+                                    <p className="text-[var(--color-foreground)] font-medium">{project.completionTime}</p>
                                 </div>
                                 <div>
                                     <h4 className="text-gray-500 font-bold mb-2">Scope of Work</h4>
-                                    <p className="text-white font-medium">{project.scopeOfWork}</p>
+                                    <p className="text-[var(--color-foreground)] font-medium">{project.scopeOfWork}</p>
                                 </div>
                                 <div>
                                     <h4 className="text-gray-500 font-bold mb-2">Stack</h4>
@@ -136,7 +136,7 @@ export function ProjectDetailsModal({ project, projects, isOpen, onClose, onNavi
                                     </div>
                                 </div>
                                 {project.link && (
-                                    <div className="col-span-2 mt-4 pt-4 border-t border-white/10">
+                                    <div className="col-span-2 mt-4 pt-4 border-t border-[var(--color-foreground)]/10">
                                         <h4 className="text-gray-500 font-bold mb-2">Live Project</h4>
                                         <a
                                             href={project.link}
@@ -173,7 +173,7 @@ export function ProjectDetailsModal({ project, projects, isOpen, onClose, onNavi
                                     />
                                 ) : (
                                     <div className="w-full h-full flex items-center justify-center bg-white/5">
-                                        <span className="text-white/20">Additional View</span>
+                                        <span className="text-[var(--color-foreground)]/20">Additional View</span>
                                     </div>
                                 )}
                             </div>
@@ -192,7 +192,7 @@ export function ProjectDetailsModal({ project, projects, isOpen, onClose, onNavi
 
                         {/* Middle Large Image */}
                         {project.galleryImages[1] && (
-                            <div className="relative w-full aspect-[16/9] bg-surface rounded-xl overflow-hidden border border-white/5">
+                            <div className="relative w-full aspect-[16/9] bg-surface rounded-xl overflow-hidden border border-[var(--color-foreground)]/5">
                                 <Image
                                     src={project.galleryImages[1]}
                                     alt="Project functionality"
@@ -217,22 +217,22 @@ export function ProjectDetailsModal({ project, projects, isOpen, onClose, onNavi
                         {nextProject && (
                             <button
                                 onClick={() => onNavigate(nextProject)}
-                                className="group flex flex-col items-center gap-4 py-8 border-t border-b border-white/10 hover:border-accent/30 transition-colors duration-300"
+                                className="group flex flex-col items-center gap-4 py-8 border-t border-b border-[var(--color-foreground)]/10 hover:border-accent/30 transition-colors duration-300"
                             >
                                 <span className="text-xs uppercase tracking-[0.2em] text-gray-500 group-hover:text-accent transition-colors flex items-center gap-2">
                                     Next Project
                                     <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                                 </span>
-                                <span className="text-2xl md:text-3xl font-display font-bold text-white/60 group-hover:text-white transition-colors">
+                                <span className="text-2xl md:text-3xl font-display font-bold text-[var(--color-foreground)]/60 group-hover:text-[var(--color-foreground)] transition-colors">
                                     {nextProject.title}
                                 </span>
                             </button>
                         )}
 
                         {/* CTA / Footer of Modal */}
-                        <div className="mt-8 relative overflow-hidden rounded-2xl bg-gradient-to-r from-surface to-black border border-white/10 p-12 text-center">
+                        <div className="mt-8 relative overflow-hidden rounded-2xl bg-gradient-to-r from-surface to-[var(--color-background)] border border-[var(--color-foreground)]/10 p-12 text-center">
                             <div className="relative z-10 flex flex-col items-center gap-8">
-                                <h3 className="text-4xl md:text-5xl font-display font-bold text-white max-w-2xl">
+                                <h3 className="text-4xl md:text-5xl font-display font-bold text-[var(--color-foreground)] max-w-2xl">
                                     Get Your Solution Built in Office Hours
                                 </h3>
                                 <a

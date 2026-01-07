@@ -40,11 +40,11 @@ export function Comparison() {
         if (value === "x") {
             return <X className="w-5 h-5 text-gray-600" />;
         }
-        return <span className={colIndex === 0 ? "text-white" : "text-gray-400"}>{value}</span>;
+        return <span className={colIndex === 0 ? "text-[var(--color-foreground)]" : "text-gray-400"}>{value}</span>;
     };
 
     return (
-        <section className="py-16 md:py-32 bg-black">
+        <section className="py-16 md:py-32 bg-[var(--color-background)]">
             <div className="container mx-auto px-6 md:px-12" ref={ref}>
                 <motion.div
                     className="mb-16"
@@ -58,21 +58,22 @@ export function Comparison() {
                 </motion.div>
 
                 <motion.div
-                    className="overflow-x-auto"
+                    className="overflow-x-auto p-4" // Added padding to prevent border clipping
                     initial={{ opacity: 0, y: 20 }}
                     animate={isInView ? { opacity: 1, y: 0 } : {}}
                     transition={{ duration: 0.6, delay: 0.2 }}
                 >
-                    <table className="w-full min-w-[640px]">
+                    <table className="w-full min-w-[640px] border-separate border-spacing-0">
                         <thead>
-                            <tr className="border-b-2 border-accent">
-                                <th className="py-4 pr-4 text-left"></th>
+                            <tr>
+                                <th className="py-4 pr-4 text-left border-b border-accent"></th>
                                 {columns.map((col, index) => (
                                     <th
                                         key={col}
-                                        className={`py-4 px-4 text-left font-display text-lg md:text-xl font-bold ${
-                                            index === 0 ? "text-accent" : "text-white"
-                                        }`}
+                                        className={`py-4 px-4 text-left font-display text-lg md:text-xl font-bold ${index === 0
+                                            ? "text-accent border-t border-x border-accent rounded-t-2xl bg-accent/5"
+                                            : "text-[var(--color-foreground)] border-b border-accent"
+                                            }`}
                                     >
                                         {col}
                                     </th>
@@ -83,20 +84,24 @@ export function Comparison() {
                             {rows.map((row, rowIndex) => (
                                 <motion.tr
                                     key={row.feature}
-                                    className="border-b border-white/10 hover:bg-surface transition-colors duration-300"
+                                    className="hover:bg-surface transition-colors duration-300"
                                     initial={{ opacity: 0, y: 10 }}
                                     animate={isInView ? { opacity: 1, y: 0 } : {}}
                                     transition={{ duration: 0.4, delay: 0.3 + rowIndex * 0.1 }}
                                 >
-                                    <td className="py-5 pr-4 text-gray-400 font-body">
+                                    <td className="py-5 pr-4 text-gray-400 font-body border-b border-white/10">
                                         {row.feature}
                                     </td>
                                     {row.values.map((value, colIndex) => (
                                         <td
                                             key={`${row.feature}-${colIndex}`}
-                                            className={`py-5 px-4 font-body ${
-                                                colIndex === 0 ? "bg-accent/5" : ""
-                                            }`}
+                                            className={`py-5 px-4 font-body ${colIndex === 0
+                                                ? `border-x border-accent bg-accent/5 ${rowIndex === rows.length - 1
+                                                    ? "border-b rounded-b-2xl"
+                                                    : "border-b border-white/10"
+                                                }`
+                                                : "border-b border-white/10"
+                                                }`}
                                         >
                                             {renderValue(value, colIndex)}
                                         </td>
