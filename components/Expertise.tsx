@@ -66,7 +66,7 @@ export function Expertise() {
                     return (
                         <motion.div
                             key={item.id}
-                            className="relative border-t border-white/10 py-12 md:py-14 lg:py-16"
+                            className="relative border-t border-white/5 py-12 md:py-14 lg:py-16"
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true, margin: "-50px" }}
