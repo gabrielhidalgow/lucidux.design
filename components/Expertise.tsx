@@ -2,43 +2,47 @@
 
 import { motion, useInView } from "motion/react";
 import { useRef } from "react";
-import Image from "next/image";
-
-const iconMap: Record<string, string> = {
-  "01": "/icons/icon-eye.png",
-  "02": "/icons/icon-chess.png",
-  "03": "/icons/icon-data.png",
-  "04": "/icons/icon-support.png",
-};
+import { ExpertEyeAnimation } from "./animations/ExpertEyeAnimation";
+import { StrategyAnimation } from "./animations/StrategyAnimation";
+import { DataValidationAnimation } from "./animations/DataValidationAnimation";
+import { SupportAnimation } from "./animations/SupportAnimation";
 
 export function Expertise() {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-100px" });
+    const ref = useRef(null);
+    const isInView = useInView(ref, { once: true, margin: "-100px" });
 
-  const processSteps = [
+    const processSteps = [
         {
             id: "01",
             title: "Expert eye",
             subtitle: "Spot what AI tools miss",
-            description: "I review your interface and spot 5-7 critical issues in minutes. Visual hierarchy, cognitive load, interaction gaps—problems AI tools consistently miss.",
+            description:
+                "I review your interface and spot 5-7 critical issues in minutes. Visual hierarchy, cognitive load, interaction gaps—problems AI tools consistently miss.",
+            component: <ExpertEyeAnimation />,
         },
         {
             id: "02",
             title: "Strategy",
             subtitle: "Prioritize what to fix first",
-            description: "Based on the audit, I create a prioritized design roadmap. What's costing you conversions now vs. what can wait. Clear recommendations with expected impact.",
+            description:
+                "Based on the audit, I create a prioritized design roadmap. What's costing you conversions now vs. what can wait. Clear recommendations with expected impact.",
+            component: <StrategyAnimation />,
         },
         {
             id: "03",
             title: "Data Validation",
             subtitle: "Prove what matters most",
-            description: "Analytics review and usability testing confirm which fixes matter most. No guesswork—just evidence.",
+            description:
+                "Analytics review and usability testing confirm which fixes matter most. No guesswork—just evidence.",
+            component: <DataValidationAnimation />,
         },
         {
             id: "04",
             title: "Support",
             subtitle: "Ongoing design partnership",
-            description: "Weekly strategic consultation, async feedback, design review before development. Expert eyes on every change without a full-time hire.",
+            description:
+                "Weekly strategic consultation, async feedback, design review before development. Expert eyes on every change without a full-time hire.",
+            component: <SupportAnimation />,
         },
     ];
 
@@ -59,8 +63,6 @@ export function Expertise() {
 
             <div className="flex flex-col">
                 {processSteps.map((item, index) => {
-                    const iconSrc = iconMap[item.id];
-
                     return (
                         <motion.div
                             key={item.id}
@@ -71,27 +73,20 @@ export function Expertise() {
                             transition={{ duration: 0.5, delay: index * 0.1 }}
                         >
                             <div className="container mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8 items-center">
-                                <div className="md:col-span-2 flex items-center justify-start">
-                                    {iconSrc && (
-                                        <motion.div
-                                            initial={{ opacity: 0, scale: 0.85, y: 15 }}
-                                            whileInView={{ opacity: 1, scale: 1, y: 0 }}
-                                            viewport={{ once: true }}
-                                            transition={{
-                                                duration: 0.6,
-                                                ease: [0.25, 0.1, 0.25, 1],
-                                                delay: index * 0.1 + 0.2
-                                            }}
-                                        >
-                                            <Image
-                                                src={iconSrc}
-                                                alt={item.title}
-                                                width={80}
-                                                height={80}
-                                                className="object-contain"
-                                            />
-                                        </motion.div>
-                                    )}
+                                <div className="md:col-span-2 flex items-center justify-start h-32 w-full">
+                                    <motion.div
+                                        className="w-full h-full max-w-[120px]"
+                                        initial={{ opacity: 0, scale: 0.85, y: 15 }}
+                                        whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                                        viewport={{ once: true }}
+                                        transition={{
+                                            duration: 0.6,
+                                            ease: [0.25, 0.1, 0.25, 1],
+                                            delay: index * 0.1 + 0.2,
+                                        }}
+                                    >
+                                        {item.component}
+                                    </motion.div>
                                 </div>
 
                                 <div className="md:col-span-4">
