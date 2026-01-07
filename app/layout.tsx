@@ -18,7 +18,7 @@ const spaceGrotesk = Space_Grotesk({
 export const metadata: Metadata = {
   metadataBase: new URL('https://lucidux.design'),
   title: "Lucidux — UX/UI Design for AI-Built Startups | Free UX Audit",
-  description: "Expert UX/UI consultant for technical founders. I fix usability issues, optimize conversion, and build design systems for products built with Cursor, v0, Lovable, Bolt, Replit, and Claude Code.",
+  description: "Sydney-based UX/UI consultant for technical founders. I fix usability issues, optimize conversion, and build design systems for products built with Cursor, v0, Lovable, Bolt, Replit, and Claude Code.",
   keywords: ["UX designer", "UI designer", "startup design", "AI products", "UX audit", "design systems", "Cursor", "v0", "Lovable", "Bolt", "Replit", "Claude Code", "conversion optimization", "Sydney UX designer", "Sydney UI designer", "UX consultant Sydney", "Australian design consultant", "Sydney startup design"],
   authors: [{ name: "Gabriel Hidalgo" }],
   creator: "Gabriel Hidalgo",
@@ -28,12 +28,12 @@ export const metadata: Metadata = {
     url: "https://lucidux.design",
     siteName: "Lucidux Design",
     title: "Lucidux — UX/UI Design for AI-Built Startups",
-    description: "Expert UX/UI consultant for technical founders. I fix usability issues, optimize conversion, and build design systems for products built with Cursor, v0, Lovable, Bolt, Replit, and Claude Code.",
+    description: "Sydney-based UX/UI consultant for technical founders. I fix usability issues, optimize conversion, and build design systems for products built with Cursor, v0, Lovable, Bolt, Replit, and Claude Code.",
   },
   twitter: {
     card: "summary_large_image",
     title: "Lucidux — UX/UI Design for AI-Built Startups",
-    description: "Expert UX/UI consultant for technical founders. I fix usability issues, optimize conversion, and build design systems.",
+    description: "Sydney-based UX/UI consultant for technical founders. I fix usability issues, optimize conversion, and build design systems.",
     creator: "@gabrielhidalgo",
   },
   robots: {
