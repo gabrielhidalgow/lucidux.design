@@ -92,7 +92,7 @@ export function Hero() {
             <div className="z-10 max-w-7xl mx-auto w-full">
                 {/* Availability Status */}
                 <motion.div
-                    className="inline-flex items-center gap-2.5 px-3 py-1.5 mb-10 rounded-sm border border-[var(--color-border)] bg-[#111]/90"
+                    className="inline-flex items-center gap-2.5 px-4 py-1.5 mb-10 rounded-full border border-[var(--color-border)] bg-[#111]/50"
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.2 }}

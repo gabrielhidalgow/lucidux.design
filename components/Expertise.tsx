@@ -4,6 +4,7 @@ import { motion, useInView } from "motion/react";
 import { useRef } from "react";
 import { ExpertEyeAnimation } from "./animations/ExpertEyeAnimation";
 import { StrategyAnimation } from "./animations/StrategyAnimation";
+import { UsabilityTestingAnimation } from "./animations/UsabilityTestingAnimation";
 import { DataValidationAnimation } from "./animations/DataValidationAnimation";
 import { SupportAnimation } from "./animations/SupportAnimation";
 
@@ -30,6 +31,14 @@ export function Expertise() {
         },
         {
             id: "03",
+            title: "Usability Testing",
+            subtitle: "Validate with real users",
+            description:
+                "Remote and in-person testing sessions reveal the friction points analytics can't explain. Real users navigate your AI product while I capture insights that drive meaningful improvements.",
+            component: <UsabilityTestingAnimation />,
+        },
+        {
+            id: "04",
             title: "Data Validation",
             subtitle: "Prove what matters most",
             description:
@@ -37,7 +46,7 @@ export function Expertise() {
             component: <DataValidationAnimation />,
         },
         {
-            id: "04",
+            id: "05",
             title: "Support",
             subtitle: "Ongoing design partnership",
             description:

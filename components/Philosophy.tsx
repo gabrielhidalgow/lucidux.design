@@ -121,10 +121,10 @@ export function Philosophy() {
                                 AI tools ship polished UIs fast. But polished ≠ effective.
                             </p>
                             <p>
-                                I've reviewed 100+ AI-generated interfaces. The same problems appear in 80%: equal visual weight everywhere, cognitive overload, unclear affordances, generic patterns that don't fit the use case.
+                                I've reviewed 15+ AI-generated interfaces. The same problems appear in 80%: equal visual weight everywhere, cognitive overload, unclear affordances, generic patterns that don't fit the use case.
                             </p>
                             <p>
-                                Expert judgment spots these instantly. Data validates they matter.
+                                Expert judgment and usability testing with real customers spot these instantly. Data validates they matter.
                             </p>
                         </div>
 

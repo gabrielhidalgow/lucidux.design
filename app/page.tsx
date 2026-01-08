@@ -9,6 +9,7 @@ import { Work } from "@/components/Work";
 import { Philosophy } from "@/components/Philosophy";
 import { Testimonials } from "@/components/Testimonials";
 import { FAQs } from "@/components/FAQs";
+import { Team } from "@/components/Team";
 import { Contact } from "@/components/Contact";
 import { Footer } from "@/components/Footer";
 import { CustomCursor } from "@/components/CustomCursor";
