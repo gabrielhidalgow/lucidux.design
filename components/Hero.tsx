@@ -92,23 +92,23 @@ export function Hero() {
             <div className="z-10 max-w-7xl mx-auto w-full">
                 {/* Availability Status */}
                 <motion.div
-                    className="inline-flex items-center gap-2 px-4 py-2 mb-6 rounded-full border border-[var(--color-border)] bg-surface/50 backdrop-blur-sm"
+                    className="inline-flex items-center gap-2.5 px-3 py-1.5 mb-10 rounded-sm border border-[var(--color-border)] bg-[#111]/90"
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.2 }}
                 >
                     <span className="relative flex h-2.5 w-2.5">
-                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald opacity-75"></span>
-                        <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald"></span>
+                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75"></span>
+                        <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-accent"></span>
                     </span>
-                    <span className="text-xs uppercase tracking-widest text-text-muted font-medium">
+                    <span className="text-xs uppercase tracking-widest text-text-muted font-mono">
                         Available for projects
                     </span>
                 </motion.div>
 
                 <div className="overflow-hidden">
                     <motion.h1
-                        className="text-[11vw] md:text-[5vw] leading-[0.85] font-display font-bold tracking-tighter mix-blend-difference text-white"
+                        className="text-[11vw] md:text-[6.5vw] leading-[0.85] font-display font-bold tracking-tighter mix-blend-difference text-white"
                         initial={{ y: "100%" }}
                         animate={{ y: 0 }}
                         transition={{ duration: 0.8, ease: [0.33, 1, 0.68, 1] }}
@@ -116,9 +116,9 @@ export function Hero() {
                         SHIPPED FAST.
                     </motion.h1>
                 </div>
-                <div className="overflow-hidden">
+                <div className="overflow-hidden mt-2">
                     <motion.h1
-                        className="text-[11vw] md:text-[5vw] leading-[0.85] font-display font-bold tracking-tighter text-accent"
+                        className="text-[11vw] md:text-[6.5vw] leading-[0.85] font-display font-bold tracking-tighter text-accent"
                         initial={{ y: "100%" }}
                         animate={{ y: 0 }}
                         transition={{ duration: 0.8, delay: 0.1, ease: [0.33, 1, 0.68, 1] }}
@@ -128,7 +128,7 @@ export function Hero() {
                 </div>
 
                 <motion.div
-                    className="mt-12 max-w-5xl flex flex-col gap-6"
+                    className="mt-16 max-w-5xl flex flex-col gap-8"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.5 }}

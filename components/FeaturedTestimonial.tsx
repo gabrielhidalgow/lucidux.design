@@ -10,7 +10,7 @@ export function FeaturedTestimonial() {
 
     return (
         <section className="py-24 md:py-32 bg-[var(--color-background)] relative overflow-hidden" ref={ref}>
-            <div className="absolute inset-0 bg-grid [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black_70%)] pointer-events-none" />
+            <div className="absolute inset-0 bg-grid [mask-image:linear-gradient(to_bottom,black_0%,black_70%,transparent_100%)] pointer-events-none" />
             <div className="container mx-auto px-6 md:px-12 relative z-10">
                 {/* Heading */}
                 <motion.div
