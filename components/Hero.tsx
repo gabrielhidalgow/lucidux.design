@@ -149,7 +149,7 @@ export function Hero() {
                         <div className="w-12 h-12 rounded-full border border-gray-600 flex items-center justify-center group-hover:bg-accent group-hover:border-accent group-hover:text-black transition-all duration-300">
                             <ArrowDown className="w-5 h-5" />
                         </div>
-                        <span className="uppercase tracking-widest text-sm font-bold">Explore How It Works</span>
+                        <span className="uppercase tracking-widest text-sm font-bold">See Your Path to Better UX</span>
                     </motion.div>
                 </motion.div>
             </div>
