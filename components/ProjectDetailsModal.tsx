@@ -116,7 +116,7 @@ export function ProjectDetailsModal({ project, projects, isOpen, onClose, onNavi
 
                             <div className="grid grid-cols-2 gap-x-12 gap-y-8 text-sm uppercase tracking-wider">
                                 <div>
-                                    <h4 className="text-gray-500 font-bold mb-2">Client</h4>
+                                    <h4 className="text-gray-500 font-bold mb-2">Company</h4>
                                     <p className="text-[var(--color-foreground)] font-medium">{project.client}</p>
                                 </div>
                                 <div>
@@ -127,16 +127,8 @@ export function ProjectDetailsModal({ project, projects, isOpen, onClose, onNavi
                                     <h4 className="text-gray-500 font-bold mb-2">Scope of Work</h4>
                                     <p className="text-[var(--color-foreground)] font-medium">{project.scopeOfWork}</p>
                                 </div>
-                                <div>
-                                    <h4 className="text-gray-500 font-bold mb-2">Stack</h4>
-                                    <div className="flex gap-3 text-accent transition-colors">
-                                        {project.stack.map((icon, i) => (
-                                            <div key={i}>{icon}</div>
-                                        ))}
-                                    </div>
-                                </div>
                                 {project.link && (
-                                    <div className="col-span-2 mt-4 pt-4 border-t border-[var(--color-foreground)]/10">
+                                    <div>
                                         <h4 className="text-gray-500 font-bold mb-2">Live Project</h4>
                                         <a
                                             href={project.link}
@@ -154,25 +146,26 @@ export function ProjectDetailsModal({ project, projects, isOpen, onClose, onNavi
 
                         {/* Hero Image & Gallery Top */}
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                            <div className="relative aspect-video lg:aspect-square bg-surface rounded-lg overflow-hidden">
-                                {/* Placeholder if no image provided, but we expect one */}
+                            <div className="relative bg-surface rounded-lg overflow-hidden">
                                 <Image
                                     src={project.image}
                                     alt={project.title}
-                                    fill
-                                    className="object-cover"
+                                    width={800}
+                                    height={800}
+                                    className="w-full h-auto object-contain lg:object-cover lg:aspect-square"
                                 />
                             </div>
-                            <div className="relative aspect-video lg:aspect-square bg-surface rounded-lg overflow-hidden">
+                            <div className="relative bg-surface rounded-lg overflow-hidden">
                                 {project.galleryImages[0] ? (
                                     <Image
                                         src={project.galleryImages[0]}
                                         alt="Gallery detail"
-                                        fill
-                                        className="object-cover"
+                                        width={800}
+                                        height={800}
+                                        className="w-full h-auto object-contain lg:object-cover lg:aspect-square"
                                     />
                                 ) : (
-                                    <div className="w-full h-full flex items-center justify-center bg-white/5">
+                                    <div className="w-full h-full flex items-center justify-center bg-white/5 aspect-square">
                                         <span className="text-[var(--color-foreground)]/20">Additional View</span>
                                     </div>
                                 )}
@@ -192,12 +185,13 @@ export function ProjectDetailsModal({ project, projects, isOpen, onClose, onNavi
 
                         {/* Middle Large Image */}
                         {project.galleryImages[1] && (
-                            <div className="relative w-full aspect-[16/9] bg-surface rounded-xl overflow-hidden border border-[var(--color-foreground)]/5">
+                            <div className="relative w-full bg-surface rounded-xl overflow-hidden border border-[var(--color-foreground)]/5">
                                 <Image
                                     src={project.galleryImages[1]}
                                     alt="Project functionality"
-                                    fill
-                                    className="object-cover"
+                                    width={1200}
+                                    height={800}
+                                    className="w-full h-auto object-contain lg:object-cover lg:aspect-[16/9]"
                                 />
                             </div>
                         )}
@@ -233,7 +227,7 @@ export function ProjectDetailsModal({ project, projects, isOpen, onClose, onNavi
                         <div className="mt-8 relative overflow-hidden rounded-2xl bg-gradient-to-r from-surface to-[var(--color-background)] border border-[var(--color-foreground)]/10 p-12 text-center">
                             <div className="relative z-10 flex flex-col items-center gap-8">
                                 <h3 className="text-4xl md:text-5xl font-display font-bold text-[var(--color-foreground)] max-w-2xl">
-                                    Get Your Solution Built in Office Hours
+                                    Let's make your interface convert
                                 </h3>
                                 <a
                                     href="https://calendly.com/gabrielhidalgo/30min"

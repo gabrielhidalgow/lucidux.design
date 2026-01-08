@@ -118,8 +118,8 @@ export function Work() {
             problem: "RewardPay had just secured a major partnership with Qantas Business Rewards, requiring strategic product design to integrate new functionality while supporting their growth trajectory without disrupting the current user experience.",
             solution: "Designed complete integration of Qantas Business Rewards system into the existing RewardPay platform. Created dedicated landing pages for Qantas linking, implemented tracking sections for earned points, and established scalable design patterns to support continued expansion and future partnerships.",
             galleryImages: [
-                "/images/synthetic-gallery.png",
-                "/images/synthetic-vogue.png"
+                "/images/rewardpay-asset2.jpg",
+                "/images/rewardpay-dashboard.jpg"
             ]
         },
         {
@@ -137,8 +137,8 @@ export function Work() {
             problem: "Needed to fully redesign an existing content-heavy website while maintaining SEO alignment, creating visual consistency across all digital touchpoints, and converting visitors into clients through strategic UX design.",
             solution: "Built a comprehensive design system from scratch using atomic design principles. Developed reusable UI components with multiple states, created clear documentation for developers, and achieved 57.7k sessions with 5:53 average session duration—significantly exceeding industry benchmarks for legal websites.",
             galleryImages: [
-                "/images/nebula-gallery.png",
-                "/images/nebula-protocol.png"
+                "/images/monaco-screens.jpg",
+                "/images/monaco-design-system.jpg"
             ]
         },
         {
@@ -146,7 +146,7 @@ export function Work() {
             year: "2024",
             category: "UI Design",
             title: "COMMBANK PET INSURANCE",
-            image: "/images/petsure.png",
+            image: "/images/petsure-cover.png",
             link: "https://www.commbank.com.au/insurance/pet-insurance.html",
             client: "COMMBANK",
             completionTime: "3 Months",
@@ -156,8 +156,8 @@ export function Work() {
             problem: "Create intuitive interfaces that integrate seamlessly into CommBank's existing digital ecosystem while balancing business requirements with user needs and simplifying the traditionally complex insurance application process.",
             solution: "Delivered end-to-end digital experience through close collaboration with the Senior UX Designer, stakeholders, and PetSure design team. The product launched successfully within planned timeline, establishing CommBank's entry into the pet insurance market with strong initial adoption rates.",
             galleryImages: [
-                "/images/cyber-gallery.png",
-                "/images/cyber-flora.png"
+                "/images/pet-insurance-square.jpg",
+                "/images/pet-insurance-landscape.jpg"
             ]
         },
     ];

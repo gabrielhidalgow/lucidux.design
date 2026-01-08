@@ -17,7 +17,7 @@ export function Expertise() {
             title: "Expert eye",
             subtitle: "Spot what AI tools miss",
             description:
-                "I review your interface and spot 5-7 critical issues in minutes. Visual hierarchy, cognitive load, interaction gaps—problems AI tools consistently miss.",
+                "I review your interface and spot critical issues in minutes. Visual hierarchy, cognitive load, interaction gaps—problems AI tools consistently miss.",
             component: <ExpertEyeAnimation />,
         },
         {
