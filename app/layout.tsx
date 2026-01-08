@@ -29,12 +29,21 @@ export const metadata: Metadata = {
     siteName: "Lucidux Design",
     title: "LUCIDUX — UX/UI Design for AI-Built Startups",
     description: "Sydney-based UX/UI consultant for technical founders. I fix usability issues, optimize conversion, and build design systems for products built with Cursor, v0, Lovable, Bolt, Replit, and Claude Code.",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "LUCIDUX — UX/UI Design for AI-Built Startups",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "LUCIDUX — UX/UI Design for AI-Built Startups",
     description: "Sydney-based UX/UI consultant for technical founders. I fix usability issues, optimize conversion, and build design systems.",
     creator: "@gabrielhidalgo",
+    images: ["/og-image.jpg"],
   },
   robots: {
     index: true,
