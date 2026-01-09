@@ -44,12 +44,6 @@ export function Comparison() {
         return <span className={colIndex === 0 ? "text-[var(--color-foreground)]" : "text-gray-400"}>{value}</span>;
     };
 
-    const gradientBorder = {
-        background: "linear-gradient(rgba(204, 255, 0, 0.05), rgba(204, 255, 0, 0.05)) padding-box, linear-gradient(to right, #ccff00, rgba(204, 255, 0, 0.2)) border-box",
-        borderColor: "transparent",
-        borderStyle: "solid",
-    };
-
     return (
         <section className="py-16 md:py-32 bg-[var(--color-background)]">
             <div className="container mx-auto px-4 md:px-12" ref={ref}>
@@ -90,10 +84,9 @@ export function Comparison() {
                                                 <th
                                                     key={col}
                                                     className={`py-6 px-6 text-left font-display text-lg md:text-xl font-bold ${index === 0
-                                                        ? "text-accent rounded-t-xl"
+                                                        ? "text-accent grad-col-top rounded-t-xl"
                                                         : "text-[var(--color-foreground)] border-b border-white/10"
                                                         }`}
-                                                    style={index === 0 ? { ...gradientBorder, borderWidth: "1px 1px 0 1px" } : undefined}
                                                 >
                                                     {col}
                                                 </th>
@@ -117,15 +110,11 @@ export function Comparison() {
                                                         key={`${row.feature}-${colIndex}`}
                                                         className={`py-6 px-6 font-body ${colIndex === 0
                                                             ? `${rowIndex === rows.length - 1
-                                                                ? "rounded-b-xl"
-                                                                : ""
+                                                                ? "grad-col-bot rounded-b-xl"
+                                                                : "grad-col-mid"
                                                             }`
                                                             : ""
-                                                            } ${rowIndex !== rows.length - 1 && colIndex !== 0 ? "border-b border-white/10" : ""}`}
-                                                        style={colIndex === 0 ? {
-                                                            ...gradientBorder,
-                                                            borderWidth: "0 1px 1px 1px"
-                                                        } : undefined}
+                                                            } ${rowIndex !== rows.length - 1 ? "border-b border-white/10" : ""}`}
                                                     >
                                                         {renderValue(value, colIndex)}
                                                     </td>

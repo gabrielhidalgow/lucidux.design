@@ -142,9 +142,12 @@ body {
 
 
 @keyframes float {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateY(0);
   }
+
   50% {
     transform: translateY(-10px);
   }
@@ -175,15 +178,13 @@ body {
 /* Primary variant (yellow/accent) */
 .shiny-cta-primary {
   background: linear-gradient(#ccff00, #b8e600) padding-box,
-    conic-gradient(
-      from var(--gradient-angle),
+    conic-gradient(from var(--gradient-angle),
       transparent 0%,
       #8ba300 5%,
       #ccff00 15%,
       #8ba300 30%,
       transparent 40%,
-      transparent 100%
-    ) border-box;
+      transparent 100%) border-box;
   border: 2px solid transparent;
   box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
 }
@@ -195,15 +196,13 @@ body {
 /* Secondary variant (black with white animated border) */
 .shiny-cta-secondary {
   background: linear-gradient(#0a0a0a, #151515) padding-box,
-    conic-gradient(
-      from var(--gradient-angle),
+    conic-gradient(from var(--gradient-angle),
       transparent 0%,
       #444444 5%,
       #ffffff 15%,
       #444444 30%,
       transparent 40%,
-      transparent 100%
-    ) border-box;
+      transparent 100%) border-box;
   border: 2px solid transparent;
   box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
 }
@@ -223,4 +222,47 @@ body {
   background: linear-gradient(#18181b, #18181b) padding-box,
     linear-gradient(to bottom, rgba(204, 255, 0, 0.5), rgba(204, 255, 0, 0.05)) border-box;
   border: 1px solid transparent;
+}
+
+/* Gradient Column Border Implementation */
+.grad-col-top,
+.grad-col-mid,
+.grad-col-bot {
+  position: relative;
+  background: transparent !important;
+  /* Ensure no background */
+}
+
+.grad-col-top::after,
+.grad-col-mid::after,
+.grad-col-bot::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(to right, #ccff00, rgba(204, 255, 0, 0.1));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  padding: 1px;
+  z-index: 10;
+}
+
+.grad-col-top::after {
+  border-top-left-radius: 0.75rem;
+  border-top-right-radius: 0.75rem;
+  /* Hide bottom border */
+  clip-path: inset(-5px -5px 0px -5px);
+}
+
+.grad-col-mid::after {
+  /* Hide top and bottom borders */
+  clip-path: inset(0px -5px 0px -5px);
+}
+
+.grad-col-bot::after {
+  border-bottom-left-radius: 0.75rem;
+  border-bottom-right-radius: 0.75rem;
+  /* Hide top border */
+  clip-path: inset(0px -5px -5px -5px);
 }
