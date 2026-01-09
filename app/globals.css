@@ -251,18 +251,18 @@ body {
 .grad-col-top::after {
   border-top-left-radius: 0.75rem;
   border-top-right-radius: 0.75rem;
-  /* Hide bottom border */
-  clip-path: inset(-5px -5px 0px -5px);
+  /* Hide bottom border using 1px clip */
+  clip-path: inset(-5px -5px 1px -5px);
 }
 
 .grad-col-mid::after {
-  /* Hide top and bottom borders */
-  clip-path: inset(0px -5px 0px -5px);
+  /* Hide top and bottom borders using 1px clip */
+  clip-path: inset(1px -5px 1px -5px);
 }
 
 .grad-col-bot::after {
   border-bottom-left-radius: 0.75rem;
   border-bottom-right-radius: 0.75rem;
-  /* Hide top border */
-  clip-path: inset(0px -5px -5px -5px);
+  /* Hide top border using 1px clip */
+  clip-path: inset(1px -5px -5px -5px);
 }
