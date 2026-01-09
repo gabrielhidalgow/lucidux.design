@@ -224,45 +224,55 @@ body {
   border: 1px solid transparent;
 }
 
-/* Gradient Column Border Implementation */
+/* Gradient Column Border Implementation - Square & Continuous */
 .grad-col-top,
 .grad-col-mid,
 .grad-col-bot {
   position: relative;
   background: transparent !important;
-  /* Ensure no background */
 }
 
+/* Left Vertical Line (Continuous) */
+.grad-col-top::before,
+.grad-col-mid::before,
+.grad-col-bot::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 2px;
+  background: #ccff00;
+  z-index: 10;
+}
+
+/* Right Vertical Line (Continuous Faint) */
 .grad-col-top::after,
 .grad-col-mid::after,
 .grad-col-bot::after {
   content: "";
   position: absolute;
-  inset: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 1px;
+  background: rgba(204, 255, 0, 0.1);
   pointer-events: none;
-  background: linear-gradient(to right, #ccff00, rgba(204, 255, 0, 0.1));
-  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
-  padding: 1px;
   z-index: 10;
 }
 
-.grad-col-top::after {
-  border-top-left-radius: 0.75rem;
-  border-top-right-radius: 0.75rem;
-  /* Hide bottom border using 1px clip */
-  clip-path: inset(-5px -5px 1px -5px);
+/* Top Cap (Header only) */
+.grad-col-top {
+  background-image: linear-gradient(to right, #ccff00, rgba(204, 255, 0, 0.1));
+  background-size: 100% 2px;
+  background-position: top left;
+  background-repeat: no-repeat;
 }
 
-.grad-col-mid::after {
-  /* Hide top and bottom borders using 1px clip */
-  clip-path: inset(1px -5px 1px -5px);
-}
-
-.grad-col-bot::after {
-  border-bottom-left-radius: 0.75rem;
-  border-bottom-right-radius: 0.75rem;
-  /* Hide top border using 1px clip */
-  clip-path: inset(1px -5px -5px -5px);
+/* Bottom Cap (Footer only) */
+.grad-col-bot {
+  background-image: linear-gradient(to right, #ccff00, rgba(204, 255, 0, 0.1));
+  background-size: 100% 2px;
+  background-position: bottom left;
+  background-repeat: no-repeat;
 }

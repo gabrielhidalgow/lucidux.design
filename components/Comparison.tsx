@@ -84,7 +84,7 @@ export function Comparison() {
                                                 <th
                                                     key={col}
                                                     className={`py-6 px-6 text-left font-display text-lg md:text-xl font-bold ${index === 0
-                                                        ? "text-accent grad-col-top rounded-t-xl"
+                                                        ? "text-accent grad-col-top"
                                                         : "text-[var(--color-foreground)] border-b border-white/10"
                                                         }`}
                                                 >
@@ -110,7 +110,7 @@ export function Comparison() {
                                                         key={`${row.feature}-${colIndex}`}
                                                         className={`py-6 px-6 font-body ${colIndex === 0
                                                             ? `${rowIndex === rows.length - 1
-                                                                ? "grad-col-bot rounded-b-xl"
+                                                                ? "grad-col-bot"
                                                                 : "grad-col-mid"
                                                             }`
                                                             : ""
