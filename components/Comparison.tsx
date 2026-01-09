@@ -3,33 +3,34 @@
 import { motion, useInView } from "motion/react";
 import { useRef } from "react";
 import { Check, X } from "lucide-react";
+import { ShinyButton } from "./ShinyButton";
 
 export function Comparison() {
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true, margin: "-100px" });
 
-    const columns = ["Expert UX Review", "DIY Fixes", "Traditional Agency"];
+    const columns = ["LUCIDUX", "DIY Fixes", "Traditional Agency"];
 
     const rows = [
         {
             feature: "Time to insights",
-            values: ["Instant (Free UX Audit)", "Weeks of guessing", "2-4 weeks"],
+            values: ["Days", "Weeks of guessing", "2-4 weeks"],
         },
         {
-            feature: "Issues identified",
-            values: ["10-15 specific", "Maybe 2-3 obvious", "Varies"],
-        },
-        {
-            feature: "Data-backed",
-            values: ["check", "x", "Sometimes"],
-        },
-        {
-            feature: "Understands AI tools",
+            feature: "Native to AI-built products",
             values: ["check", "check", "Rarely"],
         },
         {
-            feature: "Cost",
-            values: ["Fixed project OR Hourly rate fees", "Your time", "High retainers"],
+            feature: "Works with your stack",
+            values: ["v0, Cursor, Bolt, Replit, Lovable, etc.", "Your tools", "Generic process"],
+        },
+        {
+            feature: "Actionable recommendations",
+            values: ["Prioritized roadmap", "Trial & error", "PDF reports"],
+        },
+        {
+            feature: "Pricing",
+            values: ["Flexible (fixed/hourly)", "Your time", "High retainers"],
         },
     ];
 
@@ -45,71 +46,97 @@ export function Comparison() {
 
     return (
         <section className="py-16 md:py-32 bg-[var(--color-background)]">
-            <div className="container mx-auto px-6 md:px-12" ref={ref}>
+            <div className="container mx-auto px-4 md:px-12" ref={ref}>
+                {/* Module Container */}
                 <motion.div
-                    className="mb-16"
+                    className="rounded-3xl border border-white/10 bg-gradient-to-b from-white/[0.03] to-transparent p-8 md:p-12 lg:p-16"
                     initial={{ opacity: 0, y: 30 }}
                     animate={isInView ? { opacity: 1, y: 0 } : {}}
                     transition={{ duration: 0.6 }}
                 >
-                    <h2 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold leading-tight">
-                        The <span className="text-accent">smarter</span> choice
-                    </h2>
-                </motion.div>
+                    {/* Header */}
+                    <div className="mb-12 md:mb-16">
+                        <h2 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold leading-tight">
+                            The <span className="text-accent">smarter</span> choice
+                        </h2>
+                    </div>
 
-                <motion.div
-                    className="overflow-x-auto p-4" // Added padding to prevent border clipping
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={isInView ? { opacity: 1, y: 0 } : {}}
-                    transition={{ duration: 0.6, delay: 0.2 }}
-                >
-                    <table className="w-full min-w-[640px] border-separate border-spacing-0">
-                        <thead>
-                            <tr>
-                                <th className="py-4 pr-4 text-left border-b border-accent"></th>
-                                {columns.map((col, index) => (
-                                    <th
-                                        key={col}
-                                        className={`py-4 px-4 text-left font-display text-lg md:text-xl font-bold ${index === 0
-                                            ? "text-accent border-t border-x border-accent rounded-t-2xl bg-accent/5"
-                                            : "text-[var(--color-foreground)] border-b border-accent"
-                                            }`}
-                                    >
-                                        {col}
-                                    </th>
-                                ))}
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {rows.map((row, rowIndex) => (
-                                <motion.tr
-                                    key={row.feature}
-                                    className="hover:bg-surface transition-colors duration-300"
-                                    initial={{ opacity: 0, y: 10 }}
-                                    animate={isInView ? { opacity: 1, y: 0 } : {}}
-                                    transition={{ duration: 0.4, delay: 0.3 + rowIndex * 0.1 }}
-                                >
-                                    <td className="py-5 pr-4 text-gray-400 font-body border-b border-white/10">
-                                        {row.feature}
-                                    </td>
-                                    {row.values.map((value, colIndex) => (
-                                        <td
-                                            key={`${row.feature}-${colIndex}`}
-                                            className={`py-5 px-4 font-body ${colIndex === 0
-                                                ? `border-x border-accent bg-accent/5 ${rowIndex === rows.length - 1
-                                                    ? "border-b rounded-b-2xl"
-                                                    : "border-b border-white/10"
-                                                }`
-                                                : "border-b border-white/10"
-                                                }`}
+                    {/* Inner Card with Table */}
+                    <motion.div
+                        className="rounded-2xl border border-white/10 bg-surface/50 overflow-hidden"
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={isInView ? { opacity: 1, y: 0 } : {}}
+                        transition={{ duration: 0.6, delay: 0.2 }}
+                    >
+                        <div className="overflow-x-auto">
+                            <table className="w-full min-w-[640px] border-separate border-spacing-0">
+                                <thead>
+                                    <tr>
+                                        <th className="py-6 px-6 text-left border-b border-white/10"></th>
+                                        {columns.map((col, index) => (
+                                            <th
+                                                key={col}
+                                                className={`py-6 px-6 text-left font-display text-lg md:text-xl font-bold ${index === 0
+                                                    ? "text-accent bg-accent/5 border-t border-x border-accent rounded-t-xl"
+                                                    : "text-[var(--color-foreground)] border-b border-white/10"
+                                                    }`}
+                                            >
+                                                {col}
+                                            </th>
+                                        ))}
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {rows.map((row, rowIndex) => (
+                                        <motion.tr
+                                            key={row.feature}
+                                            className="hover:bg-white/[0.02] transition-colors duration-300"
+                                            initial={{ opacity: 0, y: 10 }}
+                                            animate={isInView ? { opacity: 1, y: 0 } : {}}
+                                            transition={{ duration: 0.4, delay: 0.3 + rowIndex * 0.1 }}
                                         >
-                                            {renderValue(value, colIndex)}
-                                        </td>
+                                            <td className={`py-6 px-6 text-gray-400 font-body ${rowIndex !== rows.length - 1 ? "border-b border-white/10" : ""}`}>
+                                                {row.feature}
+                                            </td>
+                                            {row.values.map((value, colIndex) => (
+                                                <td
+                                                    key={`${row.feature}-${colIndex}`}
+                                                    className={`py-6 px-6 font-body ${colIndex === 0
+                                                        ? `bg-accent/5 border-x border-accent ${rowIndex === rows.length - 1
+                                                            ? "border-b border-accent rounded-b-xl"
+                                                            : ""
+                                                        }`
+                                                        : ""
+                                                    } ${rowIndex !== rows.length - 1 ? "border-b border-white/10" : ""}`}
+                                                >
+                                                    {renderValue(value, colIndex)}
+                                                </td>
+                                            ))}
+                                        </motion.tr>
                                     ))}
-                                </motion.tr>
-                            ))}
-                        </tbody>
-                    </table>
+                                </tbody>
+                            </table>
+                        </div>
+                    </motion.div>
+
+                    {/* CTA */}
+                    <motion.div
+                        className="mt-12 md:mt-16 text-center"
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={isInView ? { opacity: 1, y: 0 } : {}}
+                        transition={{ duration: 0.6, delay: 0.8 }}
+                    >
+                        <ShinyButton
+                            as="a"
+                            href="https://calendly.com/gabrielhidalgo/30min"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            variant="secondary"
+                            size="lg"
+                        >
+                            Start with a free UX audit
+                        </ShinyButton>
+                    </motion.div>
                 </motion.div>
             </div>
         </section>

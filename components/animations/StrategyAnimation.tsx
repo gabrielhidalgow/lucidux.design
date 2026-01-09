@@ -17,7 +17,7 @@ export function StrategyAnimation() {
                     <div className="absolute -inset-2 bg-[var(--color-accent)]/15 rounded-xl blur-md animate-[pulse_3s_ease-in-out_infinite]"></div>
 
                     {/* Main Card Body */}
-                    <div className="w-20 h-24 bg-zinc-900 rounded-lg border border-[var(--color-accent)]/50 shadow-[0_0_30px_-5px_rgba(var(--accent-rgb),0.25)] flex items-end justify-center gap-1.5 pb-4 px-3 relative">
+                    <div className="w-20 h-24 rounded-lg gradient-border-card shadow-[0_0_30px_-5px_rgba(var(--accent-rgb),0.25)] flex items-end justify-center gap-1.5 pb-4 px-3 relative">
 
                         {/* Grid Lines */}
                         <div className="absolute top-0 left-0 w-full h-full opacity-10 flex flex-col justify-between p-2 pointer-events-none">

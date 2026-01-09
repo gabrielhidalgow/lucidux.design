@@ -14,7 +14,7 @@ export function SupportAnimation() {
                     <div className="absolute -inset-2 bg-[var(--color-accent)]/15 rounded-3xl blur-md"></div>
 
                     {/* Bubble Container */}
-                    <div className="w-20 h-16 bg-zinc-900 rounded-t-2xl rounded-br-2xl rounded-bl-sm border border-[var(--color-accent)]/50 shadow-[0_0_30px_-5px_rgba(var(--accent-rgb),0.25)] flex items-center justify-center gap-1.5 relative">
+                    <div className="w-20 h-16 rounded-t-2xl rounded-br-2xl rounded-bl-sm gradient-border-card shadow-[0_0_30px_-5px_rgba(var(--accent-rgb),0.25)] flex items-center justify-center gap-1.5 relative">
 
                         {/* Yellow Typing Dots - Custom Animation */}
                         <div className="w-2 h-2 bg-[var(--color-accent)] rounded-full animate-[typing-bounce_1s_infinite] [animation-delay:0s]"></div>

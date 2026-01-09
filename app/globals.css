@@ -159,3 +159,68 @@ body {
   background-image: linear-gradient(to right, rgba(255, 255, 255, 0.035) 1px, transparent 1px),
     linear-gradient(to bottom, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
 }
+
+/* Shiny Button Styles */
+@property --gradient-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.shiny-cta {
+  --gradient-angle: 0deg;
+  animation: border-spin 2.5s linear infinite;
+}
+
+/* Primary variant (yellow/accent) */
+.shiny-cta-primary {
+  background: linear-gradient(#ccff00, #b8e600) padding-box,
+    conic-gradient(
+      from var(--gradient-angle),
+      transparent 0%,
+      #8ba300 5%,
+      #ccff00 15%,
+      #8ba300 30%,
+      transparent 40%,
+      transparent 100%
+    ) border-box;
+  border: 2px solid transparent;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+}
+
+.shiny-cta-primary:hover {
+  box-shadow: 0 0 25px rgba(204, 255, 0, 0.5), inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+}
+
+/* Secondary variant (black with white animated border) */
+.shiny-cta-secondary {
+  background: linear-gradient(#0a0a0a, #151515) padding-box,
+    conic-gradient(
+      from var(--gradient-angle),
+      transparent 0%,
+      #444444 5%,
+      #ffffff 15%,
+      #444444 30%,
+      transparent 40%,
+      transparent 100%
+    ) border-box;
+  border: 2px solid transparent;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+}
+
+.shiny-cta-secondary:hover {
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.2), inset 0 0 0 1px rgba(255, 255, 255, 0.15);
+}
+
+@keyframes border-spin {
+  to {
+    --gradient-angle: 360deg;
+  }
+}
+
+/* Gradient border for animation cards */
+.gradient-border-card {
+  background: linear-gradient(#18181b, #18181b) padding-box,
+    linear-gradient(to bottom, rgba(204, 255, 0, 0.5), rgba(204, 255, 0, 0.05)) border-box;
+  border: 1px solid transparent;
+}

@@ -2,6 +2,7 @@
 
 import { motion, useInView } from "motion/react";
 import { useRef } from "react";
+import { ShinyButton } from "./ShinyButton";
 import { ExpertEyeAnimation } from "./animations/ExpertEyeAnimation";
 import { StrategyAnimation } from "./animations/StrategyAnimation";
 import { UsabilityTestingAnimation } from "./animations/UsabilityTestingAnimation";
@@ -120,20 +121,22 @@ export function Expertise() {
 
             {/* CTA Button */}
             <motion.div
-                className="container mx-auto px-6 md:px-12 mt-16 md:mt-24 flex justify-center"
+                className="container mx-auto px-6 md:px-12 mt-8 md:mt-12 flex justify-center"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.2 }}
             >
-                <a
+                <ShinyButton
+                    as="a"
                     href="https://calendly.com/gabrielhidalgo/30min"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-block bg-accent text-black px-10 py-5 rounded-full font-bold text-lg uppercase tracking-widest hover:scale-105 transition-transform duration-300"
+                    variant="primary"
+                    size="lg"
                 >
                     Free Lucid UX Audit
-                </a>
+                </ShinyButton>
             </motion.div>
         </section>
     );

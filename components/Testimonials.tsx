@@ -3,6 +3,7 @@
 import { motion, useInView } from "motion/react";
 import { useRef } from "react";
 import { TestimonialsColumn } from "@/components/ui/testimonials-column";
+import { ShinyButton } from "./ShinyButton";
 
 const testimonials = [
     {
@@ -104,14 +105,16 @@ export function Testimonials() {
                     viewport={{ once: true }}
                     transition={{ duration: 0.5, delay: 0.3 }}
                 >
-                    <a
+                    <ShinyButton
+                        as="a"
                         href="https://calendly.com/gabrielhidalgo/30min"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-block bg-accent text-black font-bold py-4 px-10 rounded-full hover:bg-accent/90 transition-colors duration-300 uppercase tracking-wider"
+                        variant="primary"
+                        size="lg"
                     >
-                        BOOK A CONSULTATION CALL
-                    </a>
+                        Book a consultation call
+                    </ShinyButton>
                 </motion.div>
             </div>
         </section>

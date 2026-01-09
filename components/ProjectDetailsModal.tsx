@@ -6,6 +6,7 @@ import Image from "next/image";
 import { X, Zap, CheckCircle, ArrowRight, ChevronRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { motion, AnimatePresence } from "motion/react";
+import { ShinyButton } from "./ShinyButton";
 
 // Define the shape of the project data expected by the modal
 export interface ProjectDetails {
@@ -229,14 +230,16 @@ export function ProjectDetailsModal({ project, projects, isOpen, onClose, onNavi
                                 <h3 className="text-4xl md:text-5xl font-display font-bold text-[var(--color-foreground)] max-w-2xl">
                                     Let's make your interface convert
                                 </h3>
-                                <a
+                                <ShinyButton
+                                    as="a"
                                     href="https://calendly.com/gabrielhidalgo/30min"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="bg-white text-black px-8 py-4 rounded-full font-bold uppercase tracking-wider hover:bg-gray-200 transition-colors"
+                                    variant="primary"
+                                    size="lg"
                                 >
                                     Book a Consultation Call
-                                </a>
+                                </ShinyButton>
                             </div>
                             {/* Ambient background glow */}
                             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-accent/5 blur-3xl rounded-full"></div>

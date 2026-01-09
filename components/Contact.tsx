@@ -2,6 +2,7 @@
 
 import { motion, useInView } from "motion/react";
 import { useRef } from "react";
+import { ShinyButton } from "./ShinyButton";
 
 export function Contact() {
     const ref = useRef(null);
@@ -38,17 +39,22 @@ export function Contact() {
                 >
                     Book a free 30-minute UX audit. I'll review your product live, identify 2-3 quick wins, and give you honest feedback—no pitch, no commitment.
                 </motion.p>
-                <motion.a
-                    href="https://calendly.com/gabrielhidalgo/30min"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-block bg-[var(--color-background)] text-[var(--color-foreground)] px-10 py-5 rounded-full font-bold text-lg uppercase tracking-widest hover:scale-105 transition-transform duration-300"
+                <motion.div
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={isInView ? { opacity: 1, scale: 1 } : {}}
                     transition={{ duration: 0.5, delay: 0.5 }}
                 >
-                    Book Free UX Audit
-                </motion.a>
+                    <ShinyButton
+                        as="a"
+                        href="https://calendly.com/gabrielhidalgo/30min"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        variant="secondary"
+                        size="lg"
+                    >
+                        Book Free UX Audit
+                    </ShinyButton>
+                </motion.div>
             </div>
 
             {/* Decorative Rotating Circles */}

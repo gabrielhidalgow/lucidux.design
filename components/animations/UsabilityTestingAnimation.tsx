@@ -11,7 +11,7 @@ export function UsabilityTestingAnimation() {
                     <div className="absolute -inset-2 bg-[var(--color-accent)]/15 rounded-2xl blur-md animate-pulse"></div>
 
                     {/* Phone Body */}
-                    <div className="w-16 h-24 bg-zinc-900 rounded-xl border border-[var(--color-accent)]/50 shadow-[0_0_30px_-5px_rgba(var(--accent-rgb),0.25)] flex flex-col items-center pt-2 relative overflow-hidden">
+                    <div className="w-16 h-24 rounded-xl gradient-border-card shadow-[0_0_30px_-5px_rgba(var(--accent-rgb),0.25)] flex flex-col items-center pt-2 relative overflow-hidden">
 
                         {/* Phone Notch */}
                         <div className="w-6 h-1.5 bg-zinc-800 rounded-full mb-2"></div>

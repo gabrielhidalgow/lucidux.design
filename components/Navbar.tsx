@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { motion } from "motion/react";
+import { ShinyButton } from "./ShinyButton";
 
 export function Navbar() {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -48,7 +49,7 @@ export function Navbar() {
                     href="#services"
                     className="hidden md:block text-sm font-body text-gray-400 hover:text-[var(--color-foreground)] transition-colors uppercase tracking-wider"
                 >
-                    How it works
+                    Better UX
                 </a>
                 <a
                     href="#work"
@@ -62,14 +63,17 @@ export function Navbar() {
                 >
                     Testimonials
                 </a>
-                <a
+                <ShinyButton
+                    as="a"
                     href="https://calendly.com/gabrielhidalgo/30min"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-accent text-black font-bold font-body text-xs px-3 py-2 md:text-sm md:px-6 md:py-3 rounded-full hover:bg-accent/90 transition-colors uppercase tracking-wider"
+                    variant="primary"
+                    size="sm"
                 >
-                    <span className="hidden md:inline">FREE LUCID UX AUDIT</span><span className="md:hidden">FREE UX AUDIT</span>
-                </a>
+                    <span className="hidden md:inline">FREE LUCID UX AUDIT</span>
+                    <span className="md:hidden">FREE AUDIT</span>
+                </ShinyButton>
             </motion.div>
         </motion.nav>
     );
