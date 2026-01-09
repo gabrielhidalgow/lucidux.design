@@ -4,9 +4,6 @@ export function SupportAnimation() {
     return (
         <div className="relative w-full h-full flex items-center justify-center z-10">
 
-            {/* Decorative Small Bubbles */}
-            <div className="absolute bottom-[30%] left-[15%] w-4 h-4 bg-zinc-800 rounded-full animate-[float_5s_ease-in-out_infinite_0.5s]"></div>
-
             {/* Main Chat Bubble */}
             <div className="flex flex-col items-center gap-2 transform z-10 animate-[float_4s_ease-in-out_infinite]">
                 <div className="relative">
