@@ -68,8 +68,8 @@ export function Comparison() {
                         animate={isInView ? { opacity: 1, y: 0 } : {}}
                         transition={{ duration: 0.6, delay: 0.2 }}
                     >
-                        {/* Scroll Hint - Mobile Only */}
-                        <div className="md:hidden flex items-center justify-center gap-2 mb-4 text-sm text-gray-400 font-mono">
+                        {/* Scroll Hint - Mobile/Tablet */}
+                        <div className="lg:hidden flex items-center justify-center gap-2 mb-4 pt-2 text-sm text-gray-400 font-mono">
                             <ArrowLeftRight className="w-4 h-4" />
                             <span>Swipe to compare</span>
                         </div>
@@ -125,7 +125,7 @@ export function Comparison() {
                                 </table>
                             </div>
                             {/* Gradient Fade for scroll indication */}
-                            <div className="absolute top-0 right-0 h-full w-8 bg-gradient-to-l from-black/40 to-transparent pointer-events-none md:hidden" />
+                            <div className="absolute top-0 right-0 h-full w-8 bg-gradient-to-l from-black/40 to-transparent pointer-events-none lg:hidden" />
                         </div>
                     </motion.div>
 
