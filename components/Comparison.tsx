@@ -2,7 +2,7 @@
 
 import { motion, useInView } from "motion/react";
 import { useRef } from "react";
-import { Check, X } from "lucide-react";
+import { Check, X, ArrowLeftRight } from "lucide-react";
 import { ShinyButton } from "./ShinyButton";
 
 export function Comparison() {
@@ -68,54 +68,64 @@ export function Comparison() {
                         animate={isInView ? { opacity: 1, y: 0 } : {}}
                         transition={{ duration: 0.6, delay: 0.2 }}
                     >
-                        <div className="overflow-x-auto">
-                            <table className="w-full min-w-[640px] border-separate border-spacing-0">
-                                <thead>
-                                    <tr>
-                                        <th className="py-6 px-6 text-left border-b border-white/10"></th>
-                                        {columns.map((col, index) => (
-                                            <th
-                                                key={col}
-                                                className={`py-6 px-6 text-left font-display text-lg md:text-xl font-bold ${index === 0
-                                                    ? "text-accent bg-accent/5 border-t border-x border-accent rounded-t-xl"
-                                                    : "text-[var(--color-foreground)] border-b border-white/10"
-                                                    }`}
-                                            >
-                                                {col}
-                                            </th>
-                                        ))}
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    {rows.map((row, rowIndex) => (
-                                        <motion.tr
-                                            key={row.feature}
-                                            className="hover:bg-white/[0.02] transition-colors duration-300"
-                                            initial={{ opacity: 0, y: 10 }}
-                                            animate={isInView ? { opacity: 1, y: 0 } : {}}
-                                            transition={{ duration: 0.4, delay: 0.3 + rowIndex * 0.1 }}
-                                        >
-                                            <td className={`py-6 px-6 text-gray-400 font-body ${rowIndex !== rows.length - 1 ? "border-b border-white/10" : ""}`}>
-                                                {row.feature}
-                                            </td>
-                                            {row.values.map((value, colIndex) => (
-                                                <td
-                                                    key={`${row.feature}-${colIndex}`}
-                                                    className={`py-6 px-6 font-body ${colIndex === 0
-                                                        ? `bg-accent/5 border-x border-accent ${rowIndex === rows.length - 1
-                                                            ? "border-b border-accent rounded-b-xl"
-                                                            : ""
-                                                        }`
-                                                        : ""
-                                                    } ${rowIndex !== rows.length - 1 ? "border-b border-white/10" : ""}`}
+                        {/* Scroll Hint - Mobile Only */}
+                        <div className="md:hidden flex items-center justify-center gap-2 mb-4 text-sm text-gray-400 font-mono">
+                            <ArrowLeftRight className="w-4 h-4" />
+                            <span>Swipe to compare</span>
+                        </div>
+
+                        <div className="relative">
+                            <div className="overflow-x-auto">
+                                <table className="w-full min-w-[640px] border-separate border-spacing-0">
+                                    <thead>
+                                        <tr>
+                                            <th className="py-6 px-6 text-left border-b border-white/10"></th>
+                                            {columns.map((col, index) => (
+                                                <th
+                                                    key={col}
+                                                    className={`py-6 px-6 text-left font-display text-lg md:text-xl font-bold ${index === 0
+                                                        ? "text-accent bg-accent/5 border-t border-x border-accent rounded-t-xl"
+                                                        : "text-[var(--color-foreground)] border-b border-white/10"
+                                                        }`}
                                                 >
-                                                    {renderValue(value, colIndex)}
-                                                </td>
+                                                    {col}
+                                                </th>
                                             ))}
-                                        </motion.tr>
-                                    ))}
-                                </tbody>
-                            </table>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {rows.map((row, rowIndex) => (
+                                            <motion.tr
+                                                key={row.feature}
+                                                className="hover:bg-white/[0.02] transition-colors duration-300"
+                                                initial={{ opacity: 0, y: 10 }}
+                                                animate={isInView ? { opacity: 1, y: 0 } : {}}
+                                                transition={{ duration: 0.4, delay: 0.3 + rowIndex * 0.1 }}
+                                            >
+                                                <td className={`py-6 px-6 text-gray-400 font-body ${rowIndex !== rows.length - 1 ? "border-b border-white/10" : ""}`}>
+                                                    {row.feature}
+                                                </td>
+                                                {row.values.map((value, colIndex) => (
+                                                    <td
+                                                        key={`${row.feature}-${colIndex}`}
+                                                        className={`py-6 px-6 font-body ${colIndex === 0
+                                                            ? `bg-accent/5 border-x border-accent ${rowIndex === rows.length - 1
+                                                                ? "border-b border-accent rounded-b-xl"
+                                                                : ""
+                                                            }`
+                                                            : ""
+                                                            } ${rowIndex !== rows.length - 1 ? "border-b border-white/10" : ""}`}
+                                                    >
+                                                        {renderValue(value, colIndex)}
+                                                    </td>
+                                                ))}
+                                            </motion.tr>
+                                        ))}
+                                    </tbody>
+                                </table>
+                            </div>
+                            {/* Gradient Fade for scroll indication */}
+                            <div className="absolute top-0 right-0 h-full w-8 bg-gradient-to-l from-black/40 to-transparent pointer-events-none md:hidden" />
                         </div>
                     </motion.div>
 

@@ -155,7 +155,7 @@ export function Hero() {
             </div>
 
             <motion.div
-                className="absolute bottom-12 right-6 md:right-12 flex flex-col items-end gap-2 font-mono text-xs text-gray-500"
+                className="hidden md:flex absolute bottom-12 right-6 md:right-12 flex-col items-end gap-2 font-mono text-xs text-gray-500"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.5, delay: 1 }}
