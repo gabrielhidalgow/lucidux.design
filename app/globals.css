@@ -224,55 +224,75 @@ body {
   border: 1px solid transparent;
 }
 
-/* Gradient Column Border Implementation - Square & Continuous */
+/* Gradient Column Border Implementation */
 .grad-col-top,
 .grad-col-mid,
 .grad-col-bot {
   position: relative;
-  background: transparent !important;
+  background-color: transparent !important;
 }
 
-/* Left Vertical Line (Continuous) */
+/* SHARED: Solid yellow left line (STRAIGHT PARTS ONLY) */
 .grad-col-top::before,
 .grad-col-mid::before,
 .grad-col-bot::before {
   content: "";
   position: absolute;
-  top: 0;
-  bottom: 0;
   left: 0;
-  width: 2px;
-  background: #ccff00;
-  z-index: 10;
+  width: 1.5px;
+  background: var(--color-accent);
+  z-index: 20;
 }
 
-/* Right Vertical Line (Continuous Faint) */
+/* TOP CELL: Line starts BELOW the radius (8px) and overlaps bottom */
+.grad-col-top::before {
+  top: 8px;
+  bottom: -5px;
+}
+
+/* MIDDLE CELL: Line overlaps both top and bottom */
+.grad-col-mid::before {
+  top: -5px;
+  bottom: -5px;
+}
+
+/* BOTTOM CELL: Line overlaps top and STOPS ABOVE radius (8px) */
+.grad-col-bot::before {
+  top: -5px;
+  bottom: 8px;
+}
+
+/* CORNER CAPS (Top-Left and Bottom-Left) */
 .grad-col-top::after,
-.grad-col-mid::after,
 .grad-col-bot::after {
   content: "";
   position: absolute;
-  top: 0;
-  bottom: 0;
+  left: 0;
   right: 0;
-  width: 1px;
-  background: rgba(204, 255, 0, 0.1);
+  height: 8px;
+  /* Matches radius */
   pointer-events: none;
-  z-index: 10;
+  z-index: 25;
 }
 
-/* Top Cap (Header only) */
-.grad-col-top {
-  background-image: linear-gradient(to right, #ccff00, rgba(204, 255, 0, 0.1));
-  background-size: 100% 2px;
-  background-position: top left;
-  background-repeat: no-repeat;
+/* TOP CORNER: Top border + Left border + Radius */
+.grad-col-top::after {
+  top: 0;
+  border-top: 1.5px solid var(--color-accent);
+  border-left: 1.5px solid var(--color-accent);
+  border-top-left-radius: 8px;
+  /* Fade to right (keeping left side opaque) */
+  -webkit-mask-image: linear-gradient(to right, #000 0%, transparent 100%);
+  mask-image: linear-gradient(to right, #000 0%, transparent 100%);
 }
 
-/* Bottom Cap (Footer only) */
-.grad-col-bot {
-  background-image: linear-gradient(to right, #ccff00, rgba(204, 255, 0, 0.1));
-  background-size: 100% 2px;
-  background-position: bottom left;
-  background-repeat: no-repeat;
+/* BOTTOM CORNER: Bottom border + Left border + Radius */
+.grad-col-bot::after {
+  bottom: 0;
+  border-bottom: 1.5px solid var(--color-accent);
+  border-left: 1.5px solid var(--color-accent);
+  border-bottom-left-radius: 8px;
+  /* Fade to right (keeping left side opaque) */
+  -webkit-mask-image: linear-gradient(to right, #000 0%, transparent 100%);
+  mask-image: linear-gradient(to right, #000 0%, transparent 100%);
 }

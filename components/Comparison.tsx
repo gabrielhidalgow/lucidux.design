@@ -84,7 +84,7 @@ export function Comparison() {
                                                 <th
                                                     key={col}
                                                     className={`py-6 px-6 text-left font-display text-lg md:text-xl font-bold ${index === 0
-                                                        ? "text-accent grad-col-top"
+                                                        ? "text-accent grad-col-top border-b border-white/10"
                                                         : "text-[var(--color-foreground)] border-b border-white/10"
                                                         }`}
                                                 >
