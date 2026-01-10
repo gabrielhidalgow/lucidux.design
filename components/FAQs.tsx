@@ -13,27 +13,27 @@ const faqItems = [
     {
         id: "item-1",
         question: "What is AI design consulting?",
-        answer: "AI design consulting helps businesses integrate artificial intelligence tools into their design workflows. I assess your current processes, recommend the right AI tools, implement them, and train your team to use them effectively.",
+        answer: "AI design consulting helps businesses integrate artificial intelligence tools into their design workflows. We assess your current processes, recommend the right AI tools, implement them, and train your team to use them effectively.",
     },
     {
         id: "item-2",
         question: "How is this different from hiring a traditional designer?",
-        answer: "Unlike traditional designers who create assets manually, I focus on building systems and workflows that leverage AI to multiply your team's output. The goal is to make your existing team more efficient, not replace them.",
+        answer: "Unlike traditional designers who create assets manually, we focus on building systems and workflows that leverage AI to multiply your team's output. The goal is to make your existing team more efficient, not replace them.",
     },
     {
         id: "item-3",
         question: "What AI tools do you work with?",
-        answer: "I work with a range of AI tools including Midjourney, DALL-E, Stable Diffusion for image generation, as well as Figma AI, Adobe Firefly, and various automation tools. The specific tools depend on your needs and existing tech stack.",
+        answer: "We work with a range of AI tools including Midjourney, DALL-E, Stable Diffusion for image generation, as well as Figma AI, Adobe Firefly, and various automation tools. The specific tools depend on your needs and existing tech stack.",
     },
     {
         id: "item-4",
         question: "How long does a typical engagement take?",
-        answer: "Most projects run 2-8 weeks depending on scope. A basic audit and strategy takes 2-3 weeks, while a full implementation with training can take 6-8 weeks. I also offer ongoing support packages.",
+        answer: "Most projects run 2-8 weeks depending on scope. A basic audit and strategy takes 2-3 weeks, while a full implementation with training can take 6-8 weeks. We also offer ongoing support packages.",
     },
     {
         id: "item-5",
         question: "Is this suitable for small businesses?",
-        answer: "Absolutely. I work with teams of 5-50 people. Small businesses often see the biggest ROI because AI tools can dramatically reduce the need for expensive agency work or additional hires.",
+        answer: "Absolutely. We work with teams of 5-50 people. Small businesses often see the biggest ROI because AI tools can dramatically reduce the need for expensive agency work or additional hires.",
     },
     {
         id: "item-6",
@@ -43,22 +43,22 @@ const faqItems = [
     {
         id: "item-7",
         question: "Do you work remotely?",
-        answer: "Yes, I work 100% remotely with clients across Australia and New Zealand. I use video calls, screen sharing, and collaborative tools to ensure seamless communication regardless of location.",
+        answer: "Yes, we work 100% remotely with clients across Australia and New Zealand. We use video calls, screen sharing, and collaborative tools to ensure seamless communication regardless of location.",
     },
     {
         id: "item-8",
         question: "Can you work with our existing design team?",
-        answer: "Definitely. In fact, that's the ideal scenario. I work alongside your team to upskill them on AI tools, not replace them. The goal is to make your designers more productive and capable.",
+        answer: "Definitely. In fact, that's the ideal scenario. We work alongside your team to upskill them on AI tools, not replace them. The goal is to make your designers more productive and capable.",
     },
     {
         id: "item-9",
         question: "What industries do you work with?",
-        answer: "I've worked with SaaS companies, e-commerce brands, marketing agencies, and startups across various industries. The principles of AI-enhanced design apply broadly, though I tailor the approach to each industry's specific needs.",
+        answer: "We've worked with SaaS companies, e-commerce brands, marketing agencies, and startups across various industries. The principles of AI-enhanced design apply broadly, though we tailor the approach to each industry's specific needs.",
     },
     {
         id: "item-10",
         question: "Do you offer ongoing support after the project?",
-        answer: "Yes. All projects include 30 days of post-launch support. I also offer quarterly review packages for clients who want ongoing guidance as AI tools evolve and new opportunities emerge.",
+        answer: "Yes. All projects include 30 days of post-launch support. We also offer quarterly review packages for clients who want ongoing guidance as AI tools evolve and new opportunities emerge.",
     },
     {
         id: "item-11",

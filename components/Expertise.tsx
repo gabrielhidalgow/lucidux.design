@@ -19,7 +19,7 @@ export function Expertise() {
             title: "Expert eye",
             subtitle: "Spot what AI tools miss",
             description:
-                "I review your interface and spot critical issues in minutes. Visual hierarchy, cognitive load, interaction gaps—problems AI tools consistently miss.",
+                "We review your interface and spot critical issues in minutes. Visual hierarchy, cognitive load, interaction gaps—problems AI tools consistently miss.",
             component: <ExpertEyeAnimation />,
         },
         {
@@ -27,7 +27,7 @@ export function Expertise() {
             title: "Strategy",
             subtitle: "Prioritize what to fix first",
             description:
-                "Based on the audit, I create a prioritized design roadmap. What's costing you conversions now vs. what can wait. Clear recommendations with expected impact.",
+                "Based on the audit, we create a prioritized design roadmap. What's costing you conversions now vs. what can wait. Clear recommendations with expected impact.",
             component: <StrategyAnimation />,
         },
         {
@@ -35,7 +35,7 @@ export function Expertise() {
             title: "Usability Testing",
             subtitle: "Validate with real users",
             description:
-                "Remote and in-person testing sessions reveal the friction points analytics can't explain. Real users navigate your AI product while I capture insights that drive meaningful improvements.",
+                "Remote and in-person testing sessions reveal the friction points analytics can't explain. Real users navigate your AI product while we capture insights that drive meaningful improvements.",
             component: <UsabilityTestingAnimation />,
         },
         {
