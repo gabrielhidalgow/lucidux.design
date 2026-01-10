@@ -18,8 +18,8 @@ const spaceGrotesk = Space_Grotesk({
 export const metadata: Metadata = {
   metadataBase: new URL('https://lucidux.design'),
   title: "LUCIDUX — UX/UI Design for AI-Built Startups | Free UX Audit",
-  description: "Sydney-based UX/UI consultant for technical founders. I fix usability issues, optimize conversion, and build design systems for products built with Cursor, v0, Lovable, Bolt, Replit, and Claude Code.",
-  keywords: ["UX designer", "UI designer", "startup design", "AI products", "UX audit", "design systems", "Cursor", "v0", "Lovable", "Bolt", "Replit", "Claude Code", "conversion optimization", "Sydney UX designer", "Sydney UI designer", "UX consultant Sydney", "Australian design consultant", "Sydney startup design"],
+  description: "Sydney-based UX/UI design partner for startup founders. I provide product design help, fix usability issues, optimize conversion, and build design systems. Your fractional UX consultant for AI-built products.",
+  keywords: ["UX designer", "UI designer", "startup design", "AI products", "UX audit", "design systems", "product design help", "UX design partner", "design partner for startups", "fractional UX designer", "startup UX consultant", "product designer for founders", "MVP design", "conversion optimization", "Sydney UX designer", "Sydney UI designer", "UX consultant Sydney", "Australian design consultant", "Sydney startup design"],
   authors: [{ name: "Gabriel Hidalgo" }],
   creator: "Gabriel Hidalgo",
   openGraph: {
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     url: "https://lucidux.design",
     siteName: "Lucidux Design",
     title: "LUCIDUX — UX/UI Design for AI-Built Startups",
-    description: "Sydney-based UX/UI consultant for technical founders. I fix usability issues, optimize conversion, and build design systems for products built with Cursor, v0, Lovable, Bolt, Replit, and Claude Code.",
+    description: "Sydney-based UX/UI design partner for startup founders. I provide product design help, fix usability issues, optimize conversion, and build design systems for AI-built products.",
     images: [
       {
         url: "/og-image.jpg",
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "LUCIDUX — UX/UI Design for AI-Built Startups",
-    description: "Sydney-based UX/UI consultant for technical founders. I fix usability issues, optimize conversion, and build design systems.",
+    description: "Sydney-based UX/UI design partner for startup founders. Product design help, UX audits, and design systems.",
     creator: "@gabrielhidalgo",
     images: ["/og-image.jpg"],
   },
@@ -66,6 +66,7 @@ const jsonLd = {
       "@type": "Organization",
       "@id": "https://lucidux.design/#organization",
       name: "Lucidux Design",
+      alternateName: ["Lucidux", "Lucidux UX Design", "Gabriel Hidalgo Design", "Lucidux Design Studio"],
       url: "https://lucidux.design",
       logo: {
         "@type": "ImageObject",
@@ -90,12 +91,20 @@ const jsonLd = {
       knowsAbout: [
         "UX Design",
         "UI Design",
+        "Product Design",
         "User Research",
         "Usability Testing",
         "Design Systems",
         "AI Products",
         "Startup Design",
+        "MVP Design",
         "Conversion Optimization",
+        "Design Partner",
+        "Fractional Design",
+        "UX Consulting",
+        "Interface Design",
+        "Mobile App Design",
+        "Web App Design",
       ],
       sameAs: [
         "https://www.linkedin.com/in/gabrielhidalgo",
@@ -129,6 +138,40 @@ const jsonLd = {
         reviewCount: "7",
         bestRating: "5",
         worstRating: "1",
+      },
+    },
+    // LocalBusiness (for local search "Sydney UX designer")
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://lucidux.design/#localbusiness",
+      name: "Lucidux Design",
+      description: "UX/UI design partner for startup founders in Sydney. Product design help, UX audits, usability testing, and design systems.",
+      url: "https://lucidux.design",
+      telephone: "",
+      email: "gabrielhidalgow@gmail.com",
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: "Sydney",
+        addressRegion: "NSW",
+        postalCode: "2000",
+        addressCountry: "AU",
+      },
+      geo: {
+        "@type": "GeoCoordinates",
+        latitude: -33.8688,
+        longitude: 151.2093,
+      },
+      areaServed: [
+        { "@type": "City", name: "Sydney" },
+        { "@type": "Country", name: "Australia" },
+        { "@type": "Country", name: "New Zealand" },
+      ],
+      priceRange: "$$",
+      openingHoursSpecification: {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        opens: "09:00",
+        closes: "18:00",
       },
     },
     // Individual Services
