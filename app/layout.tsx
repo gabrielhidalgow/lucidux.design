@@ -17,7 +17,7 @@ const spaceGrotesk = Space_Grotesk({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://lucidux.design'),
-  title: "LUCIDUX — AI UX Design Agency Sydney | Apps & SaaS",
+  title: "LUCIDUX — AI UX Design Studio Sydney | Apps & SaaS",
   description: "AI startup with UX problems? We help founders fix conversion and usability fast. UX audits, product design for mobile apps, web apps & SaaS. Cursor, v0, Bolt.",
   keywords: [
     // Problem-based (high intent)
@@ -56,20 +56,20 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://lucidux.design",
     siteName: "Lucidux Design",
-    title: "LUCIDUX — AI UX Design Agency Sydney | Apps & SaaS",
+    title: "LUCIDUX — AI UX Design Studio Sydney | Apps & SaaS",
     description: "AI startup with UX problems? We help founders fix conversion and usability fast. UX audits, product design for mobile apps, web apps & SaaS. Cursor, v0, Bolt.",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "LUCIDUX — AI UX Design Agency Sydney",
+        alt: "LUCIDUX — AI UX Design Studio Sydney",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "LUCIDUX — AI UX Design Agency Sydney | Apps & SaaS",
+    title: "LUCIDUX — AI UX Design Studio Sydney | Apps & SaaS",
     description: "AI startup with UX problems? We fix conversion and usability fast. UX audits & product design for Cursor, v0, Bolt apps.",
     creator: "@gabrielhidalgo",
     images: ["/og-image.jpg"],
