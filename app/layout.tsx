@@ -44,6 +44,10 @@ export const metadata: Metadata = {
     // Website specific
     "website UX", "landing page UX", "website conversion optimization",
     "fix website conversion", "landing page designer",
+    // AI agency/expert positioning
+    "AI UX design agency", "UX agency for AI startups", "AI design consultant",
+    "AI product design agency", "UX expert for AI products", "AI focused design agency",
+    "design agency for AI companies", "AI product designer", "AI UX consultant",
   ],
   authors: [{ name: "Gabriel Hidalgo" }],
   creator: "Gabriel Hidalgo",
@@ -134,6 +138,8 @@ const jsonLd = {
         "SaaS Design",
         "Landing Page Design",
         "Dashboard Design",
+        "AI Product Design",
+        "AI UX Design",
       ],
       sameAs: [
         "https://www.linkedin.com/in/gabrielhidalgo",
