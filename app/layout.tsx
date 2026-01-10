@@ -139,6 +139,50 @@ const jsonLd = {
         bestRating: "5",
         worstRating: "1",
       },
+      review: [
+        {
+          "@type": "Review",
+          author: { "@type": "Person", name: "Michael John Doring" },
+          reviewBody: "If you're on the hunt for a UX designer who's not only good but also super easy and fast to work with, Gabriel's your man. Really pleased with how everything turned out.",
+          reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+        },
+        {
+          "@type": "Review",
+          author: { "@type": "Person", name: "Yashu Singh" },
+          reviewBody: "You come across as someone with great knowledge of your topic and bring a lot of experience to make things better.",
+          reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+        },
+        {
+          "@type": "Review",
+          author: { "@type": "Person", name: "Mark Dawes" },
+          reviewBody: "Gabriel is really easy to work with and his output was excellent.",
+          reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+        },
+        {
+          "@type": "Review",
+          author: { "@type": "Person", name: "Andrew Barton" },
+          reviewBody: "Gabriel has been working with us for the better part of two years. We have and continue to be happy with his flexibility in meeting our timeframes, collaboration and excellent result!",
+          reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+        },
+        {
+          "@type": "Review",
+          author: { "@type": "Person", name: "Ram Prakash K" },
+          reviewBody: "Gabriel consistently brought a strong eye for detail, deep understanding of design systems, and a knack for translating complex requirements into elegant UI solutions.",
+          reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+        },
+        {
+          "@type": "Review",
+          author: { "@type": "Person", name: "Alan Ung" },
+          reviewBody: "One of the most commendable aspects of your work on the CBA project has been your proactive communication. Your highly positive work ethic is evident in the way you promptly address queries.",
+          reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+        },
+        {
+          "@type": "Review",
+          author: { "@type": "Person", name: "Mourad Kessas" },
+          reviewBody: "I've had the pleasure of working with Gabriel on multiple projects, and the results have always been exceptional. He's creative, prompt, and very easy to work with.",
+          reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+        },
+      ],
     },
     // LocalBusiness (for local search "Sydney UX designer")
     {
@@ -316,56 +360,6 @@ const jsonLd = {
           },
         },
       ],
-    },
-    // Reviews
-    {
-      "@type": "Review",
-      author: { "@type": "Person", name: "Michael John Doring" },
-      reviewBody: "If you're on the hunt for a UX designer who's not only good but also super easy and fast to work with, Gabriel's your man. Really pleased with how everything turned out.",
-      reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
-      itemReviewed: { "@id": "https://lucidux.design/#service" },
-    },
-    {
-      "@type": "Review",
-      author: { "@type": "Person", name: "Yashu Singh" },
-      reviewBody: "You come across as someone with great knowledge of your topic and bring a lot of experience to make things better.",
-      reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
-      itemReviewed: { "@id": "https://lucidux.design/#service" },
-    },
-    {
-      "@type": "Review",
-      author: { "@type": "Person", name: "Mark Dawes" },
-      reviewBody: "Gabriel is really easy to work with and his output was excellent.",
-      reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
-      itemReviewed: { "@id": "https://lucidux.design/#service" },
-    },
-    {
-      "@type": "Review",
-      author: { "@type": "Person", name: "Andrew Barton" },
-      reviewBody: "Gabriel has been working with us for the better part of two years. We have and continue to be happy with his flexibility in meeting our timeframes, collaboration and excellent result!",
-      reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
-      itemReviewed: { "@id": "https://lucidux.design/#service" },
-    },
-    {
-      "@type": "Review",
-      author: { "@type": "Person", name: "Ram Prakash K" },
-      reviewBody: "Gabriel consistently brought a strong eye for detail, deep understanding of design systems, and a knack for translating complex requirements into elegant UI solutions.",
-      reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
-      itemReviewed: { "@id": "https://lucidux.design/#service" },
-    },
-    {
-      "@type": "Review",
-      author: { "@type": "Person", name: "Alan Ung" },
-      reviewBody: "One of the most commendable aspects of your work on the CBA project has been your proactive communication. Your highly positive work ethic is evident in the way you promptly address queries.",
-      reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
-      itemReviewed: { "@id": "https://lucidux.design/#service" },
-    },
-    {
-      "@type": "Review",
-      author: { "@type": "Person", name: "Mourad Kessas" },
-      reviewBody: "I've had the pleasure of working with Gabriel on multiple projects, and the results have always been exceptional. He's creative, prompt, and very easy to work with.",
-      reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
-      itemReviewed: { "@id": "https://lucidux.design/#service" },
     },
   ],
 };
