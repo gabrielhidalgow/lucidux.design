@@ -17,8 +17,8 @@ const spaceGrotesk = Space_Grotesk({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://lucidux.design'),
-  title: "LUCIDUX — UX/UI Design for AI-Built Startups | Free UX Audit",
-  description: "Users confused by your AI-built app? Conversion rate stuck? I help startup founders fix UX problems fast. Product design help, UX audits, and design systems for Cursor, v0, Bolt, and vibe-coded products.",
+  title: "LUCIDUX — AI UX Design Agency Sydney | Apps & SaaS",
+  description: "AI startup with UX problems? We help founders fix conversion and usability fast. UX audits, product design for mobile apps, web apps & SaaS. Cursor, v0, Bolt.",
   keywords: [
     // Problem-based (high intent)
     "fix my app UX", "improve startup conversion", "users confused by my app", "bad user experience fix",
@@ -56,21 +56,21 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://lucidux.design",
     siteName: "Lucidux Design",
-    title: "LUCIDUX — UX/UI Design for AI-Built Startups",
-    description: "Users confused by your AI-built app? I help founders fix UX problems fast. Product design help, UX audits, and design systems for Cursor, v0, Bolt, and vibe-coded products.",
+    title: "LUCIDUX — AI UX Design Agency Sydney | Apps & SaaS",
+    description: "AI startup with UX problems? We help founders fix conversion and usability fast. UX audits, product design for mobile apps, web apps & SaaS. Cursor, v0, Bolt.",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "LUCIDUX — UX/UI Design for AI-Built Startups",
+        alt: "LUCIDUX — AI UX Design Agency Sydney",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "LUCIDUX — UX/UI Design for AI-Built Startups",
-    description: "Users confused by your AI-built app? I fix UX problems fast. Design help for Cursor, v0, Bolt, and vibe-coded products.",
+    title: "LUCIDUX — AI UX Design Agency Sydney | Apps & SaaS",
+    description: "AI startup with UX problems? We fix conversion and usability fast. UX audits & product design for Cursor, v0, Bolt apps.",
     creator: "@gabrielhidalgo",
     images: ["/og-image.jpg"],
   },
