@@ -35,6 +35,15 @@ export const metadata: Metadata = {
     "fractional UX designer", "startup UX consultant", "MVP design", "conversion optimization",
     // Location
     "Sydney UX designer", "Sydney UI designer", "Australian design consultant",
+    // Mobile app specific
+    "mobile app UX design", "iOS app designer", "Android app UX", "mobile app conversion",
+    "fix mobile app UX", "mobile app usability", "app store optimization UX",
+    // Web app / SaaS specific
+    "SaaS UX design", "web app UX", "dashboard UX design", "SaaS conversion optimization",
+    "web application design", "B2B SaaS designer", "SaaS onboarding UX",
+    // Website specific
+    "website UX", "landing page UX", "website conversion optimization",
+    "fix website conversion", "landing page designer",
   ],
   authors: [{ name: "Gabriel Hidalgo" }],
   creator: "Gabriel Hidalgo",
@@ -121,6 +130,10 @@ const jsonLd = {
         "Interface Design",
         "Mobile App Design",
         "Web App Design",
+        "Website Design",
+        "SaaS Design",
+        "Landing Page Design",
+        "Dashboard Design",
       ],
       sameAs: [
         "https://www.linkedin.com/in/gabrielhidalgo",
