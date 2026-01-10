@@ -557,6 +557,363 @@ Common next steps:
 **Want expert eyes on your product?** Book a free 30-minute UX audit. I'll walk through your critical flows, identify the issues costing you conversions, and recommend specific fixes.
     `.trim(),
   },
+  {
+    slug: "fix-cursor-v0-bolt-app-ux",
+    title: "How to Fix Your Cursor, v0, or Bolt App's UX",
+    description: "AI coding tools ship fast but create predictable UX problems. Here's how to fix the common issues in Cursor, v0, Bolt, and other vibe-coded apps.",
+    date: "2025-01-12",
+    readTime: "7 min read",
+    category: "AI Tools",
+    keywords: ["fix cursor app design", "v0 app design review", "bolt app UX help", "AI built app looks bad", "vibe coded app UX", "cursor generated UI fix", "improve AI generated UI"],
+    content: `
+## The Vibe Coding Problem
+
+You shipped your app in a weekend using Cursor, v0, or Bolt. It works. The code is clean. But users are confused, conversions are low, and something feels off.
+
+This isn't a bug—it's a predictable pattern. AI coding tools optimize for functional code, not user experience. Here's how to fix it.
+
+## Problem 1: The "Kitchen Sink" Interface
+
+AI tools include everything you ask for. The result? Cluttered interfaces with every feature visible at once.
+
+**Symptoms:**
+- Dashboard with 10+ widgets
+- Navigation with 8+ top-level items
+- Settings pages with endless toggles
+- Users saying "where do I start?"
+
+**The Fix:**
+1. Identify your single most important user action
+2. Make that action visually dominant
+3. Hide secondary features behind progressive disclosure
+4. Use "Show more" or "Advanced" toggles for power-user features
+
+## Problem 2: Generic Component Soup
+
+v0 and Bolt pull from component libraries. The result looks "designed" but feels generic—like every other SaaS app.
+
+**Symptoms:**
+- Looks like a template
+- No visual hierarchy between elements
+- Everything has the same weight
+- Users can't find what matters
+
+**The Fix:**
+1. Pick ONE accent color and use it sparingly for primary actions only
+2. Increase contrast between primary and secondary elements
+3. Add whitespace to create visual breathing room
+4. Remove decorative elements that don't serve a purpose
+
+## Problem 3: Forms That Feel Like Interrogation
+
+AI-generated forms ask for everything upfront. Users bounce before they experience any value.
+
+**Symptoms:**
+- Sign-up forms with 6+ fields
+- Required fields that aren't actually required
+- No inline validation
+- Generic error messages
+
+**The Fix:**
+1. Reduce sign-up to email + password (or just email with magic link)
+2. Collect additional info after users experience value
+3. Add inline validation that helps, not punishes
+4. Write error messages that explain how to fix the issue
+
+## Problem 4: No Clear User Journey
+
+Cursor and v0 build screens, not flows. Each page works independently, but the overall journey is confusing.
+
+**Symptoms:**
+- Users don't know what to do after sign-up
+- High drop-off in onboarding
+- Features exist but nobody uses them
+- "Where did that setting go?"
+
+**The Fix:**
+1. Map your critical path: Sign up → First value → Habit
+2. Count the steps—if it's more than 5, you're losing users
+3. Add progress indicators for multi-step flows
+4. Use empty states to guide next actions
+
+## Problem 5: Mobile Afterthought
+
+AI tools generate responsive code, but responsiveness isn't the same as mobile-first design.
+
+**Symptoms:**
+- Touch targets too small
+- Horizontal scrolling
+- Important actions below the fold
+- Forms unusable on phone
+
+**The Fix:**
+1. Test on a real phone, not just browser resize
+2. Make touch targets at least 44x44px
+3. Put primary actions within thumb reach
+4. Simplify navigation for mobile (hamburger is fine)
+
+## The Quick Audit
+
+Before you ship (or to audit what you've shipped):
+
+1. **5-second test:** Can a stranger understand what this does?
+2. **Critical path count:** How many clicks to core value?
+3. **Squint test:** Does anything stand out when you squint?
+4. **Error test:** What happens when things go wrong?
+5. **Phone test:** Does it actually work on mobile?
+
+## When to Get Help
+
+You can fix many of these issues yourself. But consider expert help when:
+
+- You've fixed the obvious issues but metrics aren't improving
+- You're too close to see what's confusing users
+- You need to move faster than trial-and-error allows
+- You want validation before rebuilding
+
+**Built with Cursor, v0, or Bolt?** Book a free 30-minute UX audit. I specialize in fixing AI-generated interfaces and can identify the specific issues holding your app back.
+    `.trim(),
+  },
+  {
+    slug: "why-users-dont-understand-your-app",
+    title: "Why Users Don't Understand Your App (And How to Fix It)",
+    description: "Users say 'I don't get it' despite your product solving a real problem. Here's why clarity problems happen and the specific fixes that work.",
+    date: "2025-01-11",
+    readTime: "6 min read",
+    category: "UX Strategy",
+    keywords: ["users confused by my app", "why users abandon my app", "users dont understand my product", "app clarity problems", "confusing user interface", "fix confusing app"],
+    content: `
+## The Clarity Crisis
+
+Your product solves a real problem. You know it works. Your early users validated it. But new users keep saying "I don't get it" and bouncing.
+
+This is the most frustrating problem in product design: a clarity gap between what you built and what users perceive.
+
+## Why This Happens
+
+### 1. The Curse of Knowledge
+
+You've been building this for months. Every button, every flow, every feature makes perfect sense to you. But new users don't have your context.
+
+**Signs you have this problem:**
+- You keep adding explanatory text that nobody reads
+- Users ask questions that seem obvious to you
+- Your onboarding keeps getting longer
+
+**The fix:** Watch 5 new users try your product without any guidance. What's "obvious" to you will clearly not be obvious to them.
+
+### 2. Too Many Choices
+
+When users land on your product, they need ONE clear thing to do. If they see 5 options, they often choose none.
+
+**Signs you have this problem:**
+- Multiple CTAs competing for attention
+- Users click around randomly before leaving
+- Heat maps show clicks scattered everywhere
+
+**The fix:** For each screen, identify the single most important action. Make it visually dominant. Reduce everything else.
+
+### 3. Unclear Value Proposition
+
+Users don't care about features. They care about outcomes. If your interface leads with what it does instead of what it does for them, you lose clarity.
+
+**Signs you have this problem:**
+- Headlines describe features, not benefits
+- Users ask "but what does this actually do for me?"
+- Competitors with worse products convert better
+
+**The fix:** Rewrite every headline to answer "so what?" From the user's perspective, not yours.
+
+### 4. Assumed Knowledge
+
+Your interface assumes users know things they don't: industry terminology, how similar products work, what steps to take next.
+
+**Signs you have this problem:**
+- Support tickets about "basic" things
+- Users stuck at unexpected places
+- Different users get confused at different points
+
+**The fix:** Define every term. Explain every step. Assume zero prior knowledge.
+
+## The Clarity Checklist
+
+Run through this for your key screens:
+
+**Above the fold:**
+- [ ] Can users identify what this product does in 5 seconds?
+- [ ] Is there ONE clear primary action?
+- [ ] Does the headline state a benefit, not a feature?
+
+**Navigation:**
+- [ ] Can users find main features in under 3 clicks?
+- [ ] Are labels clear to someone outside your industry?
+- [ ] Is the current location always obvious?
+
+**Onboarding:**
+- [ ] Can users reach value before being asked to commit?
+- [ ] Is the first action obvious and achievable?
+- [ ] Is progress visible?
+
+**Throughout:**
+- [ ] Is jargon eliminated or explained?
+- [ ] Do empty states guide next actions?
+- [ ] Are error messages helpful, not just accurate?
+
+## Quick Wins That Usually Work
+
+1. **Bigger, bolder primary CTA** — Make it impossible to miss
+2. **Remove secondary options** — Temporarily hide them and see if metrics improve
+3. **Add a subtitle** — Below your main headline, explain what happens next
+4. **Progress indicators** — Show users where they are in any multi-step flow
+5. **Smart defaults** — Pre-fill anything you can reasonably assume
+
+## When Clarity Isn't The Problem
+
+Sometimes "I don't get it" actually means:
+- "I don't trust this" — Add social proof, testimonials, security indicators
+- "I don't want this" — Product-market fit issue, not UX
+- "I don't have time for this" — Reduce friction, offer a faster path
+
+Don't over-optimize for clarity if the real problem is elsewhere.
+
+**Want to find out what's actually confusing your users?** Book a free 30-minute UX audit. I'll identify the specific clarity issues in your product and recommend targeted fixes.
+    `.trim(),
+  },
+  {
+    slug: "fix-startup-conversion-rate",
+    title: "Quick UX Fixes When Your Conversion Rate Is Stuck",
+    description: "Your conversion rate is stuck at 2-3% and you don't know why. Here are the high-impact UX fixes that usually move the needle.",
+    date: "2025-01-09",
+    readTime: "5 min read",
+    category: "Conversion",
+    keywords: ["my app conversion is bad", "improve startup conversion", "fix low conversion rate", "startup conversion optimization", "why is my conversion low", "increase app signups"],
+    content: `
+## The 2-3% Plateau
+
+You're getting traffic. People are landing on your site. But your conversion rate is stuck at 2-3%, and you've tried "best practices" that don't seem to help.
+
+Here are the UX fixes that actually move the needle—based on patterns I see across dozens of startup products.
+
+## Fix 1: Reduce Your Form Fields (Yes, Again)
+
+I know you've heard this before. But you probably haven't gone far enough.
+
+**The test:** Can you launch with just an email field? Try it for a week.
+
+**Why it works:** Every field is a decision point. Every decision point loses users. The math is brutal: 5 fields at 90% completion each = 59% overall completion.
+
+**What to cut:**
+- Name (you can ask later)
+- Phone number (you probably don't need it)
+- Company name (ask after they've experienced value)
+- "How did you hear about us?" (use UTM parameters instead)
+
+## Fix 2: Move Your CTA Above the Fold
+
+Check your landing page on mobile. Is the primary CTA visible without scrolling?
+
+**The test:** Screenshot your page on a phone. If the CTA isn't visible, you're losing conversions.
+
+**Why it works:** Many users never scroll. If your CTA requires scrolling, you're filtering for only the most motivated users.
+
+**How to fix:**
+- Move the CTA button up
+- Or add a second CTA above the fold
+- Make it sticky on scroll (but test this—can feel aggressive)
+
+## Fix 3: Add a Single Testimonial Near Your CTA
+
+Social proof works, but placement matters more than quantity.
+
+**The test:** Add one short testimonial directly above or below your primary CTA.
+
+**Why it works:** At the moment of decision, users look for reassurance. A testimonial provides that at the exact right moment.
+
+**What works best:**
+- Specific result ("Increased conversions by 40%")
+- Real name and photo
+- Relevant to your target user
+- Short (1-2 sentences)
+
+## Fix 4: Fix Your Button Copy
+
+"Submit" and "Sign Up" are conversion killers. Your button text should communicate value.
+
+**The test:** Does your button tell users what they GET, not what they DO?
+
+**Examples:**
+- "Submit" → "Get My Free Audit"
+- "Sign Up" → "Start Free Trial"
+- "Learn More" → "See How It Works"
+- "Contact Us" → "Get a Quote in 24 Hours"
+
+## Fix 5: Remove Navigation From Your Landing Page
+
+This is counterintuitive but often high-impact.
+
+**The test:** Remove or minimize navigation links on your landing page. Measure conversion.
+
+**Why it works:** Every navigation link is an exit opportunity. On a conversion-focused page, you want users to have one path: convert.
+
+**How to implement:**
+- Remove header navigation entirely
+- Or reduce to just logo (clicking goes to homepage)
+- Keep footer links for trust/legal but make them subtle
+
+## Fix 6: Add Urgency or Scarcity (Honestly)
+
+Fake urgency is gross and users see through it. Real urgency works.
+
+**The test:** Is there a legitimate reason to act now? Make it visible.
+
+**Honest urgency examples:**
+- "Prices increase next month" (if true)
+- "3 spots left this quarter" (if true)
+- "Free audit for next 10 signups" (if you'll honor it)
+- Limited-time offer with real deadline
+
+**Don't do:**
+- Fake countdown timers that reset
+- "Only 2 left!" that's always 2
+- Creating pressure that doesn't exist
+
+## Fix 7: Speed Up Your Page
+
+Page speed directly impacts conversion. Every second of load time costs you.
+
+**The test:** Run PageSpeed Insights. If mobile score is under 70, you have a problem.
+
+**Quick wins:**
+- Compress images (use WebP format)
+- Remove unused JavaScript
+- Lazy load below-fold content
+- Use a CDN
+
+## The Priority Order
+
+If you're stuck at 2-3%, try these in order:
+
+1. **Form fields** — Highest impact, easiest to test
+2. **CTA placement** — Check mobile specifically
+3. **Button copy** — Quick win, easy to A/B test
+4. **Testimonial placement** — Add one near the CTA
+5. **Navigation removal** — Test on a landing page variant
+6. **Page speed** — Fix if score is under 70
+
+## When These Don't Work
+
+If you've tried these and you're still stuck:
+
+- **Traffic quality issue** — Are you attracting the right users?
+- **Product-market fit** — Do users actually want what you're offering?
+- **Pricing problem** — Is your price point misaligned with perceived value?
+- **Trust issue** — Do users believe you can deliver?
+
+UX fixes can't solve fundamental business problems.
+
+**Want to find what's actually killing your conversions?** Book a free 30-minute UX audit. I'll analyze your specific funnel and identify the highest-impact fixes for your product.
+    `.trim(),
+  },
 ];
 
 export function getAllPosts(): BlogPost[] {

@@ -18,8 +18,24 @@ const spaceGrotesk = Space_Grotesk({
 export const metadata: Metadata = {
   metadataBase: new URL('https://lucidux.design'),
   title: "LUCIDUX — UX/UI Design for AI-Built Startups | Free UX Audit",
-  description: "Sydney-based UX/UI design partner for startup founders. I provide product design help, fix usability issues, optimize conversion, and build design systems. Your fractional UX consultant for AI-built products.",
-  keywords: ["UX designer", "UI designer", "startup design", "AI products", "UX audit", "design systems", "product design help", "UX design partner", "design partner for startups", "fractional UX designer", "startup UX consultant", "product designer for founders", "MVP design", "conversion optimization", "Sydney UX designer", "Sydney UI designer", "UX consultant Sydney", "Australian design consultant", "Sydney startup design"],
+  description: "Users confused by your AI-built app? Conversion rate stuck? I help startup founders fix UX problems fast. Product design help, UX audits, and design systems for Cursor, v0, Bolt, and vibe-coded products.",
+  keywords: [
+    // Problem-based (high intent)
+    "fix my app UX", "improve startup conversion", "users confused by my app", "bad user experience fix",
+    "my app conversion is bad", "why users abandon my app", "how to fix bad UX", "signup flow not working",
+    // AI-tool specific
+    "improve AI generated UI", "fix cursor app design", "v0 app design review", "bolt app UX help",
+    "AI built app looks bad", "vibe coded app UX", "cursor generated UI fix", "AI startup UX",
+    // Help-seeking
+    "need UX help fast", "quick UX review", "someone to review my UX", "startup UX on a budget",
+    "need help with product design", "UX expert for startup",
+    // Core services
+    "UX designer", "UI designer", "startup design", "UX audit", "design systems",
+    "product design help", "UX design partner", "design partner for startups",
+    "fractional UX designer", "startup UX consultant", "MVP design", "conversion optimization",
+    // Location
+    "Sydney UX designer", "Sydney UI designer", "Australian design consultant",
+  ],
   authors: [{ name: "Gabriel Hidalgo" }],
   creator: "Gabriel Hidalgo",
   openGraph: {
@@ -28,7 +44,7 @@ export const metadata: Metadata = {
     url: "https://lucidux.design",
     siteName: "Lucidux Design",
     title: "LUCIDUX — UX/UI Design for AI-Built Startups",
-    description: "Sydney-based UX/UI design partner for startup founders. I provide product design help, fix usability issues, optimize conversion, and build design systems for AI-built products.",
+    description: "Users confused by your AI-built app? I help founders fix UX problems fast. Product design help, UX audits, and design systems for Cursor, v0, Bolt, and vibe-coded products.",
     images: [
       {
         url: "/og-image.jpg",
@@ -41,7 +57,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "LUCIDUX — UX/UI Design for AI-Built Startups",
-    description: "Sydney-based UX/UI design partner for startup founders. Product design help, UX audits, and design systems.",
+    description: "Users confused by your AI-built app? I fix UX problems fast. Design help for Cursor, v0, Bolt, and vibe-coded products.",
     creator: "@gabrielhidalgo",
     images: ["/og-image.jpg"],
   },
