@@ -128,14 +128,17 @@ export function Philosophy() {
                             </p>
                         </div>
 
-                        <div className="grid grid-cols-2 gap-8 mt-16">
-                            <div>
-                                <h4 className="text-3xl font-display font-bold text-[var(--color-foreground)] mb-2">15+</h4>
-                                <p className="text-sm font-mono text-gray-500">INTERFACES REVIEWED</p>
-                            </div>
-                            <div>
-                                <h4 className="text-3xl font-display font-bold text-[var(--color-foreground)] mb-2">80%</h4>
-                                <p className="text-sm font-mono text-gray-500">SHARE SAME ISSUES</p>
+                        <div className="mt-16">
+                            <h3 className="sr-only">Key Statistics</h3>
+                            <div className="grid grid-cols-2 gap-8">
+                                <div>
+                                    <h4 className="text-3xl font-display font-bold text-[var(--color-foreground)] mb-2">15+</h4>
+                                    <p className="text-sm font-mono text-gray-500">INTERFACES REVIEWED</p>
+                                </div>
+                                <div>
+                                    <h4 className="text-3xl font-display font-bold text-[var(--color-foreground)] mb-2">80%</h4>
+                                    <p className="text-sm font-mono text-gray-500">SHARE SAME ISSUES</p>
+                                </div>
                             </div>
                         </div>
                     </div>

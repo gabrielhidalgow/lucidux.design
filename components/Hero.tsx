@@ -106,26 +106,28 @@ export function Hero() {
                     </span>
                 </motion.div>
 
-                <div className="overflow-hidden">
-                    <motion.h1
-                        className="text-[11vw] md:text-[6.5vw] leading-[0.85] font-display font-bold tracking-tighter mix-blend-difference text-white"
-                        initial={{ y: "100%" }}
-                        animate={{ y: 0 }}
-                        transition={{ duration: 0.8, ease: [0.33, 1, 0.68, 1] }}
-                    >
-                        SHIPPED FAST.
-                    </motion.h1>
-                </div>
-                <div className="overflow-hidden mt-2">
-                    <motion.h1
-                        className="text-[11vw] md:text-[6.5vw] leading-[0.85] font-display font-bold tracking-tighter text-accent"
-                        initial={{ y: "100%" }}
-                        animate={{ y: 0 }}
-                        transition={{ duration: 0.8, delay: 0.1, ease: [0.33, 1, 0.68, 1] }}
-                    >
-                        TIME TO CONVERT.
-                    </motion.h1>
-                </div>
+                <h1 className="text-[11vw] md:text-[6.5vw] leading-[0.85] font-display font-bold tracking-tighter">
+                    <div className="overflow-hidden">
+                        <motion.span
+                            className="block mix-blend-difference text-white"
+                            initial={{ y: "100%" }}
+                            animate={{ y: 0 }}
+                            transition={{ duration: 0.8, ease: [0.33, 1, 0.68, 1] }}
+                        >
+                            SHIPPED FAST.
+                        </motion.span>
+                    </div>
+                    <div className="overflow-hidden mt-2">
+                        <motion.span
+                            className="block text-accent"
+                            initial={{ y: "100%" }}
+                            animate={{ y: 0 }}
+                            transition={{ duration: 0.8, delay: 0.1, ease: [0.33, 1, 0.68, 1] }}
+                        >
+                            TIME TO CONVERT.
+                        </motion.span>
+                    </div>
+                </h1>
 
                 <motion.div
                     className="mt-16 max-w-5xl flex flex-col gap-8"
