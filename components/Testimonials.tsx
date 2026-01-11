@@ -72,7 +72,13 @@ export function Testimonials() {
 
     return (
         <section className="py-16 md:py-32 bg-[var(--color-background)] relative overflow-hidden">
-            <div className="container mx-auto px-6 md:px-12" ref={ref}>
+            {/* Accent-tinted background gradient */}
+            <div className="absolute inset-0 bg-gradient-to-b from-[rgba(204,255,0,0.03)] via-transparent to-transparent" />
+
+            {/* Subtle top border glow */}
+            <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[var(--color-accent)]/30 to-transparent" />
+
+            <div className="container mx-auto px-6 md:px-12 relative" ref={ref}>
                 <motion.div
                     className="text-center mb-16"
                     initial={{ opacity: 0, y: 30 }}

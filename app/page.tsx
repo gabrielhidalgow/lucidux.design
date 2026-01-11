@@ -6,6 +6,7 @@ import { Expertise } from "@/components/Expertise";
 import { Comparison } from "@/components/Comparison";
 import { Audience } from "@/components/Audience";
 import { Work } from "@/components/Work";
+import { DesignSystems } from "@/components/DesignSystems";
 import { Philosophy } from "@/components/Philosophy";
 import { Testimonials } from "@/components/Testimonials";
 import { FAQs } from "@/components/FAQs";
@@ -321,6 +322,14 @@ const jsonLd = {
             text: "Book a free 30-minute consultation call. We'll discuss your current challenges, goals, and whether AI design consulting is the right fit for your team. No pressure, no commitment required.",
           },
         },
+        {
+          "@type": "Question",
+          name: "I'm a developer who can build anything but my designs look amateur. Can you help?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Absolutely—this is exactly who we work with. You bring the technical execution, we bring design expertise. We'll audit what you've built, identify usability gaps, and give you a prioritized roadmap to make it convert. You stay focused on building while we handle the visual hierarchy, interaction patterns, and polish that turn functional products into ones users love.",
+          },
+        },
       ],
     },
   ],
@@ -352,6 +361,9 @@ export default function Home() {
         <Audience />
         <div id="work">
           <Work />
+        </div>
+        <div id="design-systems">
+          <DesignSystems />
         </div>
         <div id="about">
           <Philosophy />

@@ -29,6 +29,10 @@ export const metadata: Metadata = {
     // Help-seeking
     "need UX help fast", "quick UX review", "someone to review my UX", "startup UX on a budget",
     "need help with product design", "UX expert for startup",
+    // Developer/builder identity (missing design expertise)
+    "developer needs designer", "technical founder design help", "make my app look more professional",
+    "my app works but looks bad", "polish my MVP", "MVP design polish",
+    "ship fast need design help", "builder not designer", "can code can't design",
     // Core services
     "UX designer", "UI designer", "startup design", "UX audit", "design systems",
     "product design help", "UX design partner", "design partner for startups",
