@@ -173,13 +173,14 @@ export function Work() {
             <div className="container mx-auto px-6 md:px-12">
                 <div ref={ref} className="grid grid-cols-1 md:grid-cols-3 gap-6">
                     {projects.map((project, index) => (
-                        <motion.div
+                        <motion.button
                             key={project.id}
                             initial={{ opacity: 0, y: 30 }}
                             animate={isInView ? { opacity: 1, y: 0 } : {}}
                             transition={{ duration: 0.5, delay: index * 0.1 }}
-                            className="group relative w-full aspect-[4/3] md:aspect-[3/4] rounded-[24px] overflow-hidden cursor-pointer bg-[var(--color-background)]"
+                            className="group relative w-full aspect-[4/3] md:aspect-[3/4] rounded-[24px] overflow-hidden cursor-pointer bg-[var(--color-background)] text-left focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--color-background)] outline-none"
                             onClick={() => setSelectedProject(project)}
+                            aria-label={`View ${project.title} project details`}
                         >
                             {/* Animated gradient background - always visible on mobile, fades on desktop hover */}
                             <div className="absolute inset-0 md:group-hover:opacity-0 transition-opacity duration-500">
@@ -211,7 +212,7 @@ export function Work() {
                                     </h3>
                                 </div>
                             </div>
-                        </motion.div>
+                        </motion.button>
                     ))}
                 </div>
             </div>

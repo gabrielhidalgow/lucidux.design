@@ -18,15 +18,23 @@ export function Navbar() {
     }, []);
 
     return (
-        <motion.nav
-            className={`fixed top-0 left-0 right-0 z-50 px-6 py-6 md:px-12 flex justify-between items-center text-[var(--color-foreground)] transition-all duration-300 ${isScrolled
-                    ? "bg-background/80 backdrop-blur-md"
-                    : "mix-blend-difference"
-                }`}
-            initial={{ y: -100, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.6, ease: [0.33, 1, 0.68, 1] }}
-        >
+        <>
+            {/* Skip to main content link for keyboard users */}
+            <a
+                href="#services"
+                className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[60] focus:px-4 focus:py-2 focus:bg-accent focus:text-black focus:rounded-md focus:font-bold focus:outline-none"
+            >
+                Skip to main content
+            </a>
+            <motion.nav
+                className={`fixed top-0 left-0 right-0 z-50 px-6 py-6 md:px-12 flex justify-between items-center text-[var(--color-foreground)] transition-all duration-300 ${isScrolled
+                        ? "bg-background/80 backdrop-blur-md"
+                        : "mix-blend-difference"
+                    }`}
+                initial={{ y: -100, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ duration: 0.6, ease: [0.33, 1, 0.68, 1] }}
+            >
             <motion.div
                 className="text-2xl font-bold font-display tracking-tighter z-50"
                 initial={{ opacity: 0 }}
@@ -76,5 +84,6 @@ export function Navbar() {
                 </ShinyButton>
             </motion.div>
         </motion.nav>
+        </>
     );
 }

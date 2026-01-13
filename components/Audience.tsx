@@ -8,7 +8,7 @@ const audiences = [
     "Your product works perfectly but users say \"I don't get it\" or miss obvious CTAs in session recordings",
     "You're a technical founder who can code anything but visual hierarchy and interaction patterns aren't your expertise",
     "You've got traction (100+ users, some revenue) but growth stalled because the interface confuses people",
-    "You're choosing between hiring a full-time designer ($120K+) or wasting months on trial-and-error UI tweaks",
+    "You need senior design expertise but can't justify a $120K+ full-time hire—a fractional designer is the smart middle ground",
     "You can ship a working product in days, but making it feel intuitive and polished? That's not your zone—and you know you need an expert eye",
 ];
 

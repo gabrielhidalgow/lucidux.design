@@ -17,8 +17,8 @@ const spaceGrotesk = Space_Grotesk({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://lucidux.design'),
-  title: "LUCIDUX — AI UX & Product Design Studio Sydney",
-  description: "AI startup with UX problems? We help founders fix conversion and usability fast. UX audits, product design for mobile apps, web apps & SaaS. Cursor, v0, Bolt.",
+  title: "LUCIDUX — Fractional UX & Product Design Studio Sydney",
+  description: "Fractional UX designer for AI startups. We help founders fix conversion and usability fast. UX audits, product design for mobile apps, web apps & SaaS. Cursor, v0, Bolt.",
   keywords: [
     // Problem-based (high intent)
     "fix my app UX", "improve startup conversion", "users confused by my app", "bad user experience fix",
@@ -36,7 +36,12 @@ export const metadata: Metadata = {
     // Core services
     "UX designer", "UI designer", "startup design", "UX audit", "design systems",
     "product design help", "UX design partner", "design partner for startups",
-    "fractional UX designer", "startup UX consultant", "MVP design", "conversion optimization",
+    "startup UX consultant", "MVP design", "conversion optimization",
+    // Fractional design (high-growth keyword)
+    "fractional UX designer", "fractional product designer", "fractional design partner",
+    "fractional UI designer", "hire fractional designer", "fractional UX designer for startups",
+    "fractional design team", "fractional UX Sydney", "fractional product designer Australia",
+    "part-time UX designer", "on-demand UX designer", "embedded design partner",
     // Location
     "Sydney UX designer", "Sydney UI designer", "Australian design consultant",
     // Mobile app specific
@@ -60,21 +65,21 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://lucidux.design",
     siteName: "Lucidux Design",
-    title: "LUCIDUX — AI UX & Product Design Studio Sydney",
-    description: "AI startup with UX problems? We help founders fix conversion and usability fast. UX audits, product design for mobile apps, web apps & SaaS. Cursor, v0, Bolt.",
+    title: "LUCIDUX — Fractional UX & Product Design Studio Sydney",
+    description: "Fractional UX designer for AI startups. We help founders fix conversion and usability fast. UX audits, product design for mobile apps, web apps & SaaS. Cursor, v0, Bolt.",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "LUCIDUX — AI UX & Product Design Studio Sydney",
+        alt: "LUCIDUX — Fractional UX & Product Design Studio Sydney",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "LUCIDUX — AI UX & Product Design Studio Sydney",
-    description: "AI startup with UX problems? We fix conversion and usability fast. UX audits & product design for Cursor, v0, Bolt apps.",
+    title: "LUCIDUX — Fractional UX & Product Design Studio Sydney",
+    description: "Fractional UX designer for AI startups. We fix conversion and usability fast. UX audits & product design for Cursor, v0, Bolt apps.",
     creator: "@gabrielhidalgo",
     images: ["/og-image.jpg"],
   },

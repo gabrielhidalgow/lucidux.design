@@ -61,7 +61,7 @@ export function Team() {
                             {values.map((item, index) => (
                                 <motion.div
                                     key={item.number}
-                                    className="flex gap-6 group cursor-pointer"
+                                    className="flex gap-6 group"
                                     initial={{ opacity: 0, x: -20 }}
                                     animate={isInView ? { opacity: 1, x: 0 } : {}}
                                     transition={{ duration: 0.5, delay: 0.2 + index * 0.1 }}

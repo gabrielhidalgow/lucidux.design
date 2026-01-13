@@ -28,8 +28,14 @@ export function ShinyButton({
         cursor-pointer
         transition-all duration-300
         outline-none
+        focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--color-background)]
         active:translate-y-[1px]
     `;
+
+    const focusRingStyles = {
+        primary: "focus-visible:ring-black",
+        secondary: "focus-visible:ring-accent",
+    };
 
     const sizeStyles = {
         sm: "text-xs px-4 py-2",
@@ -41,7 +47,7 @@ export function ShinyButton({
         secondary: "shiny-cta-secondary text-white",
     };
 
-    const combinedClassName = `${baseStyles} ${sizeStyles[size]} ${variantStyles[variant]} ${className}`.trim();
+    const combinedClassName = `${baseStyles} ${sizeStyles[size]} ${variantStyles[variant]} ${focusRingStyles[variant]} ${className}`.trim();
 
     if (as === "a") {
         const anchorProps = props as AnchorHTMLAttributes<HTMLAnchorElement>;

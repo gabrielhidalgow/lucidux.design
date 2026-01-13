@@ -34,12 +34,22 @@ export function Comparison() {
         },
     ];
 
-    const renderValue = (value: string, colIndex: number) => {
+    const renderValue = (value: string, colIndex: number, feature: string) => {
         if (value === "check") {
-            return <Check className={`w-5 h-5 ${colIndex === 0 ? "text-accent" : "text-gray-500"}`} />;
+            return (
+                <span className="flex items-center gap-2">
+                    <Check className={`w-5 h-5 ${colIndex === 0 ? "text-accent" : "text-gray-500"}`} aria-hidden="true" />
+                    <span className="sr-only">Yes</span>
+                </span>
+            );
         }
         if (value === "x") {
-            return <X className="w-5 h-5 text-gray-600" />;
+            return (
+                <span className="flex items-center gap-2">
+                    <X className="w-5 h-5 text-gray-600" aria-hidden="true" />
+                    <span className="sr-only">No</span>
+                </span>
+            );
         }
         return <span className={colIndex === 0 ? "text-[var(--color-foreground)]" : "text-gray-400"}>{value}</span>;
     };
@@ -79,10 +89,13 @@ export function Comparison() {
                                 <table className="w-full min-w-[640px] border-separate border-spacing-0">
                                     <thead>
                                         <tr>
-                                            <th className="py-6 px-6 text-left border-b border-white/10"></th>
+                                            <th scope="col" className="py-6 px-6 text-left border-b border-white/10">
+                                                <span className="sr-only">Feature</span>
+                                            </th>
                                             {columns.map((col, index) => (
                                                 <th
                                                     key={col}
+                                                    scope="col"
                                                     className={`py-6 px-6 text-left font-display text-lg md:text-xl font-bold ${index === 0
                                                         ? "text-accent grad-col-top border-b border-white/10"
                                                         : "text-[var(--color-foreground)] border-b border-white/10"
@@ -102,9 +115,9 @@ export function Comparison() {
                                                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                                                 transition={{ duration: 0.4, delay: 0.3 + rowIndex * 0.1 }}
                                             >
-                                                <td className={`py-6 px-6 text-gray-400 font-body ${rowIndex !== rows.length - 1 ? "border-b border-white/10" : ""}`}>
+                                                <th scope="row" className={`py-6 px-6 text-gray-400 font-body font-normal text-left ${rowIndex !== rows.length - 1 ? "border-b border-white/10" : ""}`}>
                                                     {row.feature}
-                                                </td>
+                                                </th>
                                                 {row.values.map((value, colIndex) => (
                                                     <td
                                                         key={`${row.feature}-${colIndex}`}
@@ -116,7 +129,7 @@ export function Comparison() {
                                                             : ""
                                                             } ${rowIndex !== rows.length - 1 ? "border-b border-white/10" : ""}`}
                                                     >
-                                                        {renderValue(value, colIndex)}
+                                                        {renderValue(value, colIndex, row.feature)}
                                                     </td>
                                                 ))}
                                             </motion.tr>

@@ -7,6 +7,7 @@ import { X, Zap, CheckCircle, ArrowRight, ChevronRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { motion, AnimatePresence } from "motion/react";
 import { ShinyButton } from "./ShinyButton";
+import { useFocusTrap } from "@/hooks/useFocusTrap";
 
 // Define the shape of the project data expected by the modal
 export interface ProjectDetails {
@@ -36,6 +37,7 @@ interface ProjectDetailsModalProps {
 
 export function ProjectDetailsModal({ project, projects, isOpen, onClose, onNavigate }: ProjectDetailsModalProps) {
     const scrollRef = useRef<HTMLDivElement>(null);
+    const focusTrapRef = useFocusTrap<HTMLDivElement>(isOpen);
 
     // Get next project (wrap around)
     const currentIndex = project ? projects.findIndex(p => p.id === project.id) : -1;
@@ -72,22 +74,32 @@ export function ProjectDetailsModal({ project, projects, isOpen, onClose, onNavi
     if (!isOpen || !project) return null;
 
     return createPortal(
-        <div className="fixed inset-0 z-[9999] flex items-center justify-center p-4 md:p-6">
+        <div
+            className="fixed inset-0 z-[9999] flex items-center justify-center p-4 md:p-6"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="modal-title"
+        >
             {/* Backdrop */}
             <div
                 className="absolute inset-0 bg-[var(--color-background)]/80 backdrop-blur-sm animate-fade-in"
                 onClick={onClose}
+                aria-hidden="true"
             ></div>
 
             {/* Modal Container */}
-            <div className="relative w-full max-w-6xl h-[90vh] bg-background border border-[var(--color-foreground)]/10 rounded-2xl shadow-2xl overflow-hidden flex flex-col animate-in-scale">
+            <div
+                ref={focusTrapRef}
+                className="relative w-full max-w-6xl h-[90vh] bg-background border border-[var(--color-foreground)]/10 rounded-2xl shadow-2xl overflow-hidden flex flex-col animate-in-scale"
+            >
 
                 {/* Close Button - Absolute */}
                 <button
                     onClick={onClose}
-                    className="absolute top-6 right-6 z-50 w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors backdrop-blur-md group"
+                    aria-label="Close modal"
+                    className="absolute top-6 right-6 z-50 w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors backdrop-blur-md group focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--color-background)] outline-none"
                 >
-                    <X className="w-5 h-5 text-[var(--color-foreground)] group-hover:rotate-90 transition-transform duration-300" />
+                    <X className="w-5 h-5 text-[var(--color-foreground)] group-hover:rotate-90 transition-transform duration-300" aria-hidden="true" />
                 </button>
 
                 {/* Scrollable Content */}
@@ -105,7 +117,7 @@ export function ProjectDetailsModal({ project, projects, isOpen, onClose, onNavi
                             {/* Header Section */}
                         <div className="flex flex-col lg:flex-row justify-between items-start gap-12 border-b border-[var(--color-foreground)]/10 pb-12">
                             <div className="flex-1">
-                                <h2 className="text-5xl md:text-7xl font-display font-bold mb-6 text-[var(--color-foreground)] leading-tight">
+                                <h2 id="modal-title" className="text-5xl md:text-7xl font-display font-bold mb-6 text-[var(--color-foreground)] leading-tight">
                                     {project.title.split(' ').map((word, i) => (
                                         <span key={i} className="block">{word}</span>
                                     ))}
@@ -138,7 +150,7 @@ export function ProjectDetailsModal({ project, projects, isOpen, onClose, onNavi
                                             className="text-accent font-bold hover:underline flex items-center gap-2 group/link"
                                         >
                                             View Website
-                                            <ArrowRight className="w-4 h-4 transition-transform group-hover/link:-translate-y-0.5 group-hover/link:translate-x-0.5" />
+                                            <ArrowRight className="w-4 h-4 transition-transform group-hover/link:-translate-y-0.5 group-hover/link:translate-x-0.5" aria-hidden="true" />
                                         </a>
                                     </div>
                                 )}
@@ -160,13 +172,13 @@ export function ProjectDetailsModal({ project, projects, isOpen, onClose, onNavi
                                 {project.galleryImages[0] ? (
                                     <Image
                                         src={project.galleryImages[0]}
-                                        alt="Gallery detail"
+                                        alt={`${project.title} - detailed view`}
                                         width={800}
                                         height={800}
                                         className="w-full h-auto object-contain lg:object-cover lg:aspect-square"
                                     />
                                 ) : (
-                                    <div className="w-full h-full flex items-center justify-center bg-white/5 aspect-square">
+                                    <div className="w-full h-full flex items-center justify-center bg-white/5 aspect-square" aria-hidden="true">
                                         <span className="text-[var(--color-foreground)]/20">Additional View</span>
                                     </div>
                                 )}
@@ -176,7 +188,7 @@ export function ProjectDetailsModal({ project, projects, isOpen, onClose, onNavi
                         {/* Problem Section */}
                         <div className="flex flex-col gap-6">
                             <div className="flex items-center gap-3 text-accent">
-                                <Zap className="w-6 h-6" />
+                                <Zap className="w-6 h-6" aria-hidden="true" />
                                 <h3 className="text-2xl font-bold font-display uppercase">The Problem</h3>
                             </div>
                             <p className="text-gray-400 text-lg leading-relaxed max-w-4xl">
@@ -189,7 +201,7 @@ export function ProjectDetailsModal({ project, projects, isOpen, onClose, onNavi
                             <div className="relative w-full bg-surface rounded-xl overflow-hidden border border-[var(--color-foreground)]/5">
                                 <Image
                                     src={project.galleryImages[1]}
-                                    alt="Project functionality"
+                                    alt={`${project.title} - interface overview`}
                                     width={1200}
                                     height={800}
                                     className="w-full h-auto object-contain lg:object-cover lg:aspect-[16/9]"
@@ -200,7 +212,7 @@ export function ProjectDetailsModal({ project, projects, isOpen, onClose, onNavi
                         {/* Solution Section */}
                         <div className="flex flex-col gap-6">
                             <div className="flex items-center gap-3 text-accent">
-                                <CheckCircle className="w-6 h-6" />
+                                <CheckCircle className="w-6 h-6" aria-hidden="true" />
                                 <h3 className="text-2xl font-bold font-display uppercase">The Solution</h3>
                             </div>
                             <p className="text-gray-400 text-lg leading-relaxed max-w-4xl">
@@ -212,11 +224,12 @@ export function ProjectDetailsModal({ project, projects, isOpen, onClose, onNavi
                         {nextProject && (
                             <button
                                 onClick={() => onNavigate(nextProject)}
-                                className="group flex flex-col items-center gap-4 py-8 border-t border-b border-[var(--color-foreground)]/10 hover:border-accent/30 transition-colors duration-300"
+                                aria-label={`View next project: ${nextProject.title}`}
+                                className="group flex flex-col items-center gap-4 py-8 border-t border-b border-[var(--color-foreground)]/10 hover:border-accent/30 transition-colors duration-300 focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--color-background)] outline-none rounded-lg"
                             >
                                 <span className="text-xs uppercase tracking-[0.2em] text-gray-500 group-hover:text-accent transition-colors flex items-center gap-2">
                                     Next Project
-                                    <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                                    <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" aria-hidden="true" />
                                 </span>
                                 <span className="text-2xl md:text-3xl font-display font-bold text-[var(--color-foreground)]/60 group-hover:text-[var(--color-foreground)] transition-colors">
                                     {nextProject.title}

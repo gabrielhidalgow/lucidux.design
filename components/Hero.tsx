@@ -139,20 +139,21 @@ export function Hero() {
                         UX/UI Product Design Studio for AI-Built Products (Mobile Apps, Websites & Web Apps). We streamline user journeys, fix usability gaps, and build design systems that scale.
                     </p>
 
-                    <motion.div
-                        className="flex items-center gap-4 group cursor-pointer"
+                    <motion.button
+                        className="flex items-center gap-4 group cursor-pointer bg-transparent border-none text-left"
                         initial={{ opacity: 0, x: -20 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.5, delay: 0.7 }}
                         onClick={() => {
                             document.getElementById("ticker")?.scrollIntoView({ behavior: "smooth" });
                         }}
+                        aria-label="Scroll to see your path to better UX"
                     >
-                        <div className="w-12 h-12 rounded-full border border-gray-600 flex items-center justify-center group-hover:bg-accent group-hover:border-accent group-hover:text-black transition-all duration-300">
-                            <ArrowDown className="w-5 h-5" />
+                        <div className="w-12 h-12 rounded-full border border-gray-600 flex items-center justify-center group-hover:bg-accent group-hover:border-accent group-hover:text-black group-focus-visible:bg-accent group-focus-visible:border-accent group-focus-visible:text-black transition-all duration-300">
+                            <ArrowDown className="w-5 h-5" aria-hidden="true" />
                         </div>
                         <span className="uppercase tracking-widest text-sm font-bold">See Your Path to Better UX</span>
-                    </motion.div>
+                    </motion.button>
                 </motion.div>
             </div>
 

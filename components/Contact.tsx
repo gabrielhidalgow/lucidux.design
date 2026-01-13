@@ -34,9 +34,9 @@ export function Contact() {
                     </div>
                 </h2>
                 <motion.p
-                    className="max-w-2xl mx-auto text-xl font-medium mb-12 opacity-80"
+                    className="max-w-2xl mx-auto text-xl font-medium mb-12 text-black/90"
                     initial={{ opacity: 0, y: 20 }}
-                    animate={isInView ? { opacity: 0.8, y: 0 } : {}}
+                    animate={isInView ? { opacity: 1, y: 0 } : {}}
                     transition={{ duration: 0.5, delay: 0.3 }}
                 >
                     Book a free 30-minute UX audit. We'll review your product live, identify 2-3 quick wins, and give you honest feedback—no pitch, no commitment.
