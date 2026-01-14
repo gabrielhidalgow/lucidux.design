@@ -550,7 +550,7 @@ export default function FractionalDesignerSydneyPage() {
             </div>
           </div>
           <div className="mt-8 pt-8 border-t border-white/10 text-xs text-gray-600 font-mono text-center">
-            <p>&copy; 2025 Lucidux. All rights reserved.</p>
+            <p>&copy; 2026 Lucidux. All rights reserved.</p>
           </div>
         </div>
       </footer>
