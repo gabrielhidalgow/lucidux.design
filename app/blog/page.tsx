@@ -6,20 +6,23 @@ import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "UX Insights for Founders | LUCIDUX Blog",
+  title: "Product UX/UI Design Insights | LUCIDUX Blog",
   description:
-    "Practical UX advice for startup founders. Learn how to evaluate your product's UX, when to hire a designer, and how to fix common usability issues.",
+    "Practical product design, UX, and UI advice for startup founders. Learn how to evaluate your product's UX, when to hire a designer, and how to fix common usability issues.",
   keywords: [
+    "product design blog",
     "UX blog",
+    "UI design tips",
     "startup UX advice",
     "product design tips",
     "UX for founders",
     "design insights",
+    "fractional product designer",
   ],
   openGraph: {
-    title: "UX Insights for Founders | LUCIDUX Blog",
+    title: "Product UX/UI Design Insights | LUCIDUX Blog",
     description:
-      "Practical UX advice for startup founders. Learn how to evaluate your product's UX, when to hire a designer, and how to fix common usability issues.",
+      "Practical product design, UX, and UI advice for startup founders. Learn how to evaluate your product's UX, when to hire a designer, and how to fix common usability issues.",
     url: "https://lucidux.design/blog",
     type: "website",
   },
@@ -47,12 +50,12 @@ export default function BlogPage() {
       <section className="py-16 md:py-24">
         <div className="container mx-auto px-6 md:px-12">
           <div className="max-w-3xl">
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold tracking-tighter mb-6">
-              UX <span className="text-accent">Insights</span>
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold tracking-tighter mb-6 whitespace-nowrap">
+              Product <span className="text-accent">Design Insights</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-400 leading-relaxed">
-              Practical advice for founders who want to build products users
-              actually understand. No fluff, just actionable UX guidance.
+              Practical UX, UI, and product design advice for founders who want
+              to build products users actually understand.
             </p>
           </div>
         </div>

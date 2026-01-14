@@ -11,6 +11,183 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "fractional-product-designer-sydney",
+    title: "What Is a Fractional Product Designer? A Guide for Sydney Startups",
+    description: "Learn how fractional product designers help Sydney startups and Australian businesses get senior design leadership without full-time costs. Flexible UX/UI expertise on demand.",
+    date: "2025-01-14",
+    readTime: "7 min read",
+    category: "Founder Advice",
+    keywords: ["Fractional Product Designer Sydney", "Fractional UX Designer hire", "Fractional Design Australia", "Part-time product designer startups"],
+    content: `
+## What Is a Fractional Product Designer?
+
+A fractional product designer is a senior design professional who works with your company on a part-time or project basis—typically 10-20 hours per week. Instead of hiring a full-time designer at $150,000+ per year, you get experienced UX/UI leadership for a fraction of the cost and commitment.
+
+Think of it like having a design director on retainer. You get strategic guidance, hands-on design work, and someone who understands your product deeply—without the overhead of a full-time salary, benefits, and the risk of a bad hire.
+
+## What Does a Fractional Designer Actually Do?
+
+Fractional product designers typically handle:
+
+**Strategic work:**
+- UX audits and usability reviews
+- Product strategy and roadmap input
+- Design system architecture
+- User research planning and synthesis
+- Conversion optimization
+
+**Hands-on design:**
+- UI/UX design for new features
+- Wireframing and prototyping
+- Design system components
+- User flow optimization
+- Mobile and responsive design
+
+**Team enablement:**
+- Mentoring junior designers or developers
+- Design process establishment
+- Stakeholder presentations
+- Developer handoff and QA
+
+The exact mix depends on what your startup needs most.
+
+## Fractional vs Full-Time vs Agency: Which Is Right for You?
+
+### Full-Time Designer
+**Best when:** Design is core to your competitive advantage and you have 40+ hours of ongoing design work weekly.
+
+**Typical cost:** $120,000-$200,000/year (Sydney market) plus benefits, equipment, management overhead.
+
+**Downside:** High commitment. If product priorities shift, you're still paying full salary. Hard to hire senior talent—they're expensive and in demand.
+
+### Design Agency
+**Best when:** You have a large, defined project with clear scope (complete rebrand, new product launch).
+
+**Typical cost:** $15,000-$100,000+ per project.
+
+**Downside:** Long timelines, scope creep, handoff problems. They build it, but can your team maintain it? Less context on your specific product.
+
+### Fractional Product Designer
+**Best when:** You need senior expertise without full-time commitment. Work is ongoing but variable. You want a long-term partner who knows your product.
+
+**Typical cost:** $3,000-$12,000/month for 10-20 hours weekly.
+
+**Downside:** Not available for 40+ hour crunch weeks. Requires good async communication.
+
+## Signs You Need a Fractional Designer
+
+You should consider fractional design support if:
+
+**1. Users are confused despite a working product**
+You're getting support tickets about basic features. Users say "I don't get it." Your conversion rate is stuck despite traffic.
+
+**2. You're making design decisions by gut feel**
+A/B tests that go nowhere. Redesigns that don't move metrics. Design debates that go in circles with no framework for deciding.
+
+**3. You're moving fast but breaking UX**
+Shipping features creates as many problems as it solves. UI inconsistencies pile up. New features confuse existing users.
+
+**4. You can't justify a full-time hire yet**
+Design work is important but not 40 hours a week. Budget is tight. You need senior expertise, not junior execution.
+
+**5. You're using AI tools to build but need human refinement**
+Cursor, v0, or Bolt got you 80% there, but the last 20%—the part that actually converts users—needs design expertise.
+
+## Why Sydney Startups Choose Fractional Design
+
+For Sydney-based startups, fractional design offers specific advantages:
+
+**Timezone alignment:** Working with a Sydney-based fractional designer means real-time collaboration during your business hours. No waiting overnight for feedback or design iterations.
+
+**Local market understanding:** Australian users have different expectations than US or European markets. Local designers understand these nuances—from payment preferences to regulatory requirements.
+
+**Startup ecosystem knowledge:** Sydney's startup scene has specific characteristics. A local fractional designer likely knows your investors, understands your funding stage challenges, and has worked with similar companies.
+
+**Cost efficiency:** Sydney's cost of living makes full-time senior hires expensive. Fractional lets you access $200k+ talent at a fraction of the cost.
+
+## How Fractional Engagements Work
+
+Most fractional arrangements follow one of these models:
+
+**Monthly retainer (most common):**
+- Set number of hours per week (typically 10-20)
+- Ongoing relationship, deep product knowledge
+- Predictable cost, flexible allocation of hours
+- Best for: Companies with continuous design needs
+
+**Project-based:**
+- Defined scope and timeline
+- Fixed price for specific deliverables
+- Good for: UX audits, design sprints, specific features
+- Less ideal for: Ongoing product work
+
+**Day rate:**
+- Pay for full days of focused work
+- Good for: Workshops, intensive design sessions
+- Less ideal for: Ongoing collaboration
+
+A typical fractional engagement might look like:
+- 2-3 hours of async design work daily
+- 1-2 weekly sync calls (30-60 min each)
+- Slack/Discord availability for quick questions
+- Design reviews and feedback sessions as needed
+
+## What to Look For When Hiring
+
+**Experience that matches your stage:**
+A designer who's only worked at large companies may struggle with startup ambiguity. Look for someone who's worked with early-stage products and understands shipping with constraints.
+
+**Portfolio with measurable outcomes:**
+Pretty designs aren't enough. Ask about conversion improvements, user retention, activation rates. Good fractional designers speak business metrics, not just design language.
+
+**Communication style:**
+Fractional work requires excellent async communication. Do they document their thinking? Can they explain design decisions clearly? Are they responsive and proactive?
+
+**Technical understanding:**
+They don't need to code, but they should understand development constraints. Can they work effectively with your engineering team? Do they deliver developer-ready specs?
+
+**Cultural fit:**
+This is a long-term relationship. Do you enjoy working with them? Do they push back constructively? Are they genuinely interested in your product's success?
+
+## Common Questions About Fractional Design
+
+**How is this different from a freelancer?**
+Freelancers typically work on isolated tasks with clear specifications. Fractional designers operate more like embedded team members—they understand your product strategy, attend team meetings, and think holistically about the user experience.
+
+**What if I need more hours some weeks?**
+Most fractional arrangements have flexibility built in. You might have a base retainer with ability to "burst" for specific projects. Discuss this upfront.
+
+**Do I still need to manage them?**
+Less than you'd think. Senior fractional designers are self-directed. You provide context and priorities; they figure out how to execute. You should still have regular syncs, but it's collaborative, not managerial.
+
+**What happens when I'm ready to hire full-time?**
+Good fractional designers help you make this transition. They can help define the role, interview candidates, and onboard your new hire. Some even transition to advisory roles afterward.
+
+**Can they work with my remote team?**
+Absolutely. Fractional work is inherently async-friendly. Tools like Figma, Loom, and Slack make collaboration seamless regardless of location.
+
+## Is Fractional Design Right for Your Startup?
+
+Fractional design works best when:
+- You have real design needs but not 40 hours/week
+- You value senior expertise over junior execution
+- You want long-term partnership, not one-off projects
+- You can communicate well asynchronously
+- You're ready to invest in design as a growth lever
+
+It's probably not right if:
+- You need someone full-time and in-office
+- Your design needs are highly specialized (like 3D or motion)
+- You're not sure what design work you actually need
+
+## Ready to Explore Fractional Design?
+
+If you're a Sydney startup wondering whether fractional design support makes sense for your stage, let's talk.
+
+**Book a free 30-minute call.** I'll give you an honest assessment of whether fractional design fits your situation—and if it does, how we might work together.
+    `.trim(),
+  },
+  {
     slug: "ux-mistakes-ai-startups",
     title: "5 UX Mistakes AI-Built Startups Make",
     description: "AI tools ship polished UIs fast, but these common UX problems tank conversion rates. Here's what I see in 80% of AI-generated interfaces.",
