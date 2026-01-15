@@ -17,7 +17,7 @@ const spaceGrotesk = Space_Grotesk({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://lucidux.design'),
-  title: "LUCIDUX — Fractional UX & Product Design Studio Sydney",
+  title: "LUCIDUX — Freelance & Fractional UX/UI Product Design Sydney",
   description: "Fractional UX designer for AI startups. We help founders fix conversion and usability fast. UX audits, product design for mobile apps, web apps & SaaS. Cursor, v0, Bolt.",
   keywords: [
     // Problem-based (high intent)
@@ -65,20 +65,20 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://lucidux.design",
     siteName: "Lucidux Design",
-    title: "LUCIDUX — Fractional UX & Product Design Studio Sydney",
+    title: "LUCIDUX — Freelance & Fractional UX/UI Product Design Sydney",
     description: "Fractional UX designer for AI startups. We help founders fix conversion and usability fast. UX audits, product design for mobile apps, web apps & SaaS. Cursor, v0, Bolt.",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "LUCIDUX — Fractional UX & Product Design Studio Sydney",
+        alt: "LUCIDUX — Freelance & Fractional UX/UI Product Design Sydney",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "LUCIDUX — Fractional UX & Product Design Studio Sydney",
+    title: "LUCIDUX — Freelance & Fractional UX/UI Product Design Sydney",
     description: "Fractional UX designer for AI startups. We fix conversion and usability fast. UX audits & product design for Cursor, v0, Bolt apps.",
     creator: "@gabrielhidalgo",
     images: ["/og-image.jpg"],
