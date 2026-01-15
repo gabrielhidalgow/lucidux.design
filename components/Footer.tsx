@@ -37,6 +37,7 @@ export function Footer() {
                                 { label: "Home", href: "#home" },
                                 { label: "Work", href: "#work" },
                                 { label: "Your path to better UX", href: "#services" },
+                                { label: "Fractional Design", href: "/fractional-product-designer-sydney" },
                                 { label: "Blog", href: "/blog" },
                             ].map((item) => (
                                 <li key={item.label}>

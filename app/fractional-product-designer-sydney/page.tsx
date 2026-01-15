@@ -285,7 +285,7 @@ export default function FractionalDesignerSydneyPage() {
               Senior UX/UI expertise without the full-time cost. Flexible hours, deep product focus, real results. Based in Sydney, working with startups across Australia.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row items-start gap-4">
               <ShinyButton
                 as="a"
                 href="https://calendly.com/gabrielhidalgo/30min"
@@ -539,6 +539,14 @@ export default function FractionalDesignerSydneyPage() {
             <div className="flex items-center gap-6 text-sm text-gray-400">
               <Link href="/" className="hover:text-accent transition-colors">Home</Link>
               <Link href="/blog" className="hover:text-accent transition-colors">Blog</Link>
+              <a
+                href="https://x.com/ghidalgodesign"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-accent transition-colors"
+              >
+                X
+              </a>
               <a
                 href="https://www.linkedin.com/in/gabrielhidalgow/"
                 target="_blank"
