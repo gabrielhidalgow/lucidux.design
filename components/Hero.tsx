@@ -9,14 +9,14 @@ export function Hero() {
             {/* Mobile: Static gradient background (no animations = better performance) */}
             <div className="absolute inset-0 z-0 md:hidden bg-background">
                 <div
-                    className="absolute top-0 right-0 w-[80vw] h-[80vw] rounded-full blur-[60px]"
+                    className="absolute top-0 right-0 w-[80vw] h-[80vw] rounded-full blur-[30px]"
                     style={{
                         background: "radial-gradient(circle, rgba(var(--accent-rgb), 0.4) 0%, rgba(var(--accent-rgb), 0) 60%)",
                         transform: "translate(20%, -30%)",
                     }}
                 />
                 <div
-                    className="absolute bottom-0 left-0 w-[70vw] h-[70vw] rounded-full blur-[50px]"
+                    className="absolute bottom-0 left-0 w-[70vw] h-[70vw] rounded-full blur-[30px]"
                     style={{
                         background: "radial-gradient(circle, rgba(var(--secondary-rgb), 0.5) 0%, rgba(var(--secondary-rgb), 0) 60%)",
                         transform: "translate(-20%, 30%)",
@@ -127,7 +127,7 @@ export function Hero() {
                 <h1 className="text-[11vw] md:text-[6.5vw] leading-[0.85] font-display font-bold tracking-tighter">
                     <div className="overflow-hidden">
                         <motion.span
-                            className="block mix-blend-difference text-white"
+                            className="block text-white md:mix-blend-difference"
                             initial={{ y: "100%" }}
                             animate={{ y: 0 }}
                             transition={{ duration: 0.8, ease: [0.33, 1, 0.68, 1] }}
