@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Syne, Space_Grotesk } from "next/font/google";
 import Script from "next/script";
+import { BackToTop } from "@/components/BackToTop";
 import "./globals.css";
 
 const syne = Syne({
@@ -137,6 +138,7 @@ export default function RootLayout({
         suppressHydrationWarning
       >
         {children}
+        <BackToTop />
       </body>
     </html>
   );
