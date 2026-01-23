@@ -144,7 +144,7 @@ export function Philosophy() {
                     </div>
 
                     <div className="relative" ref={ref}>
-                        <div className="absolute inset-0 bg-gradient-to-r from-accent/20 to-secondary/20 blur-[100px] rounded-full opacity-50"></div>
+                        <div className="absolute inset-0 bg-gradient-to-r from-accent/20 to-secondary/20 blur-[40px] md:blur-[100px] rounded-full opacity-50"></div>
 
                         <motion.div
                             className="relative h-full min-h-[500px] border border-[var(--color-foreground)]/10 bg-[var(--color-background)]/50 backdrop-blur-sm p-8 flex flex-col"

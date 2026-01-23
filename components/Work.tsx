@@ -65,34 +65,59 @@ function AnimatedCardBackground({ colorIndex }: { colorIndex: number }) {
 
     return (
         <div className="absolute inset-0 overflow-hidden rounded-[24px]">
-            {/* Primary blob */}
-            <motion.div
-                className="absolute w-[180%] h-[180%] rounded-full blur-[60px]"
-                style={{
-                    background: config.primary,
-                    opacity: 0.8,
-                }}
-                animate={config.primaryAnimation}
-                transition={{
-                    duration: config.primaryDuration,
-                    repeat: Infinity,
-                    ease: "easeInOut",
-                }}
-            />
-            {/* Secondary blob */}
-            <motion.div
-                className="absolute w-[150%] h-[150%] rounded-full blur-[50px]"
-                style={{
-                    background: config.secondary,
-                    opacity: 0.7,
-                }}
-                animate={config.secondaryAnimation}
-                transition={{
-                    duration: config.secondaryDuration,
-                    repeat: Infinity,
-                    ease: "easeInOut",
-                }}
-            />
+            {/* Mobile: Static gradient (no animations = better performance) */}
+            <div className="md:hidden absolute inset-0">
+                <div
+                    className="absolute w-[150%] h-[150%] rounded-full blur-[40px]"
+                    style={{
+                        background: config.primary,
+                        opacity: 0.7,
+                        top: "-25%",
+                        left: "-25%",
+                    }}
+                />
+                <div
+                    className="absolute w-[120%] h-[120%] rounded-full blur-[35px]"
+                    style={{
+                        background: config.secondary,
+                        opacity: 0.6,
+                        bottom: "-20%",
+                        right: "-20%",
+                    }}
+                />
+            </div>
+
+            {/* Desktop: Animated blobs */}
+            <div className="hidden md:block">
+                {/* Primary blob */}
+                <motion.div
+                    className="absolute w-[180%] h-[180%] rounded-full blur-[60px]"
+                    style={{
+                        background: config.primary,
+                        opacity: 0.8,
+                    }}
+                    animate={config.primaryAnimation}
+                    transition={{
+                        duration: config.primaryDuration,
+                        repeat: Infinity,
+                        ease: "easeInOut",
+                    }}
+                />
+                {/* Secondary blob */}
+                <motion.div
+                    className="absolute w-[150%] h-[150%] rounded-full blur-[50px]"
+                    style={{
+                        background: config.secondary,
+                        opacity: 0.7,
+                    }}
+                    animate={config.secondaryAnimation}
+                    transition={{
+                        duration: config.secondaryDuration,
+                        repeat: Infinity,
+                        ease: "easeInOut",
+                    }}
+                />
+            </div>
         </div>
     );
 }

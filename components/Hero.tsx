@@ -6,16 +6,34 @@ import { motion } from "motion/react";
 export function Hero() {
     return (
         <section className="relative min-h-screen w-full flex flex-col justify-center px-6 md:px-12 overflow-hidden">
-            {/* Animated Gradient Background */}
+            {/* Mobile: Static gradient background (no animations = better performance) */}
+            <div className="absolute inset-0 z-0 md:hidden bg-background">
+                <div
+                    className="absolute top-0 right-0 w-[80vw] h-[80vw] rounded-full blur-[60px]"
+                    style={{
+                        background: "radial-gradient(circle, rgba(var(--accent-rgb), 0.4) 0%, rgba(var(--accent-rgb), 0) 60%)",
+                        transform: "translate(20%, -30%)",
+                    }}
+                />
+                <div
+                    className="absolute bottom-0 left-0 w-[70vw] h-[70vw] rounded-full blur-[50px]"
+                    style={{
+                        background: "radial-gradient(circle, rgba(var(--secondary-rgb), 0.5) 0%, rgba(var(--secondary-rgb), 0) 60%)",
+                        transform: "translate(-20%, 30%)",
+                    }}
+                />
+            </div>
+
+            {/* Desktop: Animated Gradient Background */}
             <motion.div
-                className="absolute inset-0 z-0 overflow-hidden bg-background"
+                className="absolute inset-0 z-0 overflow-hidden bg-background hidden md:block"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 1.5, ease: "easeOut" }}
             >
                 {/* Primary accent blob - top right */}
                 <motion.div
-                    className="absolute w-[100vw] h-[100vw] md:w-[70vw] md:h-[70vw] rounded-full blur-[100px] md:blur-[120px]"
+                    className="absolute w-[70vw] h-[70vw] rounded-full blur-[120px]"
                     style={{
                         background: "radial-gradient(circle, rgba(var(--accent-rgb), 0.6) 0%, rgba(var(--accent-rgb), 0) 60%)",
                         opacity: 0.6,
@@ -34,7 +52,7 @@ export function Hero() {
 
                 {/* Secondary purple blob - bottom left */}
                 <motion.div
-                    className="absolute w-[90vw] h-[90vw] md:w-[60vw] md:h-[60vw] rounded-full blur-[80px] md:blur-[100px]"
+                    className="absolute w-[60vw] h-[60vw] rounded-full blur-[100px]"
                     style={{
                         background: "radial-gradient(circle, rgba(var(--secondary-rgb), 0.7) 0%, rgba(var(--secondary-rgb), 0) 60%)",
                         opacity: 0.55,
@@ -53,7 +71,7 @@ export function Hero() {
 
                 {/* Tertiary mixed blob - center */}
                 <motion.div
-                    className="absolute w-[60vw] h-[60vw] md:w-[45vw] md:h-[45vw] rounded-full blur-[60px] md:blur-[80px]"
+                    className="absolute w-[45vw] h-[45vw] rounded-full blur-[80px]"
                     style={{
                         background: "radial-gradient(circle, rgba(var(--accent-rgb), 0.5) 0%, rgba(var(--secondary-rgb), 0.4) 50%, transparent 70%)",
                         opacity: 0.5,
