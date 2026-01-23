@@ -50,7 +50,7 @@ export default function BlogPage() {
       <section className="py-16 md:py-24">
         <div className="container mx-auto px-6 md:px-12">
           <div className="max-w-3xl">
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold tracking-tighter mb-6">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold tracking-tighter mb-6 md:whitespace-nowrap">
               Product <span className="text-accent">Design Insights</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-400 leading-relaxed">
