@@ -146,7 +146,7 @@ const jsonLd = {
         },
         {
           "@type": "Review",
-          author: { "@type": "Person", name: "Mourad Kessas" },
+          author: { "@type": "Person", name: "Mourad" },
           reviewBody: "I've had the pleasure of working with Gabriel on multiple projects, and the results have always been exceptional. He's creative, prompt, and very easy to work with.",
           reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
         },

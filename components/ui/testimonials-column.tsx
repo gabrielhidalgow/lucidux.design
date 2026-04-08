@@ -6,7 +6,7 @@ import { motion } from "motion/react";
 
 type Testimonial = {
     text: string;
-    image: string;
+    image?: string;
     name: string;
     role: string;
 };
@@ -39,14 +39,20 @@ export const TestimonialsColumn = (props: {
                             >
                                 <p className="text-gray-300 leading-relaxed">{text}</p>
                                 <div className="flex items-center gap-3 mt-5">
-                                    <Image
-                                        width={40}
-                                        height={40}
-                                        src={image}
-                                        alt={`Photo of ${name}`}
-                                        className="h-10 w-10 rounded-full object-cover"
-                                        unoptimized={image.startsWith('http')}
-                                    />
+                                    {image ? (
+                                        <Image
+                                            width={40}
+                                            height={40}
+                                            src={image}
+                                            alt={`Photo of ${name}`}
+                                            className="h-10 w-10 rounded-full object-cover"
+                                            unoptimized={image.startsWith('http')}
+                                        />
+                                    ) : (
+                                        <div className="h-10 w-10 rounded-full bg-white/10 flex items-center justify-center text-sm font-medium text-white/70 shrink-0">
+                                            {name.charAt(0).toUpperCase()}
+                                        </div>
+                                    )}
                                     <div className="flex flex-col">
                                         <span className="font-medium text-[var(--color-foreground)] tracking-tight leading-5">
                                             {name}

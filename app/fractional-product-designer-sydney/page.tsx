@@ -29,8 +29,7 @@ const testimonials = [
   },
   {
     text: "I've had the pleasure of working with Gabriel on multiple projects, and the results have always been exceptional. He's creative, prompt, and very easy to work with.",
-    image: "/testimonials/mourad.avif",
-    name: "Mourad Kessas",
+    name: "Mourad",
     role: "CTO RewardPay",
   },
   {
